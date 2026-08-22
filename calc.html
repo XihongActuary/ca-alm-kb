@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>专章 A · 偿二代计算手册 · 2026 中国精算师科目八知识库</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<aside class="side">
+  <div class="brand"><b>ALM · 科目八</b><span>资产负债管理与价值评估 · 知识库</span></div>
+  <nav>
+    <div class="grp">总览</div>
+    <a href="xihong.html">关于 · 西红精算</a>
+    <a href="index.html">首页 · 考试全景</a>
+    <a href="about.html">本库说明 · 编法与用法</a>
+    <div class="grp">四大篇章（按考纲权重）</div>
+    <a href="ch1.html">① ALM 基础<span class="w">10%</span></a>
+    <a href="ch2.html">② 偿付能力评估与管理<span class="w">40%</span></a>
+    <a href="ch3.html">③ 价值评估与管理<span class="w">25%</span></a>
+    <a href="ch4.html">④ 资产负债管理<span class="w">25%</span></a>
+    <div class="grp">四大专章（纵深武器库）</div>
+    <a href="calc.html" class="on">A 偿二代计算手册</a>
+    <a href="quant.html">B ALM 量化评估拆解</a>
+    <a href="ev.html">C 内含价值实战</a>
+    <a href="hotspot.html">D 低利率与利差损</a>
+    <div class="grp">升级版 · 精算讲堂</div>
+    <a href="alm-plus.html">A⁺ ALM 模型与实务</a>
+    <a href="ev-plus.html">B⁺ 价值评估进阶</a>
+    <a href="companion.html">C⁺ ALM 在线库 · 导读</a>
+    <div class="grp">真题与实战</div>
+    <a href="zhenti.html">真题馆 · 2026 全解 ★</a>
+    <a href="exam1.html">卷一 · 筑基卷</a>
+    <a href="exam2.html">卷二 · 规则卷</a>
+    <a href="exam3.html">卷三 · 全真冲刺卷</a>
+  </nav>
+  <div class="prog-mini">已完成 <b>0 / 16</b> 页<br>点击每页底部按钮记录进度</div>
+</aside>
+<main class="main">
+
+<div class="ch-head">
+  <div class="no">SPECIAL A</div>
+  <h1>偿二代计算手册：一条线算到底</h1>
+  <div class="sub">认可资产负债 → 实际资本四级 → 三大风险最低资本 → 充足率与判定</div>
+  <div class="meta"><span>支撑 CH.02（40% 主战场）</span><span>三台演算器随算随验</span><span>因子表全覆盖</span></div>
+</div>
+
+<div class="toc"><b>本页目录</b>
+<ol>
+  <li>总路线图</li>
+  <li>第一站：认可资产与认可负债</li>
+  <li>第二站：实际资本与四级分级</li>
+  <li>第三站：最低资本三大风险因子表</li>
+  <li>第四站：汇总、充足率与判定（演算器）</li>
+  <li>久期演算器</li>
+</ol>
+</div>
+
+<section>
+  <h2><span class="sn">00</span>总路线图：一道真题就是一条流水线</h2>
+  <p>偿二代计算题（尤其 Excel 操作题）本质是一条流水线，任何题目都是在这条线上「填空」：</p>
+  <div class="steps">
+    <div class="stp"><b>① 认可资产</b><span> —— 逐项资产 × 认可比例（次级债按剩余期限折扣、权益按市值、投资性房地产按成本模式）。</span></div>
+    <div class="stp"><b>② 认可负债</b><span> —— 寿险合同负债（最优估计 + 风险边际）+ 现金价值保证 + 所得税准备；剔除资本性负债。</span></div>
+    <div class="stp"><b>③ 实际资本 = ① − ②</b><span> —— 按「吸收损失能力」切四级（保单未来盈余按剩余期限分档）。</span></div>
+    <div class="stp"><b>④ 最低资本</b><span> —— 保险风险（情景法/因子法）+ 市场风险 + 信用风险 → 相关性矩阵汇总 − LA + 控制风险 + 附加。</span></div>
+    <div class="stp"><b>⑤ 两率与判定</b><span> —— 核心 = 核心资本/MC ≥50%；综合 = AC/MC ≥100%；对照监管措施分层。</span></div>
+  </div>
+  <p class="src-note"><b>本专章知识来源</b>：偿二代二期《保险公司偿付能力监管规则》第 1 号（实际资本·评估原则）、第 2 号（最低资本·风险因子）、第 3 号（寿险合同负债）、第 4~7 号（各风险最低资本细则）＋ 金规〔2023〕5 号（因子与盈余限额调整）。本章所有因子表均以现行规则为准，规则更新时以当期为准。徽章：<span class="src">规</span> = 监管规则原文、<span class="src">题</span> = 历年真题。</p>
+  <h3>核心问题自测（先把流水线背下来，再展开对照）</h3>
+  <div class="qa-list">
+    <details class="answer"><summary>认可资产三门槛与"三加两减"是什么？</summary><div class="body"><p>三门槛：处置不受限制、不在非认可清单、按认可标准计量。三加两减（认可资产 = 会计资产 + 例外认可项目 − 非认可项目 − 处置受限调整）：加投资性房地产（成本模式）、对子公司长期股权投资（权益法）、寿险应收分保准备金；减无形资产（土地使用权除外）与经营性亏损递延所得税资产、待摊费用等非认可项、减被质押冻结等处置受限部分。</p></div></details>
+    <details class="answer"><summary>次级债折扣表与保单未来盈余分档？</summary><div class="body"><p>次级债（无赎回）按剩余期限：≥5 年 100%、4~5 年 80%、3~4 年 60%、2~3 年 40%、1~2 年 20%、&lt;1 年 0；有赎回条款按赎回日剩余期限分档且利差超 100bps 部分不认可。保单未来盈余：≥30 年核心一级、10~30 年核心二级、5~10 年附属一级、&lt;5 年附属二级。</p></div></details>
+    <details class="answer"><summary>寿险主要风险因子速记？</summary><div class="body"><p>死亡 +15%、疾病 +20%、维持费用 +10%、退保 ±30%（含期缴）/±40%（趸交）、大规模退保 +150%（月 ≥2.4% 或年 ≥25%）；沪深 300 成份股 0.30（金规 5 号后）、创业板 0.45、科创板 0.40；再保境外分入人：有担保 0.077 / 无担保 0.499 / 不达标 0.867。</p></div></details>
+    <details class="answer"><summary>相关性矩阵的关键数字？</summary><div class="body"><p>利率—权益 ρ = −0.14；人身险市场—信用 ρ = 0.35、寿险—市场 0.30（其余详见 CH.02 表）；H 公式中市场与信用按 ρ = 0.25 汇总：8%×√(MC市场² + 2×0.25×MC市场×MC信用 + MC信用²)。</p></div></details>
+  </div>
+</section>
+
+<section>
+  <h2><span class="sn">01</span>第一站：认可资产与认可负债</h2>
+  <h3>1.1 资产逐项认可 <span class="star s3">★★★</span></h3>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>资产</th><th>认可口径</th><th>坑点</th></tr>
+    <tr><td>债券/股票/基金</td><td>公允价值（市值）</td><td>处置受限（质押/冻结）→ 非认可</td></tr>
+    <tr><td>投资性房地产</td><td><b>成本模式</b>计量</td><td>不能用公允价值模式</td></tr>
+    <tr><td>对子公司长期股权投资</td><td><b>权益法</b></td><td>市场风险中对保险类子公司因子 0.35、一般子公司 1.0</td></tr>
+    <tr><td>无形资产</td><td>不认可（<b>土地使用权除外</b>）</td><td>高频选择题</td></tr>
+    <tr><td>次级债/资本补充债（持有的）</td><td>按市场价值与信用风险计量</td><td>与「发行的」折扣表区分开</td></tr>
+    <tr><td>应收分保准备金</td><td>按规则第 3 号确认（分保前后负债差额）</td><td>分保前负债全额确认为认可负债</td></tr>
+  </table>
+  </div>
+  <h3>1.2 负债逐项认可 <span class="star s3">★★★</span></h3>
+  <div class="formula">
+    <b>寿险合同负债（规则第 3 号）</b>
+    <div class="fx">认可负债 = 未到期责任准备金（<b>最优估计 PV+TVOG</b> + <b>风险边际 RM</b>）+ 未决赔款准备金（账面价值）</div>
+    <div class="fx">RM = MC<sub>分保前保险风险</sub> × Φ⁻¹(85%) / Φ⁻¹(99.5%)</div>
+    <div class="fx">折现率曲线 = 750日均线(≤20y) + 二次插值(20~40y) + 终极4.5%(&gt;40y) + 综合溢价(75/45/30BP)</div>
+  </div>
+  <div class="warn"><b>三笔「加项」负债别漏</b>：① 现金价值保证 CVG = Max(CV − PL − MC, 0)；② 所得税准备（以剩余边际为基础，趋势根本逆转才可终止确认）；③ 超资本限额的资本工具部分（确认为资本性负债）。<b>两笔「减项」</b>：农险大灾风险保费准备金、符合资本标准的长期债务（它们已按资本计量，不能重复扣）。</div>
+</section>
+
+<section>
+  <h2><span class="sn">02</span>第二站：实际资本与四级分级</h2>
+  <h3>2.1 发行的资本工具：折扣与定级 <span class="star s3">★★★</span></h3>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>工具</th><th>级别</th><th>认可价值（剩余期限 r）</th></tr>
+    <tr><td>普通股 / 留存利润</td><td>核心一级</td><td>全额</td></tr>
+    <tr><td>无固定期限资本债券（永续）</td><td>核心二级</td><td>全额（无到期或 ≥10 年、含减记/转股、发行 5 年后可赎回、无利率跳升激励）</td></tr>
+    <tr><td>资本补充债（无赎回条款）</td><td>视期限</td><td>r≥2年全额；1~2年 50%；&lt;1年 80%</td></tr>
+    <tr><td>资本补充债（有赎回条款）</td><td>视期限</td><td>r≥4年全额；3~4年 80%；2~3年 60%；1~2年 40%；&lt;1年 20%</td></tr>
+    <tr><td>保单未来盈余</td><td>按剩余期限四级分档</td><td>≥30y核心一级+附属一级；10~30y核心二级+附属一级；5~10y附属一级+附属二级；&lt;5y全附属二级</td></tr>
+    <tr><td>长期寿险再保险</td><td>视条款</td><td>3年内可终止：不计；3年后可终止+资产真实转移：核心一级；未真实转移按期限定级</td></tr>
+  </table>
+  </div>
+  <div class="mnem"><b>资本限额四数</b><span class="verse">附属 ≤ 核心 100%；核心二级 ≤ 30%；附属二级 ≤ 25%；盈余入核心 ≤ 35%（10年以上 40%，金规5号）。</span></div>
+  <h3>2.2 保单未来盈余近似式 <span class="star s2">★★</span></h3>
+  <div class="formula">
+    <div class="fx">保单未来盈余 = 寿险合同负债<b>账面价值</b> − 偿付能力口径<b>认可价值</b> − 现金价值保证 − 所得税准备</div>
+    <div class="note">整体为负 → 直接调减核心一级。这道式子是「会计 vs 偿报」两张报表的桥梁，简答论述常考其经济含义：监管只允许「足够长久」的未来利润充当吸收损失的资本。</div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="sn">03</span>第三站：最低资本三大风险因子表</h2>
+  <h3>3.1 保险风险——寿险情景法 <span class="star s3">★★★</span></h3>
+  <div class="formula">
+    <div class="fx">MC保险 = Max(PV<sub>不利情景</sub> − PV<sub>基础情景</sub>, 0)；不利 = 基础 × (1 + SF)</div>
+  </div>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>子风险</th><th>SF / 不利情景</th></tr>
+    <tr><td>死亡发生率</td><td class="num">上浮 15%</td></tr>
+    <tr><td>死亡巨灾（12个月内）</td><td class="num">绝对 +0.0018</td></tr>
+    <tr><td>长寿风险</td><td class="num">0~10y 每年 −3%；10~20y −2%；20~30y −1%；&gt;30y 维持累积值</td></tr>
+    <tr><td>疾病发生率 / 趋势</td><td class="num">+20%；趋势男 2%/女 3% 每年，10 年封顶</td></tr>
+    <tr><td>医疗及健康赔付损失率</td><td class="num">+20%</td></tr>
+    <tr><td>维持费用</td><td class="num">+10%</td></tr>
+    <tr><td>退保率（I / II 类）</td><td class="num">±30% / ±40%，取不利现值较大者</td></tr>
+    <tr><td><b>大规模退保</b></td><td class="num"><b>退保率 +150%</b>（月 ≥2.4% 或年 ≥25%）；MC退保 = Max(退保率MC, 大规模退保MC)</td></tr>
+  </table>
+  </div>
+  <p>寿险保险风险内部汇总 ρ：损失发生-费用 0.4；损失发生-退保 0；费用-退保 0.5。疾病内部（发生率-趋势）ρ = 0.25；死亡-长寿 ρ = <b>−0.25</b>（天然对冲！）。</p>
+  <h3>3.2 保险风险——非寿险综合因子法 <span class="star s2">★★</span></h3>
+  <div class="formula">
+    <div class="fx">MC = EX × RF0 × (1 + K)，K ∈ [−0.25, 0.25]</div>
+    <div class="fx">EX：保费风险 = 最近 12 个月自留保费；准备金风险 = 再保后未决赔款准备金</div>
+  </div>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>险种</th><th class="num">RF0 保费</th><th class="num">RF0 准备金</th><th>险种</th><th class="num">RF0 保费</th><th class="num">RF0 准备金</th></tr>
+    <tr><td>车险</td><td class="num">0.103</td><td class="num">0.123</td><td>非融资性信保</td><td class="num">0.467</td><td class="num">0.605</td></tr>
+    <tr><td>财产险</td><td class="num">0.391</td><td class="num">0.561</td><td>短期意外险</td><td class="num">0.122</td><td class="num">0.251</td></tr>
+    <tr><td>船货特险</td><td class="num">0.232</td><td class="num">0.604</td><td>短期健康险</td><td class="num">0.115</td><td class="num">0.269</td></tr>
+    <tr><td>责任险</td><td class="num">0.203</td><td class="num">0.433</td><td>短期寿险</td><td class="num">0.085</td><td class="num">0.193</td></tr>
+    <tr><td>农业险</td><td class="num">0.326</td><td class="num">0.441</td><td>其他险</td><td class="num">0.098</td><td class="num">0.170</td></tr>
+  </table>
+  </div>
+  <p>特征系数要点：综合成本率 ≤95% → k=−0.05、(95%,100%] → 0、(100%,105%] → +0.05、&gt;105% → +0.1；回溯偏差率大加分；各险种内部 ρ(保费, 准备金) = 0.5；保费及准备金与巨灾 ρ = 0.25；巨灾仅<b>车险与财产险</b>计提、VaR 99.5%。</p>
+  <h3>3.3 市场风险——综合因子法（人身险利率风险除外） <span class="star s3">★★★</span></h3>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>资产</th><th class="num">RF0</th><th>资产</th><th class="num">RF0</th></tr>
+    <tr><td>沪深主板股票（非300成份）</td><td class="num">0.35</td><td>债券基金</td><td class="num">0.06</td></tr>
+    <tr><td><b>沪深300成份股（金规5号后）</b></td><td class="num"><b>0.30</b></td><td>股票基金</td><td class="num">0.28</td></tr>
+    <tr><td>创业板 / 科创板</td><td class="num">0.45 / 0.40</td><td>混合/商品及衍生品基金</td><td class="num">0.23</td></tr>
+    <tr><td>未上市股权</td><td class="num">0.41</td><td>货币基金</td><td class="num">0.01</td></tr>
+    <tr><td>对保险类子公司长投</td><td class="num">0.35</td><td>可转债/可交换债</td><td class="num">0.23</td></tr>
+    <tr><td>对一般子公司长投</td><td class="num">1.0</td><td>物业房地产</td><td class="num">0.15</td></tr>
+    <tr><td>境外上市股票/股基/混基</td><td class="num">0.39</td><td>美元及挂钩货币汇率</td><td class="num">0.05</td></tr>
+    <tr><td>境外固收（非存单短融）</td><td class="num">0.08</td><td>欧元/英镑汇率</td><td class="num">0.08</td></tr>
+  </table>
+  </div>
+  <p>特征系数：沪深300成份股 k2 = −0.05；境外发达市场 k1 = 0、新兴市场 +0.25。<b>集中度风险</b>：同一交易对手超阈值加计 k = 0.4（人身险阈值：总资产 100 亿内 8%、100~500 亿 5%、500~1000 亿 4%、超 1000 亿 3%）；大类资产超投资比例限制 k = 0.2；投资性房地产/总资产 &gt;25% k = 0.5。市场风险汇总 ρ：利率-权益 <b>−0.14</b>、权益-境外权益 0.50、利率-房地产 −0.18。</p>
+  <div class="warn"><b>人身险利率风险 = 情景法（不是因子法）</b>：MC利率 = Max[PV(NCF)不利 − PV(NCF)基础, 0]，资产现金流与负债现金流<b>同时</b>按不利利率曲线折现——净敞口由久期缺口决定。这是「利率变化对最低资本影响」真题的核心机制。</div>
+  <h3>3.4 信用风险——利差 + 交易对手 <span class="star s3">★★★</span></h3>
+  <p>利差风险因子 = f(<b>评级 × 修正久期</b>)，量级参考（0&lt;D≤5 / D&gt;5）：AAA D×(0.0006D+0.012) / D×0.015；AA D×(0.0009D+0.025) / D×0.0295；BBB及以下 D×(0.01D+0.05) / D×0.1。政府债券与央票<b>不计提</b>；绿色债券 k = −0.1；多家评级<b>从低适用</b>。</p>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>交易对手敞口</th><th>因子</th></tr>
+    <tr><td>国有大行/政策性银行定期存款</td><td class="num">0.005</td></tr>
+    <tr><td>股份制银行存款（充足率≥12%）</td><td class="num">0.03</td></tr>
+    <tr><td>拆出资金 / 保单质押贷款</td><td class="num">0.03 / 0.05</td></tr>
+    <tr><td><b>境内再保分入人</b>（综合充足率 ≥200% / [150,200) / [100,150) / [50,100) / &lt;50%）</td><td class="num">0.008 / 0.013 / 0.047 / 0.261 / 0.745</td></tr>
+    <tr><td><b>境外分入人（直保分出）：有担保 / 无担保 / 不达标</b></td><td class="num"><b>0.077 / 0.499 / 0.867</b></td></tr>
+    <tr><td>应收分保（账龄 ≤6m / 6~12m / &gt;12m）</td><td class="num">0 / 0.7 / 1.0</td></tr>
+    <tr><td>应收保费（非政府补贴：≤6m / 6~12m / &gt;12m）</td><td class="num">0 / 0.5 / 1.0</td></tr>
+    <tr><td>底层贷款（五级分类正常/关注/次级/可疑/损失）</td><td class="num">0.085 / 0.135 / 0.3 / 0.5 / 1.0</td></tr>
+  </table>
+  </div>
+  <p>信用风险内部 ρ(利差, 交易对手) = 0.25。多个分入人无法拆分 → 按<b>最低</b>充足率/评级适用因子。</p>
+  <h3>3.5 总汇总：相关性矩阵 <span class="star s3">★★★</span></h3>
+  <div class="formula">
+    <b>人身险公司（第 2 号第 17 条）</b>
+    <div class="fx">MC向量 = (寿险保险, 非寿险保险, 市场, 信用)</div>
+    <div class="fx">ρ：寿-非寿 0.20 · 寿-市场 0.30 · 寿-信用 0.15 · 非寿-市场 0.10 · 非寿-信用 0.10 · 市场-信用 0.35</div>
+    <div class="fx">MC* = √(ΣΣ ρ<sub>ij</sub>·MC<sub>i</sub>·MC<sub>j</sub>) − LA　→　MC = MC* + 控制风险 + 附加资本</div>
+    <div class="note">LA（分红万能损失吸收）= Min(MC分红万能账户 × β, LA上限)；β = (1+K)×Min(0.5, 0.22×LA上限/MC账户 + 0.02)。财产险公司向量 = (非寿险保险, 市场, 信用)，ρ = 0.1 / 0.15 / 0.27。</div>
+  </div>
+</section>
+
+<section>
+  <h2><span class="sn">04</span>第四站：充足率演算器</h2>
+  <p>输入认可资产、认可负债、最低资本与核心资本（亿元），即时得到实际资本与两率判定：</p>
+  <div class="calc" id="calc-solv">
+    <div class="calc-head">偿付能力演算器 <small>规则Ⅱ口径</small></div>
+    <div class="calc-body">
+      <div class="calc-grid">
+        <div><label>认可资产（亿元）</label><input id="solv-ra" type="number" step="0.1" value="180"></div>
+        <div><label>认可负债（亿元）</label><input id="solv-rl" type="number" step="0.1" value="160"></div>
+        <div><label>最低资本（亿元）</label><input id="solv-mc" type="number" step="0.1" value="15"></div>
+        <div><label>核心资本（亿元）</label><input id="solv-cc" type="number" step="0.1" value="12"></div>
+      </div>
+      <div class="calc-out">
+        <div class="co-row"><span>实际资本 = 认可资产 − 认可负债</span><b id="solv-ac">20.00 亿元</b></div>
+        <div class="co-row"><span>核心偿付能力充足率 = 核心资本 / 最低资本（≥50%）</span><b id="solv-core">80.0%</b>　<i id="solv-j1"></i></div>
+        <div class="co-row big"><span>综合偿付能力充足率 = 实际资本 / 最低资本（≥100%）</span><b id="solv-comp">133.3%</b>　<i id="solv-j2"></i></div>
+      </div>
+      <div class="calc-note">注意：核心资本 = 核心一级 + 核心二级（受限额约束后）；风险综合评级 ≥B 类为第三项达标条件，此处未输入。</div>
+    </div>
+  </div>
+  <div class="tip"><b>用演算器体会三件事</b>：① 认可负债每 +1 亿，综合充足率约降 6~7 个点（以默认值计）——这就是「折现率曲线下移 → 负债 ↑ → 充足率 ↓」的量化直觉；② 核心与综合的差距 = 附属资本厚度；③ 两率的分母都是 MC——降 MC（如再保、对冲、金规5号因子优化）与增资本同样有效。</div>
+</section>
+
+<section>
+  <h2><span class="sn">05</span>久期与久期缺口演算器</h2>
+  <div class="calc" id="calc-dur">
+    <div class="calc-head">久期演算器（最多 5 笔现金流） <small>单一利率折现</small></div>
+    <div class="calc-body">
+      <div class="calc-grid">
+        <div><label>折现率 y（%）</label><input id="dur-rate" type="number" step="0.01" value="3.00"></div>
+      </div>
+      <div class="calc-grid" style="margin-top:10px">
+        <div><label>期限 t₁（年）</label><input id="dur-t1" type="number" step="0.5" value="1"></div>
+        <div><label>现金流 CF₁</label><input id="dur-c1" type="number" step="1" value="70"></div>
+        <div><label>期限 t₂（年）</label><input id="dur-t2" type="number" step="0.5" value="3"></div>
+        <div><label>现金流 CF₂</label><input id="dur-c2" type="number" step="1" value="30"></div>
+        <div><label>期限 t₃（年）</label><input id="dur-t3" type="number" step="0.5" value="5"></div>
+        <div><label>现金流 CF₃</label><input id="dur-c3" type="number" step="1" value="5"></div>
+        <div><label>期限 t₄（年）</label><input id="dur-t4" type="number" step="0.5" value="0"></div>
+        <div><label>现金流 CF₄</label><input id="dur-c4" type="number" step="1" value="0"></div>
+        <div><label>期限 t₅（年）</label><input id="dur-t5" type="number" step="0.5" value="0"></div>
+        <div><label>现金流 CF₅</label><input id="dur-c5" type="number" step="1" value="0"></div>
+      </div>
+      <div class="calc-out">
+        <div class="co-row"><span>现值合计 PV</span><b id="dur-pv-out">—</b></div>
+        <div class="co-row"><span>Macaulay 久期</span><b id="dur-mac">—</b></div>
+        <div class="co-row big"><span>修正久期 = D_mac / (1+y)</span><b id="dur-mod">—</b></div>
+      </div>
+      <div class="calc-note">默认值即 2017 年真题 A 业务线（1/3/5 年现金流 70/30/5）——对比官方答案现值 100.62、久期 1.73，验证你的算法。</div>
+    </div>
+  </div>
+  <div class="calc" id="calc-gap">
+    <div class="calc-head">久期缺口 · 利率冲击演算器 <small>Δ净资产估算</small></div>
+    <div class="calc-body">
+      <div class="calc-grid">
+        <div><label>资产修正久期 D_A（年）</label><input id="gap-da" type="number" step="0.1" value="6.0"></div>
+        <div><label>负债修正久期 D_L（年）</label><input id="gap-dl" type="number" step="0.1" value="10.0"></div>
+        <div><label>资产价值 V_A（亿元）</label><input id="gap-va" type="number" step="1" value="180"></div>
+        <div><label>负债价值 V_L（亿元）</label><input id="gap-vl" type="number" step="1" value="160"></div>
+        <div><label>利率冲击 Δy（bp，负=下行）</label><input id="gap-shock" type="number" step="10" value="-50"></div>
+      </div>
+      <div class="calc-out">
+        <div class="co-row"><span>久期缺口 = D_A − D_L×(V_L/V_A)</span><b id="gap-out">—</b></div>
+        <div class="co-row"><span>Δ资产价值</span><b id="gap-dva">—</b></div>
+        <div class="co-row"><span>Δ负债价值</span><b id="gap-dvl">—</b></div>
+        <div class="co-row big"><span>Δ净资产</span><b id="gap-dnav">—</b></div>
+        <div class="co-row"><span>判断</span><i id="gap-verdict" style="font-style:normal"></i></div>
+      </div>
+      <div class="calc-note">默认值模拟典型中资寿险：负债久期长于资产 → 利率下行 50bp 净资产缩水——这就是「再投资风险/利差损」的资产负债表语言。</div>
+    </div>
+  </div>
+</section>
+
+<div class="pager">
+  <a class="pager-prev" href="ch4.html"><small>← 上一页</small>CH.04 资产负债管理</a>
+  <a class="pager-next" href="quant.html"><small>下一页 →</small>专章 B ALM 量化评估拆解</a>
+</div>
+<button class="done-btn" data-id="calc">○ 标记本页已完成</button>
+<footer class="colophon">2026 中国精算师资格考试 · 资产负债管理与价值评估（科目八）知识库 · 仅供学习交流</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>
