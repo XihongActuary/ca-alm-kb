@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CH.04 资产负债管理 · 2026 中国精算师科目八知识库</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<aside class="side">
+  <div class="brand"><b>ALM · 科目八</b><span>资产负债管理与价值评估 · 知识库</span></div>
+  <nav>
+    <div class="grp">总览</div>
+    <a href="xihong.html">关于 · 西红精算</a>
+    <a href="index.html">首页 · 考试全景</a>
+    <a href="about.html">本库说明 · 编法与用法</a>
+    <div class="grp">四大篇章（按考纲权重）</div>
+    <a href="ch1.html">① ALM 基础<span class="w">10%</span></a>
+    <a href="ch2.html">② 偿付能力评估与管理<span class="w">40%</span></a>
+    <a href="ch3.html">③ 价值评估与管理<span class="w">25%</span></a>
+    <a href="ch4.html" class="on">④ 资产负债管理<span class="w">25%</span></a>
+    <div class="grp">四大专章（纵深武器库）</div>
+    <a href="calc.html">A 偿二代计算手册</a>
+    <a href="quant.html">B ALM 量化评估拆解</a>
+    <a href="ev.html">C 内含价值实战</a>
+    <a href="hotspot.html">D 低利率与利差损</a>
+    <div class="grp">升级版 · 精算讲堂</div>
+    <a href="alm-plus.html">A⁺ ALM 模型与实务</a>
+    <a href="ev-plus.html">B⁺ 价值评估进阶</a>
+    <a href="companion.html">C⁺ ALM 在线库 · 导读</a>
+    <div class="grp">真题与实战</div>
+    <a href="zhenti.html">真题馆 · 2026 全解 ★</a>
+    <a href="exam1.html">卷一 · 筑基卷</a>
+    <a href="exam2.html">卷二 · 规则卷</a>
+    <a href="exam3.html">卷三 · 全真冲刺卷</a>
+  </nav>
+  <div class="prog-mini">已完成 <b>0 / 16</b> 页<br>点击每页底部按钮记录进度</div>
+</aside>
+<main class="main">
+
+<div class="ch-head">
+  <div class="no">CHAPTER 04</div>
+  <h1>资产负债管理：从免疫理论到监管量化</h1>
+  <div class="sub">久期与凸性 · 现金流匹配 · 成本收益匹配 · SAA/TAA · DFA 与三端四表</div>
+  <div class="meta"><span>考纲权重 25%</span><span>久期计算是二十年长青计算题</span><span>2026「成本收益匹配」直接命题</span></div>
+  <div class="wbar"><div class="lab"><span>权重</span><span>25%</span></div><div class="bar"><i style="width:25%"></i></div></div>
+</div>
+
+<div class="toc"><b>本章目录</b>
+<ol>
+  <li>导语：从「被动防御」到「主动经营」</li>
+  <li>知识图谱</li>
+  <li>星级讲义（六节）</li>
+  <li>公式与数字卡片</li>
+  <li>真题印证</li>
+  <li>实务视角与口诀</li>
+</ol>
+</div>
+
+<!-- ========== 一、导语 ========== -->
+<section>
+  <h2><span class="sn">01</span>导语：从「被动防御」到「主动经营」</h2>
+  <p>1952 年，英国精算师 Redington 提出<b>免疫（immunization）</b>：让资产久期等于负债久期，利率的小幅平行移动就伤不到盈余。七十多年过去，ALM 从这颗种子长成了监管尺度下的参天大树——今天的规则第 4 号把「期限结构、成本收益、现金流」三大匹配变成 30/40/30 的百分制评分，ALM 从保险公司的自律艺术变成了<b>监管的硬约束</b>。</p>
+  <p>本章把 ALM 的「兵器谱」铺开：<b>久期/凸性</b>（免疫的数学）、<b>现金流匹配</b>（最彻底也最昂贵）、<b>成本收益匹配</b>（利差损的防火墙）、<b>SAA/TAA</b>（配置的指挥体系）、<b>DFA 随机模拟</b>（把一切放进未来时态）。每件兵器都对应一组真题——规则 4 号的逐项拆解在<a href="quant.html">专章 B</a>，低利率时代的错配困局在<a href="hotspot.html">专章 D</a>。</p>
+</section>
+
+<!-- ========== 二、知识图谱 ========== -->
+<section>
+  <h2><span class="sn">02</span>知识图谱</h2>
+  <div class="arch">
+    <div class="arch-top"><b>CH.04 知识图谱</b><div class="meta"><span>三把兵器 · 一套指挥 · 一个未来时态</span></div></div>
+    <div class="arch-grid">
+      <a class="arch-card key" href="#s41"><span class="ac-top"><span class="ac-no">4.1</span><span class="ac-wt hot">★★★</span></span><h4>久期、凸性与免疫</h4><p>Macaulay/修正/有效久期 · 凸性 · 免疫条件 · 久期缺口</p></a>
+      <a class="arch-card key" href="#s42"><span class="ac-top"><span class="ac-no">4.2</span><span class="ac-wt hot">★★★</span></span><h4>现金流匹配</h4><p>完全匹配与专门组合 · 非寿险三不适用 · 流动性分层</p></a>
+      <a class="arch-card key" href="#s43"><span class="ac-top"><span class="ac-no">4.3</span><span class="ac-wt hot">★★★</span></span><h4>成本收益匹配</h4><p>M=G−K 利差指标 · 压力情景 · 利差损防线</p></a>
+      <a class="arch-card key" href="#s44"><span class="ac-top"><span class="ac-no">4.4</span><span class="ac-wt hot">★★★</span></span><h4>SAA/TAA 与再平衡</h4><p>战略/战术配置 · 新钱法 vs 整体法 · 账户划分</p></a>
+      <a class="arch-card" href="#s45"><span class="ac-top"><span class="ac-no">4.5</span><span class="ac-wt">★★</span></span><h4>DFA 与三端四表</h4><p>随机模拟 · 资产配置模型 · ALM 模型五大应用</p></a>
+      <a class="arch-card" href="#s46"><span class="ac-top"><span class="ac-no">4.6</span></span><h4>衍生品与再保险对冲</h4><p>利率互换/国债期货 · Delta 对冲 · 再保的资产负债双侧效应</p></a>
+      <a class="arch-card spec" href="#s47"><span class="ac-top"><span class="ac-no">4.7</span><span class="ac-wt">★★</span></span><h4>投资理论补充卡（超纲储备）</h4><p>马科维茨 · 期权定价因素 · put-call parity · APT · 早期真题弹药库</p></a>
+    </div>
+  </div>
+  <h3>图谱核心问题自测（先自己答，再展开对照）</h3>
+  <div class="qa-list">
+    <details class="answer"><summary>4.1 久期三兄弟公式、免疫三条件、久期缺口公式与方向判断？</summary><div class="body"><p>D_mac = Σt·PV(CF)/ΣPV(CF)；D_mod = D_mac/(1+y)；D_eff = −(PV₊−PV₋)/(2·PV·Δy)。免疫三条件：资产现值=负债现值、资产久期=负债久期、资产凸性&gt;负债凸性。久期缺口 = D_A − D_L×V_L/V_A；缺口为负（负债相对久期长）时利率下行净资产受损——中国寿险常态。</p></div></details>
+    <details class="answer"><summary>4.2 现金流匹配定义、非寿险三不适用、监管三级检验与压力参数？</summary><div class="body"><p>定义：每期资产现金流入 ≥ 负债现金流出（严格版=专门组合）。非寿险三理由：赔付不确定、业务滚动重构成本高、牺牲流动性优先的收益。三级检验：现金 → 高流动性资产变现 → 中低流动性资产变现（测试期三年，首年按季度）；压力情景：新单 −80%、退保 max(25%, 2×基本)、固收 10% 违约同时发生；中低档变现后仍负 → 整体 0 分。</p></div></details>
+    <details class="answer"><summary>4.3 M/N/O 三个利差口径与四大压力情景？</summary><div class="body"><p>M = G−K（综合收益率−资金成本率）、N = H−L（风险调整后收益率−保证成本率）、O = E−J（会计收益率−有效成本率）；H = RAROI 扣 8% 资本占用项（市场与信用 MC 按 ρ=0.25 相关汇总）。四情景：一宏观恶化（权益 VaR 下跌、房地产 −20%）、二长期低利率（再投资 −73%~−24%）、三利率跳升（+100bps×2、负债成本同步上调）、四非寿险影响（保费 130%/150%）。</p></div></details>
+    <details class="answer"><summary>4.4 SAA 与 TAA 的区别、新钱法 vs 整体法、账户划分？</summary><div class="body"><p>SAA：3~10 年、负债驱动、董事会审定、每年滚动评估；TAA：1 年内战术偏离、受限额约束。再平衡：新钱配置法（作用于新增资金，成本低纠偏慢）vs 整体配置法（作用于组合整体，纠偏快成本高）。账户：普通账户（公司担投资风险，分传统/分红/万能子账户+资本金）与独立账户（客户自担）。</p></div></details>
+    <details class="answer"><summary>4.5 DFA 的定义、分红险 DFA 四步骤与三端四表？</summary><div class="body"><p>DFA：随机情景模拟资产负债表联合演化，输出财务结果分布。分红险 DFA 步骤（2014·20）：确定情景分析 → 随机模拟情景分析 → 结果分布与极端评估 → 管理决策。三端四表：资产端 / 负债端 / 资本端 × 资产负债表 / 利润表 / 现金流量表 / 偿付能力报表；五大应用含资本规划、配置优化、新旧准则预测、边际资本占用、气候压测。</p></div></details>
+    <details class="answer"><summary>4.6 再保险对实际资本与最低资本的完整影响逻辑？</summary><div class="body"><p>负债侧：分出 → 应收分保准备金 / 应收分保账款 / 摊回费用计入认可资产、准备金负债净额下降 → 实际资本上升（但不属于任何资本层级——不满足资本五特性）。最低资本：保险风险 MC↓（净自留敞口减少）、市场风险 MC 通常↓（投资敞口减少）、信用风险 MC↑（分入人违约风险：境内 0.008~0.745 按充足率、境外 0.077/0.499/0.867 按担保与达标）；净效应取决于分入人资质与担保安排。</p></div></details>
+  </div>
+</section>
+
+<!-- ========== 三、星级讲义 ========== -->
+<section>
+  <h2><span class="sn">03</span>星级讲义</h2>
+  <p class="src-note"><b>本章知识来源</b>：中国精算师协会《资产负债管理》教材（免疫 / 现金流匹配 / 成本收益匹配 / SAA / DFA / 衍生品各章，含教材 P224 免疫-最优化-DFA 特点对照、P443 万能险例题、第 16 章财险例题）＋ 保险资产负债管理监管规则第 4 号（量化评估三大维度）＋ 偿二代二期规则第 2 号（衍生品与再保险最低资本口径）。徽章：<span class="src">教</span> = 指定教材、<span class="src">规</span> = 监管规则、<span class="src">题</span> = 历年真题。全站来源地图见 <a href="index.html">首页 · 教材与制度地图</a>。</p>
+
+  <h3 id="s41">4.1 久期、凸性与免疫 <span class="star s3">★★★</span><span class="src">教</span><span class="src">题</span></h3>
+  <div class="formula">
+    <b>久期家族（三个都要会算）</b>
+    <div class="fx">Macaulay 久期：D_mac = Σ [t · PV(CF<sub>t</sub>)] / Σ PV(CF<sub>t</sub>)　（现金流加权平均到期时间，单位：年）</div>
+    <div class="fx">修正久期：D_mod = D_mac / (1 + y)　（价格对利率的一阶敏感度）</div>
+    <div class="fx">有效久期：D_eff = −(PV<sub>+50</sub> − PV<sub>−50</sub>) / (2 × PV × 0.01)　（含权资产用情景重估，万能/投连必用）</div>
+    <div class="fx">价格变动近似：ΔP/P ≈ −D_mod·Δy + ½·C·(Δy)²　（C 为凸性）</div>
+  </div>
+  <p><b>久期三兄弟怎么选</b>（2009 年真题：比较美元久期与有效久期计量万能/投连利率风险的差异）：Macaulay/修正久期适用于<b>现金流固定</b>的债券与普通险负债；含退保权、结算利率选择权的<b>万能险</b>与投连产品，其现金流随利率变化而变化，必须用<b>有效久期</b>（整条曲线 ±50bps 重估）；「美元久期（DV01）」= 修正久期 × 市值，衡量<b>金额敏感度</b>，适合不同规模组合间的直接比较。</p>
+  <div class="mnem"><b>免疫三条件（Redington）</b><span class="verse">久期相等是灵魂，现值相等是前提，凸性资产大一分。<br>平行移动全免疫，非平扭转需凸性——凸性资产恒大于负债，曲线任何变动下盈余不缩。</span></div>
+  <div class="formula">
+    <b>久期缺口（资产负债联合视角）</b>
+    <div class="fx">久期缺口 Gap = D_A − D_L × (V_L / V_A)</div>
+    <div class="fx">Δ净资产 ≈ −[D_A × V_A − D_L × V_L] × Δy = −Gap × V_A × Δy</div>
+    <div class="note">Gap &gt; 0：利率下行受益、上行受损；Gap &lt; 0（中国寿险常态）：利率下行时资产增值不及负债增值 → 再投资风险与利差损。监管口径见规则 4 号「规模调整后的修正久期缺口」与「资产调整后的期限缺口」（后者把长投按 12 年、投资性房地产按 25 年计权）。</div>
+  </div>
+  <div class="exam"><span class="yr">2017·5</span><b>负债现值与久期计算 + 平均利率 vs 期限结构</b>——三条业务线（短/中/长久期 1.73 / 4.95 / 9.36），用平均利率 2.67% 折现 vs 用逐期期限结构折现，差异要从三方面分析：①现金流形态（一次性 vs 分散）；②期限（越长对曲线形状越敏感）；③久期（平均利率抹平了期限结构信息，长端负债估值偏差最大）。本题套路在<a href="exam1.html">卷一</a>完整复刻。</div>
+
+  <h3 id="s42">4.2 现金流匹配 <span class="star s3">★★★</span><span class="src">教</span><span class="src">规</span><span class="src">题</span></h3>
+  <p><b>定义</b>：构造资产组合，使每期的资产现金流入 ≥ 负债现金流出（完全匹配的严格版即「专门组合策略 dedicated portfolio」）。<b>与免疫的分工</b>：免疫只盯现值敏感度（允许单期错配）、现金流匹配要求逐期覆盖（最彻底但最贵）；实务中两者混用——核心负债现金流匹配、其余久期免疫。</p>
+  <div class="warn"><b>非寿险不适合现金流匹配的三理由</b>（2013·22 标准答案）：① 赔付时点与金额不确定（报案延迟、长尾、巨灾厚尾），负债现金流刻画本身就不可靠；② 一年期业务滚动，负债持续期随续保率波动，匹配需持续重构、成本过高；③ 匹配导向会牺牲财险资金本应以流动性为先的收益。→ 替代：流动性分层管理 + 压力测试 + 再保险。</div>
+  <div class="prac"><b>再保险手续费的两个概念</b>（2013·22 第二问）：① <b>预付手续费（分保佣金）</b>：分出业务时即按分保保费一定比例支付给分出人的佣金，补偿其获取成本，<b>期初即发生</b>；② <b>调整手续费（纯益手续费/利润佣金）</b>：再保合同盈利时按约定比例向分出人返还，<b>其时点是可预期的</b>——因为它依附于合同结算与盈利核算的既定时间表（通常在业务年度结束后按账单核算），金额虽不确定、发生时点可预判，因而在现金流预测中可纳入规划。</div>
+  <p><b>监管现金流测试</b>（规则 4 号第 9 条）：测试期未来三年（首年按季度、次年合并季度、第三年按年），覆盖普通账户（含传统/分红/万能子账户）与独立账户，做「累计现金及流动性管理工具」的<b>三级检验</b>：现金 → 变现高流动性资产 → 变现中低流动性资产。变现系数表：国债 95% → 政府债/准政府债/AAA 金融债 90% → AAA 非金融债/债基 85% → 上市股票/股基/可转债 80%（高流动性档）；持有至到期国债 95%…保险资管产品 75%、其他资产 60%（中低档）。<b>压力情景</b>（人身险）：新单保费 <b>−80%</b> + 退保率取 max(年化 25%, 2×基本退保率) + 到期固收 10% 违约，三者<b>同时发生</b>。中低流动性资产变现后仍有一期为负 → <b>整体量化评估 0 分</b>（流动性的一票否决）。</p>
+
+  <h3 id="s43">4.3 成本收益匹配 <span class="star s3">★★★</span><span class="src">规</span><span class="src">题</span></h3>
+  <p>规则 4 号中<b>权重最高（40%）</b>的维度，也是 2026 年真题「成本收益匹配的挑战和机会」的直接出处。核心思想一句话：<b>持有资产的收益必须覆盖负债的成本</b>——利差为正是生存线。</p>
+  <div class="formula">
+    <b>利差指标族（寿险视角）</b>
+    <div class="fx"><b>M = G − K</b>：年化综合投资收益率 − 寿险业务负债资金成本率</div>
+    <div class="fx"><b>N = H − L</b>：风险调整后综合投资收益率 − 负债保证成本率</div>
+    <div class="fx"><b>O = E − J</b>：年化会计投资收益率 − 负债有效成本率（IRR 法）</div>
+    <div class="fx">H = RAROI = G − [8% × √(MC<sub>市场</sub>² + 2×<b>0.25</b>×MC<sub>市场</sub>×MC<sub>信用</sub> + MC<sub>信用</sub>²)] / 资金运用平均净额</div>
+    <div class="note">收益端区分「会计投资收益率 E」（不含可供出售公允价值变动）与「综合投资收益率 G」（含）。成本端四口径：保证成本率 L（预定利率/最低保证利率）、资金成本率 K（分红=宣告红利水平+预定利率、万能=过去12个月结算利率均值）、有效成本率 J（使负债现金流现值=资产账面的 IRR）、非寿险 R = (综合成本−已赚保费)/(准备金+净资产)。</div>
+  </div>
+  <p><b>四大压力情景</b>（详见<a href="quant.html">专章 B</a>）：情景一宏观恶化（权益三年 VaR 下跌、房地产 −20%、利差扩大 σ=77%、关注类以下违约损失 60%、汇率 ±20%）；情景二<b>长期低利率</b>（再投资收益率按期限下调 −73% ~ −24%，期限越短降幅越大）；情景三<b>利率跳升</b>（无风险利率第 2 年 +100bps、第 3 年再 +100bps，负债成本同步上调——防的不是利差损而是「资产缩水 + 负债成本上行」的双杀）；情景四非寿险影响（保费 130%/150%、赔付费用 106%/110%）。</p>
+  <details class="answer"><summary>2026 真题「成本收益匹配的挑战和机会」· 答题框架</summary>
+    <div class="body">
+      <p><b>挑战</b>：① 低利率下再投资收益率趋势性下行（情景二：短期限下调高达 73%），而存量保单预定利率刚性 → M 持续收窄乃至转负（利差损）；② 高预定利率存量（如 3.5% 时代产品）与新增资产收益倒挂；③ 万能结算利率的棘轮效应（资金成本率 K 黏性）；④ 中小公司高风险资产占比高，H 的风险扣减（8% 资本占用项）进一步侵蚀风险调整后利差；⑤ 会计口径与综合口径背离（OCI 波动）。</p>
+      <p><b>机会</b>：① 负债端「报行合一」与预定利率动态调整机制压降 K；② 拉长资产久期锁定长端收益（超长债、REITs、另类）；③ 提高账户精细化管理，分账户匹配资产（传统/分红/万能差异化管理）；④ 金规〔2023〕5 号因子优化（沪深300 0.30 等）降低资本占用、提升 RAROI；⑤ 以成本收益匹配评分（40% 权重）为抓手，倒逼产品定价与投资策略联动。</p>
+    </div>
+  </details>
+
+  <h3 id="s44">4.4 SAA/TAA 与再平衡 <span class="star s3">★★★</span><span class="src">教</span><span class="src">规</span><span class="src">题</span></h3>
+  <div class="steps">
+    <div class="stp"><b>SAA 战略资产配置</b><span> —— 3~10 年期，由负债特征驱动：先刻画负债久期/现金流/成本，再在风险预算与偿付能力约束下定大类资产比例（监管要求：资产战略配置规划至少三年，每年至少滚动评估一次）。</span></div>
+    <div class="stp"><b>TAA 战术资产配置</b><span> —— 1 年内围绕 SAA 有限偏离，捕捉市场机会；偏离幅度受限额管理（规则 5 号：年度资产配置计划为一年期策略）。</span></div>
+    <div class="stp"><b>再平衡两种方法</b><span> —— <b>新钱配置法</b>：SAA 目标只作用于新增可配置资金（到期资产、利息红利、业务净现金流），交易成本低、但纠偏慢；<b>整体配置法</b>：直接作用于组合整体，纠偏快、但实现损益与交易成本高。</span></div>
+    <div class="stp"><b>账户划分（32 号办法第 10 条）</b><span> —— <b>普通账户</b>（公司承担投资风险，含传统/分红/万能子账户 + 资本金账户）与<b>独立账户</b>（客户自担投资风险）；资本金参照普通账户管理。</span></div>
+  </div>
+  <div class="exam"><span class="yr hot">2026·简1</span><b>「回顾 ALM，优化 SAA」答题骨架</b>：第一步答 SAA 的 ALM 逻辑（负债驱动：负债久期/现金流/成本约束 + 偿付能力与流动性约束）；第二步给优化动作——久期缺口管理（增配长债/超长债）、账户分治（传统账户利率债为主、分红账户适度权益、万能账户高流动性）、风险预算重分配（权益占比与资本占用挂钩）、纳入利率衍生品对冲；第三步答治理保障（SAA 由 ALM 委员会审议、董事会审定，每年滚动评估）。</div>
+
+  <h3 id="s45">4.5 DFA 与「三端四表」 <span class="star s2">★★</span><span class="src">教</span><span class="src">题</span></h3>
+  <p><b>动态财务分析（DFA）</b>：用随机情景（利率随机模型、权益收益模型、相关性矩阵）把资产负债表的联合演化模拟上千条路径，输出未来各时点的财务结果分布。2014 年真题考过分红险 DFA 的步骤：<b>确定情景分析（确定性情景）→ 随机模拟情景分析（随机情景）→ 结果分布与极端情况评估 → 管理决策</b>。</p>
+  <p><b>ALM 模型的「三端四表」框架</b>（精算讲堂第 16 讯）：三端 = 资产端、负债端、资本端；四表 = 资产负债表、利润表、现金流量表、偿付能力报表。五大应用场景：① 偿付能力与资本规划预测；② 资产配置优化（改进 Markowitz 有效前沿 + 资产负债约束）；③ 新旧准则财务预测（新准则下折现率变动进 OCI、非经济假设由 CSM 吸收 → 净资产波动加大，ALM 价值凸显）；④ 定制化边际资本占用测算（每类资产对最低资本的边际贡献，选配置效率高的资产）；⑤ 气候风险压力测试与碳排放测算。</p>
+  <div class="tip"><b>资产端估值三法</b>（DFA 建模基础）：市场价值 = 现金流按（无风险即期利率 + Spread）折现；摊余成本 = 现金流按 IRR 折现；账面价值 = 交易/可供出售类取市值、其他取摊余成本。<b>负债端四套准备金</b>：法定 / 会计 / 偿付能力 / 内含价值相应负债——同一负债、四种目的、四个数字，这是科目八全书的暗线。</div>
+
+  <h3 id="s46">4.6 衍生品与再保险对冲 <span class="star s2">★★</span><span class="src">规</span><span class="src">题</span></h3>
+  <p><b>利率风险对冲工具箱</b>：</p>
+  <ul>
+    <li><b>利率互换</b>：付固定收浮动 = 做空久期（资产久期过长时用）；收固定付浮动反之。偿二代口径：EX = 名义本金，收固定付浮动敞口为正。</li>
+    <li><b>国债期货</b>：空头对冲债券组合；符合套期有效性且期限 ≥1 个月可合并计算最低资本（组合 MC = |债券组合资本要求 − 期货空头价值 × 套期有效性 × 因子|）。</li>
+    <li><b>股指期货/期权</b>：对冲权益敞口（2014 年选择题：Delta 用于套期保值比率、指数期权降投连产品股票风险）。</li>
+  </ul>
+  <p><b>再保险的资产负债双侧效应</b>（2026 Excel 真题核心逻辑）：负债侧分出 → 应收分保准备金增加（认可资产）；实际资本侧按第 1 号第 38 条分级；最低资本侧「三降一升」——保险风险 MC 下降（损失发生/退保风险暴露减少）、市场风险 MC 下降（分出资产减少投资敞口，但注意资产减少的抵消）、信用风险 MC 上升（分入人违约风险：境内按充足率 0.008~0.745、境外有担保 0.077/无担保 0.499）；净效应通常为正但取决于分入人资质与担保安排。</p>
+
+  <h3 id="s47">4.7 投资理论补充卡：早期真题的弹药库 <span class="star s2">★★</span><span class="src">教</span><span class="src">题</span></h3>
+  <p>2009 年以前与 2014 / 2017 年卷面里散落着一批<b>投资理论考点</b>（马科维茨、期权、套利定价）——它们大多超出当前考纲主线，但"越是老题越可能换个马甲回来"（久期凸性就是先例）。以下卡片全部折叠存放：读得丝滑，考前再翻。</p>
+
+  <details class="answer"><summary>卡片一 · 马科维茨均值—方差模型（2009 前·2 完整详解见真题馆）</summary>
+    <div class="body">
+      <div class="formula">
+        <div class="fx">组合方差：σ_p² = w₁²σ₁² + w₂²σ₂² + 2w₁w₂σ₁₂　（σ₁₂ = ρσ₁σ₂）</div>
+        <div class="fx">最小方差组合：w₁* = (σ₂² − σ₁₂) / (σ₁² + σ₂² − 2σ₁₂)</div>
+        <div class="fx">含无风险资产的切点组合：w* ∝ Σ⁻¹(μ − r·1)；风险容忍度 T 的总投资比例 k* = T·(μ_t − r)/σ_t²</div>
+      </div>
+      <p><b>协方差矩阵奇异（不可逆）的四种情形</b>：① 两资产完全线性相关（ρ = ±1）；② 某资产是其他资产的线性组合（基金完全复制指数）；③ 存在冗余资产使权重解不唯一；④ 因子模型下资产数多于独立因子数（秩亏）。判断方法：det(Σ) = 0。</p>
+      <p><b>与 ALM 的连接</b>：保险资产配置 = 带负债约束的马科维茨扩展——监管规则第 4 号的 H = RAROCI 本质是"扣掉资本占用后的夏普比率"。有效前沿思想仍是 SAA 优化的数学底座。</p>
+    </div>
+  </details>
+
+  <details class="answer"><summary>卡片二 · 期权价格六大影响因素（2009 前·1）</summary>
+    <div class="body">
+      <div class="tbl-scroll">
+      <table>
+        <tr><th>因素（上升）</th><th>看涨期权价值</th><th>看跌期权价值</th></tr>
+        <tr><td>标的资产价格 S</td><td class="pos">↑</td><td class="neg">↓</td></tr>
+        <tr><td>执行价格 K</td><td class="neg">↓</td><td class="pos">↑</td></tr>
+        <tr><td>到期期限 T（欧式看涨无红利时不确定）</td><td class="pos">↑</td><td class="pos">↑</td></tr>
+        <tr><td>波动率 σ（唯一只影响波动、不影响期望的因子）</td><td class="pos">↑</td><td class="pos">↑</td></tr>
+        <tr><td>无风险利率 r</td><td class="pos">↑</td><td class="neg">↓</td></tr>
+        <tr><td>红利 / 收益 D（持有期流出）</td><td class="neg">↓</td><td class="pos">↑</td></tr>
+      </table>
+      </div>
+      <p><b>保险语境</b>：保单内嵌选择权正是用期权语言刻画的——退保权 = 看跌期权（保单现金价值对账户价值）、保证利率 = 利率下限（floor）、万能结算利率的"保底 + 上不封顶" = 领子期权（collar）。VIF 计算中"金融选择权和保证的成本降低 VIF"，就是这些内嵌期权权利金的精算化身。</p>
+    </div>
+  </details>
+
+  <details class="answer"><summary>卡片三 · put-call parity 与套利判断（2009 前·6）</summary>
+    <div class="body">
+      <div class="formula">
+        <div class="fx">C − P = S − PV(K) − PV(D)　（同一标的、同一执行价、同一期限）</div>
+      </div>
+      <p><b>套利判断三步</b>（以原题为例：S = 20，K = 22，r = 5%，call = 5）：① 算理论关系——无红利时 C − P 应等于 S − K/(1+r) = 20 − 20.95 = −0.95，即理论 P = C + 0.95 = 5.95；② 与市场价格比较——若市价 P ≠ 5.95，买入低估腿、卖出高估腿锁定无风险利润；③ 注意题给"一年后股票 12.35"等干扰信息是情景值不是套利判断依据——套利只看<b>当前价格与平价关系的偏离</b>。若考虑派息 v，还要扣 PV(D)。</p>
+      <p><b>实务落点</b>：组合保险（用指数期权 / 期货复制看跌保护投连账户）正是平价关系的规模应用——2014·3 选择题 D 选项考的就是这个。</p>
+    </div>
+  </details>
+
+  <details class="answer"><summary>卡片四 · 无套利定价与 APT（2014·7 / 2017·9）</summary>
+    <div class="body">
+      <p><b>无套利定价</b>：若市场不存在套利机会，则存在<b>风险中性测度（等价鞅测度）</b>使所有资产折现价格为鞅——金融数学基本定理（FTAP），这是无套利的<b>充要条件</b>。资产价格随信息即时调整只是无套利的<b>维持机制</b>（套利者的交易使偏离瞬时消失）。</p>
+      <p><b>APT 套利定价理论</b>（Ross）：资产期望收益 = 无风险利率 + Σβᵢ×λᵢ（因子风险溢价）——多因子线性模型，CAPM 是其单因子特例。系统性风险套利的三个条件（2017·9）：① 因子结构相同（同组系统性风险暴露）；② 头寸组合<b>自融资</b>（净投入为零）；③ 无因子敞口（β 对冲干净）→ 组合收益确定，若非零即为套利。原题给 4 条债券的双因素模型即是"找权重使两因子敞口归零"的线性方程组。</p>
+      <p><b>与 ALM 的连接</b>：免疫组合本身就是"无套利思维"的资产端应用——构造对利率因子零敞口的组合；利差交易（carry trade）则是带条件（利率不跳升）的"准套利"，情景三压力测试就是在问"准套利的条件崩了怎么办"。</p>
+    </div>
+  </details>
+
+  <details class="answer"><summary>卡片五 · 期权组合收益图（2009 前·4：备兑头寸三变体）</summary>
+    <div class="body">
+      <p>设执行价 = 当前股价 P_A，记到期价 S_T，看涨期权空头收权利金 c：</p>
+      <div class="tbl-scroll">
+      <table>
+        <tr><th>头寸</th><th>到期收益（S_T ≤ K 时 / S_T &gt; K 时）</th><th>形态</th></tr>
+        <tr><td>① 1 股 + 1 份看涨空头</td><td>（S_T + c）/（K + c）</td><td><b>备兑看涨（covered call）</b>：收益封顶、下行有保护 c——到期价为 S_T + Min(0, K−S_T) + c</td></tr>
+        <tr><td>② 2 股 + 1 份看涨空头</td><td>（2S_T + c）/（S_T + K + c）</td><td>仍是上行封顶，但斜率未完全对冲（1 股裸露）</td></tr>
+        <tr><td>③ 1 股 + 2 份看涨空头</td><td>（S_T + 2c）/（2K − S_T + 2c）</td><td><b>比率备兑（2:1）</b>：S_T 超过某点后收益<b>反转下行</b>（第二个空头开始裸露）——凸性为负</td></tr>
+      </table>
+      </div>
+      <p><b>保险语境</b>：卖出保险 ≈ 卖出看跌期权（收保费、承担尾部损失），巨灾再保险 ≈ 买入价外看跌对冲尾部——③ 的"收益反转"形态正是没有再保的承保杠杆写照。</p>
+    </div>
+  </details>
+</section>
+
+<!-- ========== 四、公式与数字卡片 ========== -->
+<section>
+  <h2><span class="sn">04</span>公式与数字卡片</h2>
+  <div class="formula">
+    <b>本章一页纸</b>
+    <div class="fx">D_mac = Σt·PV/ΣPV；D_mod = D_mac/(1+y)；D_eff = −(PV₊−PV₋)/(2·PV·0.01)</div>
+    <div class="fx">ΔP/P ≈ −D_mod·Δy + ½C·(Δy)²；Gap = D_A − D_L·(V_L/V_A)</div>
+    <div class="fx">M = G − K（综合收益率−资金成本）；N = H − L；O = E − J</div>
+    <div class="fx">规则4号权重：期限结构 30 + 成本收益 40 + 现金流 30；两道否决线：核心<50% / 综合<100% → 0分；中低流动性资产变现后仍负 → 0分</div>
+  </div>
+  <div class="mnem"><b>总口诀</b><span class="verse">久期免疫凸性护，缺口看谁久期长；<br>现金流要逐期盖，非寿险靠分层扛；<br>成本收益看 M 值，G 减 K 来定生死；<br>战略配置负债引，新钱整体两再平衡；<br>随机模拟看三年，三端四表定乾坤。</span></div>
+</section>
+
+<!-- ========== 五、真题印证 ========== -->
+<section>
+  <h2><span class="sn">05</span>真题印证</h2>
+  <div class="exam"><span class="yr hot">2026·简5</span><b>「成本收益匹配的挑战和机会」</b>——4.3 折叠卡已给完整框架（挑战五条 + 机会五条）。</div>
+  <div class="exam"><span class="yr hot">2026·简8</span><b>「传统险账户如何 ALM 以降低报表波动」</b>——传统险保证刚性 + 久期长：① 拉长资产久期贴合负债（国债/超长债）；② 利率衍生品对冲残余缺口；③ 降低权益与高波动资产占比（新准则下权益 FVTPL 波动直接进利润表）；④ 新钱配置优先长久期利率债。落点 4.1 + 4.4。</div>
+  <div class="exam"><span class="yr">2017·7</span><b>财险资产负债匹配三问</b>——险种归类（短尾/长尾/巨灾）、半年/年底现金流与经营收益测算、95% 概率赔付约束下的收益最大化配置——现金流匹配 + 流动性管理的综合计算题。</div>
+  <div class="exam"><span class="yr">2014·18</span><b>负债/资产三情景估值 + 现金流能否完全匹配</b>——久期计算 + 情景折现 + 匹配判断三合一，本套路在<a href="exam3.html">卷三</a>全真复刻。</div>
+  <div class="exam"><span class="yr">2013·22 / 2009 前·11</span><b>期限错配与现金流匹配论述</b>——「中国资产期限 &lt; 负债期限」的三问：概念理解、风险（再投资风险/利差损/流动性）、长期资产占比受限的资金运用环境分析。</div>
+</section>
+
+<!-- ========== 六、实务视角与口诀 ========== -->
+<section>
+  <h2><span class="sn">06</span>实务视角与口诀</h2>
+  <div class="prac"><b>实务视角（一名精算师的旁白）</b>：季度 ALM 报告交上去，评分表上每一个扣分项都会被追问。久期缺口超 ±2 年，投资部下周就要提配置调整方案；现金流测试第三级（中低流动性变现后）踩线，产品端的退保假设马上要重新检视。规则 4 号真正厉害的地方在于：它把「资产负债管理」从精算部的一份分析报告，变成了全公司资源分配的指挥棒——<b>你考核什么，公司就变成什么样。</b></div>
+  <div class="mnem"><b>记不满时先记三句</b><span class="verse">久期平移免疫，现金流逐期盖，利差正才是命；<br>规则四号三四十（30/40/30），两道否决要牢记；<br>压力三负八十退，变现三级见真章。</span></div>
+</section>
+
+  <p class="link">进阶延伸：再平衡三机制 · 资产端估值 · IFRS17 衔接 → <a href="alm-plus.html">升级版 A⁺ ALM 模型与实务</a></p>
+<div class="pager">
+  <a class="pager-prev" href="ch3.html"><small>← 上一页</small>CH.03 价值评估与管理</a>
+  <a class="pager-next" href="calc.html"><small>下一页 →</small>专章 A 偿二代计算手册</a>
+</div>
+<button class="done-btn" data-id="ch4">○ 标记本页已完成</button>
+<footer class="colophon">2026 中国精算师资格考试 · 资产负债管理与价值评估（科目八）知识库 · 仅供学习交流</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>
