@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>升级版 A · 资产负债管理模型与实务 · 2026 中国精算师科目八知识库</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<aside class="side">
+  <div class="brand"><b>ALM · 科目八</b><span>资产负债管理与价值评估 · 知识库</span></div>
+  <nav>
+    <div class="grp">总览</div>
+    <a href="xihong.html">关于 · 西红精算</a>
+    <a href="index.html">首页 · 考试全景</a>
+    <a href="about.html">本库说明 · 编法与用法</a>
+    <div class="grp">四大篇章（按考纲权重）</div>
+    <a href="ch1.html">① ALM 基础<span class="w">10%</span></a>
+    <a href="ch2.html">② 偿付能力评估与管理<span class="w">40%</span></a>
+    <a href="ch3.html">③ 价值评估与管理<span class="w">25%</span></a>
+    <a href="ch4.html">④ 资产负债管理<span class="w">25%</span></a>
+    <div class="grp">四大专章（纵深武器库）</div>
+    <a href="calc.html">A 偿二代计算手册</a>
+    <a href="quant.html">B ALM 量化评估拆解</a>
+    <a href="ev.html">C 内含价值实战</a>
+    <a href="hotspot.html">D 低利率与利差损</a>
+    <div class="grp">升级版 · 精算讲堂</div>
+    <a href="alm-plus.html" class="on">A⁺ ALM 模型与实务</a>
+    <a href="ev-plus.html">B⁺ 价值评估进阶</a>
+    <a href="companion.html">C⁺ ALM 在线库 · 导读</a>
+    <div class="grp">真题与实战</div>
+    <a href="zhenti.html">真题馆 · 2026 全解 ★</a>
+    <a href="exam1.html">卷一 · 筑基卷</a>
+    <a href="exam2.html">卷二 · 规则卷</a>
+    <a href="exam3.html">卷三 · 全真冲刺卷</a>
+  </nav>
+  <div class="prog-mini">已完成 <b>0 / 16</b> 页<br>点击每页底部按钮记录进度</div>
+</aside>
+<main class="main">
+
+<div class="ch-head">
+  <div class="no">PLUS A</div>
+  <h1>资产负债管理 · 升级版：模型、口径与实务场景</h1>
+  <div class="sub">ALM 模型全景 · 四类准备金 · 资产端估值 · 再平衡机制 · IFRS17 衔接 · 五大应用场景</div>
+  <div class="meta"><span>素材来源：精算讲堂《资产负债管理模型》</span><span>补充 CH.01 / CH.04 / 专章 B</span><span>考纲外实务扩充</span></div>
+</div>
+
+<div class="toc"><b>本页目录</b>
+<ol>
+  <li>导读：这一页讲主库没讲透的什么</li>
+  <li>ALM 模型全景：三端结构与建模流程</li>
+  <li>负债端：四类准备金口径与三差分析</li>
+  <li>资产端估值：三类方法与会计分类联动</li>
+  <li>利率与再投资：曲线假设的三个层次</li>
+  <li>再平衡机制：阈值、频率与触发器设计</li>
+  <li>IFRS17 下的 ALM：CSM 联动与 OCI 对冲</li>
+  <li>五大应用场景与考试视角</li>
+</ol>
+</div>
+
+<section>
+  <h2><span class="sn">00</span>导读：这一页讲主库没讲透的什么 <span class="star s2">★★</span></h2>
+  <p>主库的 CH.01~04 与专章 B 已经把<b>监管规则口径</b>（量化评估 30/40/30、久期缺口、压力情景）拆到条文级。这一页换一个视角——从<b>精算讲堂《资产负债管理模型》</b>出发，补齐「一家保险公司内部如何真的建 ALM 模型」的实务知识：<span class="src">教</span></p>
+  <ul>
+    <li><b>模型怎么搭</b>：三端结构（资产端 / 负债端 / 策略端）与建模七步流程；</li>
+    <li><b>口径怎么统一</b>：四类准备金（法定 / 会计 / 税务 / 偿二代认可）与三差分析——2026 真题 Excel 1 成本收益匹配题的底层语言；</li>
+    <li><b>资产怎么估值</b>：摊余成本、市值、模型估值三类方法及其与 IFRS9 三分类的联动——主库完全未展开的一块；</li>
+    <li><b>组合怎么管</b>：再平衡的阈值触发 / 定期触发 / 事件触发三种机制；</li>
+    <li><b>结果怎么用</b>：产品开发、投资策略、资本管理、风险管理、绩效考核五大场景。</li>
+  </ul>
+  <p class="src-note"><b>本页知识来源</b>：精算讲堂《资产负债管理模型》课件（IMA 知识库「中国精算师ALM考试」）＋《资产负债管理》指定教材 ＋ IFRS9 / IFRS17 会计准则框架。徽章：<span class="src">教</span> = 教材与讲堂、<span class="src">规</span> = 监管规则与准则、<span class="src">题</span> = 历年真题。定位是<b>考纲外实务储备</b>——回答论述题时能写上这些内容，档次立刻不同。</p>
+</section>
+
+<section>
+  <h2><span class="sn">01</span>ALM 模型全景：三端结构与建模流程 <span class="star s2">★★</span><span class="src">教</span></h2>
+  <p>一个完整的保险公司 ALM 模型由三端构成，数据在端与端之间流动形成闭环：</p>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>端</th><th>输入</th><th>核心引擎</th><th>输出</th></tr>
+    <tr><td><b>负债端</b></td><td>保单数据 / 精算假设（死亡率、退保率、费用、分红）</td><td>负债现金流预测模型（含选择权行为模型）</td><td>负债现金流时间序列、准备金、久期 / 凸性、VIF</td></tr>
+    <tr><td><b>资产端</b></td><td>持仓明细（券、非标、股权、衍生品）+ 市场数据</td><td>资产现金流与重定价模型、估值引擎</td><td>资产现金流、再投资需求、市值 / 账面值、久期</td></tr>
+    <tr><td><b>策略端</b></td><td>两端的缺口信号 + 约束（监管 / 账户 / 风险偏好）</td><td>优化器（缺口最小化 / 收益最大化 / 风险预算）</td><td>SAA 方案、再平衡指令、对冲方案</td></tr>
+  </table>
+  </div>
+  <h3>建模七步流程</h3>
+  <div class="steps">
+    <div class="stp"><b>① 明确目标与约束</b><span> —— 监管约束（量化评估指标、偿付能力）+ 公司约束（风险偏好、账户隔离、流动性）。</span></div>
+    <div class="stp"><b>② 负债建模</b><span> —— 按产品分组预测现金流；关键难点是<b>投保人行为假设</b>（退保、部分领取、万能结算利率弹性）。</span></div>
+    <div class="stp"><b>③ 资产建模</b><span> —— 现金流映射（固定收益逐笔、非标摊余、权益类市值漂移）；含违约与提前偿还模块。</span></div>
+    <div class="stp"><b>④ 情景生成</b><span> —— 确定性情景（监管六情景）+ 随机情景（利率随机模型：单因子 / 双因子 Hull-White、CIR、LIBOR 市场模型）。</span></div>
+    <div class="stp"><b>⑤ 联动计算</b><span> —— 每个情景下资产 × 负债现金流轧差 → 缺口序列 / 净资产分布。</span></div>
+    <div class="stp"><b>⑥ 优化与回测</b><span> —— 用历史数据回测模型偏差（经验分析调整行为假设），用优化器搜索满足约束的最优配置。</span></div>
+    <div class="stp"><b>⑦ 监控与再平衡</b><span> —— 指标监控 → 触发再平衡 → 回到第 ① 步，形成年度循环。</span></div>
+  </div>
+  <details class="answer"><summary>折叠 · 模型分类谱系与选型逻辑</summary><div class="body">
+    <p><b>按确定性程度</b>：确定性模型（deterministic，单一利率路径，用于监管报送与基础报表）→ 情景模型（scenario-based，有限个规定情景，用于压力测试）→ 随机模型（stochastic，数千条蒙特卡洛路径，用于经济资本与尾部风险）。</p>
+    <p><b>按建模颗粒度</b>：因子模型（久期 / 凸性 / PV01 快速近似，日常监控用）vs 现金流模型（逐保单或模型点 model point，年度评估用）。实务中两层并存：日频用因子层看方向，季度 / 年度用现金流层定方案——这就是 CH.04 讲的「久期匹配是第一道防线、现金流匹配是第二道防线」的技术实现。</p>
+    <p><b>选型三问</b>：用途是什么（监管 / 内控 / 定价）？数据支持到什么颗粒度？计算资源允许跑多少条路径？——考试论述「如何搭建 ALM 模型」时按这三问展开即是框架分。</p>
+  </div></details>
+</section>
+
+<section>
+  <h2><span class="sn">02</span>负债端：四类准备金口径与三差分析 <span class="star s3">★★★</span><span class="src">教</span><span class="src">规</span><span class="src">题</span></h2>
+  <p>同一家公司同一时点，负债可以按<b>四个不同口径</b>计量——这是理解偿付能力、会计利润与税务「三张皮」的钥匙，也是 2026 真题 Excel 1 成本收益匹配题的底层语言：</p>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>口径</th><th>依据</th><th>特征</th><th>用途</th></tr>
+    <tr><td><b>法定准备金</b></td><td>监管规定（偿二代 + 精算规定）</td><td>审慎原则：不利假设、不许认可未来投资收益的超额部分</td><td>偿付能力报告、监管考核</td></tr>
+    <tr><td><b>会计准备金</b></td><td>企业会计准则（新保险合同准则 / IFRS17）</td><td>最佳估计 + 风险调整 + CSM 摊销；折现率盯市</td><td>财务报表、对外披露</td></tr>
+    <tr><td><b>税务准备金</b></td><td>税法</td><td>一般在法定或会计口径上做调整（可抵扣限额）</td><td>所得税计算</td></tr>
+    <tr><td><b>内含价值口径负债</b></td><td>EV 评估标准</td><td>最佳估计假设 + 市场一致折现；扣除要求资本对应负债</td><td>EV / VNB 评估</td></tr>
+  </table>
+  </div>
+  <p><b>四口径并存的后果</b>：同一保单在四个体系里的「利润」确认节奏不同——法定口径最保守（利润前置空间小）、EV 口径把未来利润折现（VIF）、会计口径按 CSM 摊销（利润后置且平滑）。考试问「为什么偿付能力充足但报表亏损」（或反之），答案就在口径差异 + 投资端会计分类的联动里。</p>
+  <h3>三差分析：负债端经营语言的公分母</h3>
+  <p>利差（实际投资收益率 − 准备金评估假设利率）、死差（实际赔付 / 给付 vs 假设）、费差（实际费用 vs 假设费用）——加上退保差与利源分析，构成「三差（五差）」体系。ALM 视角下最重要的是<b>利差</b>，而利差的分母正是准备金口径：法定口径利差 ≈ 投资收益率 − 定价利率（刚性）；EV 口径利差 ≈ 投资收益率 − 资产份额累积利率（可调）。<b>2026 真题 Excel 1 的「平均负债成本 K」本质就是法定 / 会计口径的负债成本率</b>，与 G（投资收益率）相减即利差 M——负利差就是利差损的当代表现。</p>
+  <p class="link">考点回链：<a href="zhenti.html">真题馆 Excel 1 详版演算表</a> · <a href="quant.html">专章 B 成本收益匹配</a></p>
+</section>
+
+<section>
+  <h2><span class="sn">03</span>资产端估值：三类方法与会计分类联动 <span class="star s3">★★★</span><span class="src">教</span><span class="src">规</span></h2>
+  <p>主库此前只写了负债怎么估，这一节补<b>资产怎么估</b>——ALM 的资产端语言。估值方法按信息来源分三类：</p>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>估值方法</th><th>适用资产</th><th>技术要点</th><th>风险点</th></tr>
+    <tr><td><b>① 摊余成本法</b></td><td>持有至到期债券、贷款、非标</td><td>现金流折现按实际利率法摊销利息</td><td>利率上行时账面值高估（隐藏浮亏）；违约减值</td></tr>
+    <tr><td><b>② 市场 / 可观察价格法</b></td><td>上市股票、交易所债券、公募基金</td><td>收盘价 / 中债估值 / 中证估值</td><td>流动性差的券估值失真；停牌股僵死</td></tr>
+    <tr><td><b>③ 模型估值法</b></td><td>非上市股权、不动产、衍生品、私募</td><td>现金流折现（DCF）、最近融资价格法、市场乘数法（P/E、P/B、Cap Rate）、期权定价模型</td><td>假设敏感、估值频率低（季度 / 年度）、顺周期波动</td></tr>
+  </table>
+  </div>
+  <h3>与 IFRS9 三分类的联动（资产端会计语言）</h3>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>IFRS9 分类</th><th>计量</th><th>波动去向</th><th>保险资金典型持仓</th></tr>
+    <tr><td><b>AC 摊余成本</b></td><td>摊余成本 + 预期信用损失（ECL）</td><td>不进损益（减值除外）</td><td>持有至到期利率债、高等级信用债</td></tr>
+    <tr><td><b>FVOCI 以公允价值计且变动进其他综合收益</b></td><td>公允价值</td><td>公允价值变动进 OCI，处置时不转损益（债）/ 转损益（股）</td><td>以收取现金流兼出售的债券、部分战略持股</td></tr>
+    <tr><td><b>FVTPL 公允价值计且变动进损益</b></td><td>公允价值</td><td>直接进当期损益</td><td>交易性债券、股票、基金、衍生品、不满足 SPPI 的资产</td></tr>
+  </table>
+  </div>
+  <details class="answer"><summary>折叠 · ALM 如何利用会计分类「降波动」——2026 真题简 8 的进阶版答案</summary><div class="body">
+    <p><b>机制</b>：负债端在 IFRS17 下若选择「风险调整与未来现金流不计提纾困特征、折现率变动进 OCI」的组合，则资产端配 FVOCI 债券，使<b>折现率变动对负债的影响与利率变动对 FVOCI 资产的影响同进 OCI、方向相反、自然对冲</b>——损益表只留承保与费用科目，报表波动大幅下降。</p>
+    <p><b>约束</b>：① SPPI 测试（本金 + 利息特征）淘汰了含权债、结构化产品；② 指定 FVOCI 的权益工具不可逆转、处置不转损益；③ 摊余成本类资产需通过业务模式测试（持有收取现金流）。<b>过度摊余成本化的代价</b>：利率上行期的浮亏藏在账面值里，净资产失真——这就是监管 2023 年后反复提示「长债利率风险」时要求保险机构加强 AC 类资产利率风险评估的原因。</p>
+    <p><b>与偿二代的关系</b>：会计分类不影响认可价值（认可口径按监管规则计量），但影响<b>净资产波动路径</b>，进而影响实际资本中「核心一级 = 净资产」的季节性波动。答题时写出「会计分类 → OCI 对冲 → 实际资本波动下降」这条传导链，就是满分结构。</p>
+  </div></details>
+  <p class="link">考点回链：<a href="zhenti.html">真题馆 简 8 详版</a> · <a href="hotspot.html">专章 D 低利率资产端策略</a></p>
+</section>
+
+<section>
+  <h2><span class="sn">04</span>利率与再投资：曲线假设的三个层次 <span class="star s2">★★</span><span class="src">教</span><span class="src">规</span></h2>
+  <p>ALM 模型里所有折现与再投资都挂在一条利率曲线上，但「一条曲线」其实有三个层次，混用层次是实务建模最常见的错误：</p>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>层次</th><th>含义</th><th>典型来源</th><th>用在模型哪里</th></tr>
+    <tr><td><b>即期曲线（市场曲线）</b></td><td>当前时点各期限零息收益率</td><td>国债收益率曲线、750 日移动平均（偿二代 / 准备金）</td><td>存量资产负债的<b>折现</b></td></tr>
+    <tr><td><b>远期 / 情景曲线</b></td><td>未来各时点的预期或压力曲线</td><td>监管六情景（专章 B）、随机利率模型生成</td><td>未来现金流的<b>再投资定价与压力测试</b></td></tr>
+    <tr><td><b>终极利率（Ultimate）</b></td><td>超长期限锁定的收敛利率</td><td>规则第 4 号 40 年以上变动为 0；EV 标准终极利率假设</td><td>超长久期负债（终身寿、年金）的<b>尾部折现</b></td></tr>
+  </table>
+  </div>
+  <p><b>再投资假设的三种流派</b>：① 现期收益率外推（简单但失真）；② 曲线远期利率（无套利但长期偏高——「远期利率不是预期」的经典陷阱）；③ 情景 / 随机模拟（监管成本收益压力情景即此流派：情景二长期低利率就是把再投资收益率按期限系统性下调 73%~24%）。考试答「情景二与情景三的差别」，本质就是<b>再投资假设的下调方式不同</b>：前者缓降（长期低利率），后者跳升（+100bps × 2 年）。</p>
+  <p class="link">考点回链：<a href="quant.html">专章 B 六情景参数</a> · <a href="hotspot.html">专章 D 情景二详解</a></p>
+</section>
+
+<section>
+  <h2><span class="sn">05</span>再平衡机制：阈值、频率与触发器设计 <span class="star s2">★★</span><span class="src">教</span><span class="src">题</span></h2>
+  <p>SAA 定的是「航道」，再平衡解决「偏航后何时修正」。三种机制各有代价：</p>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>机制</th><th>规则</th><th>优点</th><th>缺点</th></tr>
+    <tr><td><b>定期再平衡</b></td><td>固定频率（季度 / 年度）调回目标权重</td><td>纪律性强、可预期</td><td>对区间内漂移不敏感；市场极端时反应慢</td></tr>
+    <tr><td><b>阈值再平衡</b></td><td>资产类别权重偏离目标 ±X% 或久期缺口超 ±N 年即触发</td><td>与风险指标挂钩、响应及时</td><td>波动市场里频繁触发 → 交易成本与税收摩擦</td></tr>
+    <tr><td><b>事件触发再平衡</b></td><td>重大事件（大额保费流入 / 集中退保 / 偿付能力跌破内控线 / 监管新规）即时评估</td><td>覆盖模型盲区</td><td>依赖人工判断，需明确事件清单与授权</td></tr>
+  </table>
+  </div>
+  <p><b>与监管指标的衔接</b>：实务上阈值常直接锚定量化评估指标——久期缺口内控线 ±2 年（监管满分线）、成本收益匹配口径利差 M ≥ 0、流动性比例 ≥ 5%。这样一旦指标逼近扣分区，再平衡自动前置。<b>考试答「如何执行 SAA」</b>（2016/2026 简答反复出现），三层机制 + 锚定监管指标就是完整框架。</p>
+  <p class="link">考点回链：<a href="ch4.html">CH.04 §4.4 SAA/TAA</a> · <a href="quant.html">专章 B 久期缺口评分档</a></p>
+</section>
+
+<section>
+  <h2><span class="sn">06</span>IFRS17 下的 ALM：CSM 联动与背对背对冲 <span class="star s2">★★</span><span class="src">规</span></h2>
+  <p>新保险合同准则不只改变披露，还改变了 ALM 的<b>管理目标函数</b>——从「管理净资产」部分转向「管理 CSM 摊销节奏 + OCI 波动」：</p>
+  <ul>
+    <li><b>计量单元与分组</b>：按盈利性分组（亏损组立即确认 P&L、无显著可能性亏损组单独处理），ALM 需按组别匹配资产；</li>
+    <li><b>CSM 吸收机制</b>：与非金融假设变动相关的未来现金流变化调整 CSM（摊销节奏改变）而非当期损益——负债端有了「缓冲垫」，资产端 FVOCI 对冲与之配合；</li>
+    <li><b>背对背（back-to-back）对冲</b>：对分红险等 participating 合同，若持有底层资产公允价值变动与负债分红调整基本同步，损益接近零波动——ALM 从「久期匹配」升级为「盈余分配机制匹配」；</li>
+    <li><b>VFA 变动收费法</b>：分红账户负债与底层资产回报挂钩，CSM 随资产回报浮动——直接改变「利差」的定义：从固定假设利差变为「实际资产回报 − 分红支出」的余额。</li>
+  </ul>
+  <details class="answer"><summary>折叠 · IFRS17 × 偿二代 × EV 三体系对照表（考纲外大杀器）</summary><div class="body">
+    <div class="tbl-scroll">
+    <table>
+      <tr><th>维度</th><th>偿二代</th><th>IFRS17 / 新准则</th><th>EV 评估标准</th></tr>
+      <tr><td>负债计量</td><td>法定认可口径（审慎）</td><td>履约现金流（最佳估计 + 风险调整）+ CSM</td><td>最佳估计 + 市场一致折现</td></tr>
+      <tr><td>折现率</td><td>750 日国债 + 综合溢价（三段）</td><td>盯市曲线（OCI 指定或损益）</td><td>与资产一致的税后投资收益率 / 市场曲线</td></tr>
+      <tr><td>未来利润</td><td>不认可（审慎）</td><td>CSM 摊销释放</td><td>VIF 折现确认</td></tr>
+      <tr><td>波动偏好</td><td>越稳越好（监管视角）</td><td>中性（反映经济实质）</td><td>评估日时点值</td></tr>
+      <tr><td>与 ALM 的接口</td><td>量化评估 30/40/30</td><td>OCI 对冲 / 背对背 / VFA</td><td>投资假设敏感性 ±50bps → ±20%</td></tr>
+    </table>
+    </div>
+    <p>论述题若问「三套体系下资产负债管理目标是否一致」：目标一致（都要求资产覆盖负债的期限内与价值上匹配），但<b>度量语言不同</b>——偿二代讲缺口与资本占用、新准则讲 CSM 摊销与 OCI 波动、EV 讲折现值与假设敏感性。成熟公司的 ALM 治理是在一套模型上同时输出三套口径的报表（「一次建模、三口径输出」）。</p>
+  </div></details>
+</section>
+
+<section>
+  <h2><span class="sn">07</span>五大应用场景与考试视角 <span class="star s3">★★★</span><span class="src">教</span><span class="src">题</span></h2>
+  <p>ALM 模型的输出最终落在五个管理场景——这也是论述题「资产负债管理在公司经营中的作用」的展开骨架：</p>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>场景</th><th>ALM 提供什么</th><th>决策示例</th></tr>
+    <tr><td><b>① 产品开发</b></td><td>负债特性画像（久期、保证成本、退保权价值）</td><td>预定利率上限设定、新业务利差敏感性、分红演示利率</td></tr>
+    <tr><td><b>② 投资策略</b></td><td>SAA 优化、久期 / 现金流匹配方案、再平衡阈值</td><td>增配 30 年国债对冲年金、非标额度控制</td></tr>
+    <tr><td><b>③ 资本管理</b></td><td>利率冲击下实际资本变动、资本工具选择</td><td>发行资本补充债补综合充足率（2026 Excel 3）</td></tr>
+    <tr><td><b>④ 风险管理</b></td><td>压力测试 / 情景分析、尾部风险度量</td><td>情景三跳升预案、退保潮流动性预案</td></tr>
+    <tr><td><b>⑤ 绩效考核</b></td><td>三差归因、EV 营运利润、投资超额收益分解</td><td>长周期考核（3/5 年权重 50%/20%）、VNB率考核</td></tr>
+  </table>
+  </div>
+  <h3>核心问题自测</h3>
+  <div class="qa-list">
+    <details class="answer"><summary>四类准备金口径的差异根源是什么？</summary><div class="body"><p>目标函数不同：法定口径服务监管审慎（不利假设）、会计口径服务投资者信息（最佳估计 + 盯市）、税务口径服务税基确定、EV 口径服务股东价值（市场一致折现）。差异主要体现在折现率、未来利润认可与审慎边际三处。</p></div></details>
+    <details class="answer"><summary>资产估值三方法分别的风险点？</summary><div class="body"><p>摊余成本法：利率上行隐藏浮亏、违约减值滞后；市场法：低流动性券估值失真；模型法：假设敏感、估值频率低且顺周期。IFRS9 通过 SPPI 与业务模式测试决定分类，分类再决定波动进损益还是 OCI。</p></div></details>
+    <details class="answer"><summary>再平衡三机制的触发逻辑与代价？</summary><div class="body"><p>定期（纪律强但反应慢）、阈值（盯风险指标但频繁触发有交易成本）、事件触发（覆盖盲区但依赖人工）。实务以阈值为主、定期为辅、事件清单兜底，阈值常锚定监管扣分区（如久期缺口 ±2 年）。</p></div></details>
+    <details class="answer"><summary>IFRS17 如何改变 ALM 的目标函数？</summary><div class="body"><p>从单纯管理净资产转向同时管理 CSM 摊销节奏与 OCI 波动：非金融假设变动进 CSM 缓冲；VFA / 背对背安排使负债与资产回报联动；资产端 FVOCI 与负债折现率 OCI 指定形成自然对冲——「一次建模、三口径输出」成为治理标配。</p></div></details>
+  </div>
+  <div class="tip"><b>答题升维提示</b>：主库答案写到「监管指标」层面已可得 80% 分；再补上本页的「四口径准备金」「资产估值三方法」「再平衡三机制」「三体系一次建模」任一条，就是阅卷人眼里的实务派答卷。</div>
+</section>
+
+<div class="mnem"><b>本页总口诀</b><span class="verse">三端建模闭环转，七步流程年年看；<br>四类准备金分口径，利差死差费差摊；<br>摊余市值模型估，SPPI定进损益间；<br>曲线三层即期远，终极利率四十年；<br>定期阈值事件发，偏离航道即修正；<br>CSM里藏缓冲垫，背对背来对OCI；<br>产品投资与资本，风险考核五场景。</span></div>
+
+<div class="pager">
+  <a class="pager-prev" href="hotspot.html"><small>← 上一页</small>专章 D 低利率与利差损</a>
+  <a class="pager-next" href="ev-plus.html"><small>下一页 →</small>升级版 B 价值评估进阶</a>
+</div>
+<button class="done-btn" data-id="alm-plus">○ 标记本页已完成</button>
+<footer class="colophon">2026 中国精算师资格考试 · 资产负债管理与价值评估（科目八）知识库 · 仅供学习交流</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>
