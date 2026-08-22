@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CH.01 ALM 基础 · 2026 中国精算师科目八知识库</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<aside class="side">
+  <div class="brand"><b>ALM · 科目八</b><span>资产负债管理与价值评估 · 知识库</span></div>
+  <nav>
+    <div class="grp">总览</div>
+    <a href="xihong.html">关于 · 西红精算</a>
+    <a href="index.html">首页 · 考试全景</a>
+    <a href="about.html">本库说明 · 编法与用法</a>
+    <div class="grp">四大篇章（按考纲权重）</div>
+    <a href="ch1.html" class="on">① ALM 基础<span class="w">10%</span></a>
+    <a href="ch2.html">② 偿付能力评估与管理<span class="w">40%</span></a>
+    <a href="ch3.html">③ 价值评估与管理<span class="w">25%</span></a>
+    <a href="ch4.html">④ 资产负债管理<span class="w">25%</span></a>
+    <div class="grp">四大专章（纵深武器库）</div>
+    <a href="calc.html">A 偿二代计算手册</a>
+    <a href="quant.html">B ALM 量化评估拆解</a>
+    <a href="ev.html">C 内含价值实战</a>
+    <a href="hotspot.html">D 低利率与利差损</a>
+    <div class="grp">升级版 · 精算讲堂</div>
+    <a href="alm-plus.html">A⁺ ALM 模型与实务</a>
+    <a href="ev-plus.html">B⁺ 价值评估进阶</a>
+    <a href="companion.html">C⁺ ALM 在线库 · 导读</a>
+    <div class="grp">真题与实战</div>
+    <a href="zhenti.html">真题馆 · 2026 全解 ★</a>
+    <a href="exam1.html">卷一 · 筑基卷</a>
+    <a href="exam2.html">卷二 · 规则卷</a>
+    <a href="exam3.html">卷三 · 全真冲刺卷</a>
+  </nav>
+  <div class="prog-mini">已完成 <b>0 / 16</b> 页<br>点击每页底部按钮记录进度</div>
+</aside>
+<main class="main">
+
+<div class="ch-head">
+  <div class="no">CHAPTER 01</div>
+  <h1>ALM 基础：目标、组织与负债的语言</h1>
+  <div class="sub">资产负债管理是什么 · 谁来管 · 管的是什么形态的负债</div>
+  <div class="meta"><span>考纲权重 10%</span><span>历年考点密度极高（性价比之王）</span><span>篇幅短 · 答案固定 · 必须全拿</span></div>
+  <div class="wbar"><div class="lab"><span>权重</span><span>10%</span></div><div class="bar"><i style="width:10%"></i></div></div>
+</div>
+
+<div class="toc"><b>本章目录</b>
+<ol>
+  <li>导语：为什么精算师必须懂 ALM</li>
+  <li>知识图谱</li>
+  <li>星级讲义</li>
+  <li>公式与框架卡片</li>
+  <li>真题印证</li>
+  <li>实务视角与口诀</li>
+</ol>
+</div>
+
+<!-- ========== 一、导语 ========== -->
+<section>
+  <h2><span class="sn">01</span>导语：一句「错配」贯穿二十年考题</h2>
+  <p>保险公司这门生意的本质，是<b>先收钱、后付钱</b>——资产端与负债端天然不同步：期限不同步、利率敏感性不同步、现金流节奏不同步。这个「不同步」就叫<b>错配（mismatch）</b>。ALM（Asset & Liability Management，资产负债管理）就是经营错配的艺术：<b>在可承受的风险内，让资产与负债的对话尽可能和谐，从而实现财务安全与价值增长的平衡。</b></p>
+  <p>翻开二十年真题，「资产负债匹配 / ALM 目标与流程」以 <span class="freq f-hi">9 次</span> 位居所有考点之首——2009 年以前考、2013 年考、2014 年考、2017 年考、2026 年还在考（「优化 SAA」「传统险账户如何匹配降波动」）。它不出偏题怪题，答案框架相对固定，是<b>全卷性价比最高的 10%</b>。</p>
+</section>
+
+<!-- ========== 二、知识图谱 ========== -->
+<section>
+  <h2><span class="sn">02</span>知识图谱</h2>
+  <div class="arch">
+    <div class="arch-top"><b>CH.01 知识图谱</b><div class="meta"><span>三问结构：是什么 · 谁来管 · 管什么</span></div></div>
+    <div class="arch-grid">
+      <a class="arch-card" href="#s31"><span class="ac-top"><span class="ac-no">1.1</span></span><h4>ALM 定义与目标</h4><p>定义三要素 · 目标层次（安全/收益/价值）· 与 ERM 的关系</p></a>
+      <a class="arch-card key" href="#s32"><span class="ac-top"><span class="ac-no">1.2</span><span class="ac-wt hot">★★★</span></span><h4>ALM 流程与途径</h4><p>六步闭环 · 免疫 / 现金流匹配 / 最优化 / DFA 四大途径</p></a>
+      <a class="arch-card key" href="#s33"><span class="ac-top"><span class="ac-no">1.3</span><span class="ac-wt hot">★★★</span></span><h4>组织架构与职责</h4><p>董事会 / ALM 委员会 / 工作小组 / 精算部 / 财务部 / 投资部</p></a>
+      <a class="arch-card key" href="#s34"><span class="ac-top"><span class="ac-no">1.4</span><span class="ac-wt hot">★★★</span></span><h4>负债特性图谱</h4><p>传统险 / 分红 / 万能 / 投连 / 非寿险 · 利率敏感性与久期形态</p></a>
+      <a class="arch-card" href="#s35"><span class="ac-top"><span class="ac-no">1.5</span></span><h4>资产驱动型产品演变</h4><p>本世纪负债端三次浪潮 · 高现价与短钱长配</p></a>
+      <a class="arch-card spec" href="#s36"><span class="ac-top"><span class="ac-no">1.6</span></span><h4>监管语境的 ALM</h4><p>32 号暂行办法 · 规则 4/5 号 · 从自愿到硬约束</p></a>
+    </div>
+  </div>
+  <h3>图谱核心问题自测（先自己答，再展开对照）</h3>
+  <div class="qa-list">
+    <details class="answer"><summary>1.1 ALM 的定义三要素与目标三层是什么？</summary><div class="body"><p>定义三要素：① 风险偏好约束下（不是无条件追求收益）；② 资产端与负债端<b>协同</b>管理（不是各自为政）；③ 实现财务安全性与盈利性的<b>动态平衡</b>（不是一次性静态匹配）。目标三层：安全层（偿付能力与流动性底线）→ 收益层（风险预算内的利差）→ 价值层（EV 与市场价值最大化）。</p></div></details>
+    <details class="answer"><summary>1.2 ALM 六步流程与四大途径分别是什么？</summary><div class="body"><p>六步：设定风险偏好与目标 → 分析负债特性 → 制定 SAA/TAA → 量化评估与监控 → 执行与再平衡 → 报告与反馈。四大途径：现金流匹配（完全免疫但成本高）、久期免疫（易实施但仅防平行移动）、最优化方法（系统化但模型风险）、DFA（捕捉动态交互但解释门槛高）。</p></div></details>
+    <details class="answer"><summary>1.3 董事会 / ALM 委员会 / 工作小组 / 精算部 / 财务部 / 投资部的职责各一句话？</summary><div class="body"><p>董事会——批准风险偏好与 ALM 政策、承担最终责任；ALM 委员会——跨部门定策略、审限额、协调两端冲突；工作小组——日常监控指标、识别错配、提再平衡建议；精算部——负债评估、久期与现金流预测、定价与投资假设一致性；财务部——会计计量、资本规划、绩效考核衔接；投资部——SAA/TAA 落地、组合久期与再平衡、衍生品对冲。</p></div></details>
+    <details class="answer"><summary>1.4 五类负债的"性格"与万能险负债特征五条？</summary><div class="body"><p>传统险——久期长、保证刚性、资产端必须拉长久期；分红险——红利浮动半缓冲、需稳定可分配盈余；万能险——结算利率上不封顶下有保底、退保选择权、账户独立；投连险——风险全在客户、ALM 压力最小；非寿险——短周期、赔付厚尾、适合流动性分层而非完全匹配。万能险五条：账户制透明、结算利率竞争刚性（棘轮）、退保选择权、缴费灵活、分账户管理。</p></div></details>
+    <details class="answer"><summary>1.5 我国资产驱动型产品的三次浪潮与触发监管的节点？</summary><div class="body"><p>① 2000 前后——高预定利率（复利 6.5%~8.8%）传统险锁定，降息周期酿成 90 年代利差损存量；② 2000~2013——分红 / 万能 / 投连新型产品，浮动机制部分转嫁利差风险；③ 2014~2016——高现价中短存续期万能险"短钱长配"爆发，触发 2017 年起严监管；2017 至今回归保障 + 报行合一 + 规则 4 号量化硬约束。</p></div></details>
+    <details class="answer"><summary>1.6 中国 ALM 监管"三级跳"的三个文件与核心内容？</summary><div class="body"><p>① 2019 年 32 号《保险资产负债管理监管暂行办法》——能力评估 + 量化评估双轨、结果挂钩监管措施；② 监管规则第 1~5 号——第 4 号量化评估（30/40/30 权重 + 两道一票否决）、第 5 号报告要求（年度 5 月 31 日前）；③ 2026 年《关于加强资产负债管理的通知（征求意见稿）》——久期错配缺口上限（人身险 7 年）+ 考核机制改革时间线。</p></div></details>
+  </div>
+</section>
+
+<!-- ========== 三、星级讲义 ========== -->
+<section>
+  <h2><span class="sn">03</span>星级讲义</h2>
+  <p class="src-note"><b>本章知识来源</b>：中国精算师协会《资产负债管理》教材（ALM 定义 / 流程 / 途径 / 组织架构 / 负债特性 / 资产驱动型产品演变各章）＋ 原银保监办发〔2019〕32 号《保险资产负债管理监管暂行办法》＋ 保险资产负债管理监管规则第 4 / 5 号。各节徽章 <span class="src">教</span> = 指定教材、<span class="src">规</span> = 监管规则与法规、<span class="src">题</span> = 历年真题。全站来源地图见 <a href="index.html">首页 · 教材与制度地图</a>。</p>
+
+  <h3 id="s31">1.1 ALM 的定义与目标 <span class="star s2">★★</span><span class="src">教</span></h3>
+  <p><b>定义（三要素缺一不可）</b>：资产负债管理是<b>在风险偏好约束下</b>，通过对资产端与负债端的<b>协同管理</b>（而非各自为政），实现<b>财务安全性与盈利性的动态平衡</b>的技术与制度安排。</p>
+  <p><b>目标三层（答题模板）</b>：</p>
+  <ul>
+    <li><b>安全层</b>：维持充足的偿付能力与流动性，守住不发生「技术性破产」的底线——对应偿付能力监管与现金流测试；</li>
+    <li><b>收益层</b>：在既定风险预算内追求投资收益与负债成本的利差——对应成本收益匹配与再投资管理；</li>
+    <li><b>价值层</b>：最大化公司内涵价值与市场价值——EV、NBV 与股东回报最终都落在这里。</li>
+  </ul>
+  <div class="tip"><b>答「ALM 目标」类题目</b>：先点「风险偏好约束下」（体现 ERM 语感），再展开三层目标，最后落到「资产负债两端协同决策、动态调整」——比背单句定义多拿一半分。</div>
+
+  <h3 id="s32">1.2 ALM 流程与四大途径 <span class="star s3">★★★</span><span class="src">教</span><span class="src">题</span></h3>
+  <p><b>ALM 六步流程闭环</b>（2014/2013 两度直接命题「阐述 ALM 流程」）：</p>
+  <div class="steps">
+    <div class="stp"><b>设定风险偏好与 ALM 目标</b><span> —— 董事会层面批准，量化为久期限额、错配限额、偿付能力底线等指标。</span></div>
+    <div class="stp"><b>分析负债特性</b><span> —— 期限、久期、利率敏感性、现金流形态、期权性（退保/结算利率选择权）。</span></div>
+    <div class="stp"><b>制定资产配置策略（SAA/TAA）</b><span> —— 战略配置定长期错配格局，战术配置做短期偏离。</span></div>
+    <div class="stp"><b>量化评估与监控</b><span> —— 久期缺口、现金流匹配、成本收益匹配、压力测试（详见专章 B）。</span></div>
+    <div class="stp"><b>执行与再平衡</b><span> —— 通过资产调整、产品调整、再保险、衍生品对冲纠偏。</span></div>
+    <div class="stp"><b>报告与反馈</b><span> —— 定期向 ALM 委员会/董事会报告，触发限额检视与目标修订。</span></div>
+  </div>
+  <p><b>四大经典途径</b>（2013 年第 16 题「ALM 主要途径并举例」）：</p>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>途径</th><th>核心思想</th><th>优点</th><th>局限</th></tr>
+    <tr><td><b>现金流匹配</b></td><td>每期资产现金流 ≥ 负债现金流（完全匹配/专门组合）</td><td>免疫一切利率风险，逻辑最彻底</td><td>成本高、约束多；非寿险等不规则现金流几乎无法实现</td></tr>
+    <tr><td><b>久期免疫</b></td><td>资产久期 = 负债久期（进一步可加凸性匹配）</td><td>易实施，只盯久期一个指标</td><td>仅对平行移动免疫；收益率曲线非平行变动时失效</td></tr>
+    <tr><td><b>最优化方法</b></td><td>在约束下求解目标函数（如最大化利差 / 最小化错配方差）</td><td>系统化、可嵌入监管与风险预算约束</td><td>依赖假设与估计误差，模型风险</td></tr>
+    <tr><td><b>动态财务分析 DFA</b></td><td>随机情景模拟资产负债表随时间的联合演化</td><td>捕捉动态交互与尾部风险，支持前瞻决策</td><td>计算复杂、结果解释门槛高（2014 年分红险 DFA 步骤题）</td></tr>
+  </table>
+  </div>
+  <div class="mnem"><b>口诀</b><span class="verse">匹配免疫最优化，随机模拟看天下；平行移动找久期，非平扭曲靠 DFA。</span></div>
+
+  <h3 id="s33">1.3 组织架构与职责 <span class="star s3">★★★</span><span class="src">教</span><span class="src">规</span><span class="src">题</span></h3>
+  <p>「ALM 委员会、工作小组、精算部、财务部、投资部各自职责」在 2013、2014 连续两年考大题，属于<b>背了就满分</b>的送分内容：</p>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>层级</th><th>职责要点</th><th>关键词</th></tr>
+    <tr><td><b>董事会</b></td><td>批准风险偏好与 ALM 政策，承担最终责任；听取重大错配与超限报告</td><td>最终责任 · 批准政策</td></tr>
+    <tr><td><b>ALM 委员会</b></td><td>跨部门决策机构：制定 ALM 策略与限额、审议配置方案、协调资产负债两端冲突、监督执行</td><td>跨部门 · 定策略 · 审限额</td></tr>
+    <tr><td><b>ALM 工作小组</b></td><td>执行层：日常监控指标、识别错配、准备报告、提出再平衡建议</td><td>日常监控 · 提建议</td></tr>
+    <tr><td><b>精算部</b></td><td>负债端专业担当：负债评估与久期分析、现金流预测、产品定价与 ALM 一致性、准备金与 EV 假设</td><td>负债语言 · 现金流预测</td></tr>
+    <tr><td><b>财务部</b></td><td>报表与资本视角：会计计量、资本规划、财务预算、绩效考核衔接</td><td>资本规划 · 报表视角</td></tr>
+    <tr><td><b>投资部</b></td><td>资产端执行：SAA/TAA 落地、组合久期管理、再平衡交易、衍生品对冲</td><td>资产执行 · 组合管理</td></tr>
+  </table>
+  </div>
+  <div class="exam"><span class="yr">2013·25</span><b>ERM 与 ALM 的关系</b>：ERM（企业风险管理）是在统一风险偏好下对全公司风险的识别、评估、量化、监控与报告的体系；ALM 是其在「资产负债错配风险」这一维度上的深化落地。答此题需点出：ALM 关注点贯穿 ERM 的风险识别（错配计量）、风险量化（压力测试/随机模拟）、风险应对（限额与对冲）三大步骤。</div>
+
+  <h3 id="s34">1.4 负债特性图谱 <span class="star s3">★★★</span><span class="src">教</span><span class="src">题</span></h3>
+  <p>读懂负债，是 ALM 的第一步。五大类负债的「性格」必须能脱口而出（万能险 5 次真题，为最高频单一产品）：</p>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>负债类型</th><th>期限/久期</th><th>利率敏感性</th><th>关键特征与 ALM 要点</th></tr>
+    <tr><td><b>传统寿险</b></td><td>长（可达 30 年+）</td><td>对客户不敏感、对公司敏感</td><td>保证利率刚性锁定 → 资产端必须拉长久期对冲再投资风险；负债久期 &gt; 资产久期是中国寿险的典型形态</td></tr>
+    <tr><td><b>分红险</b></td><td>长</td><td>半敏感</td><td>红利浮动提供缓冲垫（利差可部分转嫁），但红利实现率有隐含下限压力 → 需维持稳定可分配盈余（2013/2014 分红 ALM 大题）</td></tr>
+    <tr><td><b>万能险</b></td><td>可长可短（高现价则短）</td><td><b>高度敏感</b></td><td>结算利率与退保选择权双刃剑：市场利率升 → 退保套利 + 结算利率竞争；账户制管理、独立核算（详见下）</td></tr>
+    <tr><td><b>投连险</b></td><td>随账户</td><td>风险全在客户</td><td>单位化负债，资产=负债动态相等，公司主要承担费用与平滑风险；ALM 压力最小</td></tr>
+    <tr><td><b>非寿险</b></td><td>短（1 年期为主）</td><td>间接</td><td>赔付形态决定短尾/长尾；现金流不规则（赔付分布有厚尾），适合「分层流动性管理 + 现金流测试」而非完全匹配（2013·22 非寿险不适合现金流匹配三理由）</td></tr>
+  </table>
+  </div>
+  <details class="answer"><summary>背一背：万能险负债特征（2013·18 / 2017·8 / 2014·25）</summary>
+    <div class="body">
+      <ol>
+        <li><b>账户制与透明性</b>：保费进入个人账户，结算利率逐月公布，费用扣除透明；</li>
+        <li><b>结算利率的竞争刚性</b>：虽设最低保证利率，但实际结算利率受市场与同业竞争驱动，具有「可上难下」的棘轮效应；</li>
+        <li><b>退保选择权</b>：客户可随时退保，利率上升时退保率上升（内嵌看跌期权），负债久期随利率环境变化；</li>
+        <li><b>缴费灵活</b>：趸交/期交/追加保费灵活，负债规模与现金流可预测性差；</li>
+        <li><b>资产负债需分账户管理</b>：利率敏感 + 流动性敏感，监管要求独立账户运作，资产配置须高流动性、短久期为主。</li>
+      </ol>
+    </div>
+  </details>
+  <details class="answer"><summary>补一补：养老金业务 vs 寿险业务（2014·4 选择题考点，考纲外补充）</summary>
+    <div class="body">
+      <div class="tbl-scroll">
+      <table>
+        <tr><th>维度</th><th>寿险业务</th><th>养老金业务（DC / DB）</th></tr>
+        <tr><td><b>监管要求</b></td><td>偿付能力监管、产品备案、精算规定</td><td>养老金法规 / 税收递延政策 / 账户制监管，约束体系不同</td></tr>
+        <tr><td><b>资本状况</b></td><td>须持有最低资本，占用股东资本并要求回报</td><td>DC 受托管理几乎无资本占用；DB 计划风险由发起企业承担</td></tr>
+        <tr><td><b>资本结构</b></td><td>"保单持有人负债 + 股东资本"结构</td><td>资产属于受益人，无股东资本层</td></tr>
+        <tr><td><b>负债特性</b></td><td>死亡 / 生存给付，久期长且有保证</td><td>年金化领取（长寿风险）、工资挂钩缴费（与个人收入相关）</td></tr>
+        <tr><td><b>ALM 要点</b></td><td>久期匹配 + 保证成本管理</td><td>长寿风险对冲（长寿债券 / 生命周期下滑航道）、负债工资指数化</td></tr>
+      </table>
+      </div>
+      <p>差异的三大根源：<b>监管要求、资本状况、资本结构</b>——2014 年选择题考的就是这个"为什么不同"。个人收入情况（缴费与工资挂钩）是可辩的第四条。</p>
+    </div>
+  </details>
+  <details class="answer"><summary>补一补：非寿险业务特征细分（短尾 / 长尾明细，2014·9 / 2017·7 考点）</summary>
+    <div class="body">
+      <div class="tbl-scroll">
+      <table>
+        <tr><th>险种</th><th>尾部</th><th>特征要点</th><th>准备金含义</th></tr>
+        <tr><td><b>车险</b></td><td>短尾</td><td>报案快、结案快、赔付规律性强、小额高频</td><td>以未到期责任准备金为主</td></tr>
+        <tr><td><b>家财险</b></td><td>短尾（有巨灾相关性）</td><td>事故突发（火灾 / 盗抢 / 台风洪涝）、单笔小额、季节性</td><td>未到期 + 巨灾累积关注</td></tr>
+        <tr><td><b>货运险</b></td><td>中短尾</td><td>损失常在货物抵达时才发现 → <b>存在报案延迟</b></td><td>已发生未报（IBNR）需计提</td></tr>
+        <tr><td><b>船舶险 / 远洋险</b></td><td>中长尾 + 巨灾</td><td>海难集中出险、共同海损、理赔复杂</td><td>未决占比高、巨灾附加</td></tr>
+        <tr><td><b>责任险</b></td><td><b>长尾</b></td><td>报案延迟 + 法律程序 + 金额高度不确定（二维分布）</td><td>未决 + IBNR 占比最高的险种</td></tr>
+      </table>
+      </div>
+      <p><b>记忆钩子</b>："车家短、货船中、责任长"——尾部长短决定负债久期与准备金结构，进而决定资产端的期限与流动性策略，这是非寿险 ALM 的总纲。</p>
+    </div>
+  </details>
+  <div class="warn"><b>非寿险为何不适合现金流匹配（标准三理由）</b>：① 赔付发生时点与金额不确定（报案延迟、理赔时滞、巨灾厚尾），负债现金流无法精确刻画；② 业务短期滚动（一年期），负债持续期随续保波动，匹配方案需不断重构、成本过高；③ 现金流匹配要求资产期限贴合负债，但财险资金本就以流动性为先，强行匹配牺牲收益。替代方案：流动性分层 + 压力测试 + 再保险。</div>
+
+  <h3 id="s35">1.5 资产驱动型产品演变 <span class="star s2">★★</span><span class="src">教</span><span class="src">题</span></h3>
+  <p>「资产驱动型产品」是理解中国寿险近二十年沉浮的钥匙，2013/2014 连续命题。演变三浪潮：</p>
+  <div class="timeline">
+    <div class="tl"><b>2000 前后</b><span>传统 fixed guarantee 时代：高预定利率（复利 6.5%–8.8%）锁定，随后降息周期酿成 90 年代利差损存量——「负债驱动」但负债定价失当。</span></div>
+    <div class="tl"><b>2000–2013</b><span>分红/万能/投连「新型产品」时代：浮动收益机制把部分利差风险转嫁客户，结算利率与分红平滑成为 ALM 新课题。</span></div>
+    <div class="tl"><b>2014–2016</b><span>资产驱动型高现价产品爆发：中短存续期万能险「短钱长配」，投资端激进（举牌上市公司），负债端高结算利率刚性——ALM 严重失衡，触发 2017 年起中短存续期产品严监管。</span></div>
+    <div class="tl"><b>2017 至今</b><span>回归保障 + 「报行合一」+ 久期匹配监管硬约束（规则 4 号量化评估），行业从「规模冲动」转向「质量优先」。</span></div>
+  </div>
+  <div class="exam"><span class="yr">2014·23</span><b>「新债还旧债」不可持续</b>：财险公司靠不断的新保费流入兑付旧赔付与负债（类似庞氏结构）。当保费增速放缓、赔付高峰来临或再融资受阻时资金链断裂——本质是用流动性掩盖承保亏损，必须以承保盈利 + 投资收益的「双轮」替代单一滚动依赖。</div>
+
+  <h3 id="s36">1.6 监管语境的 ALM <span class="star s2">★★</span><span class="src">规</span></h3>
+  <p>中国 ALM 监管从「原则倡导」走向「量化硬约束」的三级跳（详见专章 B/D）：</p>
+  <ul>
+    <li><b>《保险资产负债管理监管暂行办法》（2019，原银保监办发〔2019〕32 号）</b>：建立能力评估（制度健全性）与量化评估（匹配有效性）双轨体系，评估结果与分公司准入、投资端试点等监管措施挂钩；</li>
+    <li><b>《保险资产负债管理监管规则第 4 号：资产负债管理量化评估》</b>：期限结构匹配 30% + 成本收益匹配 40% + 现金流匹配 30%，评分等级 O/1/2/3/4 档（专章 B 全拆解）；</li>
+    <li><b>《保险资产负债管理监管规则第 5 号：报告要求》</b>：年度报告次年 5 月 31 日前报送，季度监测报告随偿付能力季报；</li>
+    <li><b>2026 年《关于加强资产负债管理的通知（征求意见稿）》</b>：新增久期错配缺口上限（人身险 7 年）与考核机制改革时间线——考试「热点分」的来源（专章 D）。</li>
+  </ul>
+</section>
+
+<!-- ========== 四、公式与框架卡片 ========== -->
+<section>
+  <h2><span class="sn">04</span>公式与框架卡片</h2>
+
+  <div class="formula">
+    <b>ALM 目标函数（答题万能框架）</b>
+    <div class="fx">max <b>公司价值（EV）</b> s.t. 偿付能力达标 · 流动性充裕 · 错配限额 · 风险偏好</div>
+    <div class="note">约束条件是「安全层」，目标函数是「价值层」——任何 ALM 论述题都可以套这个「一目标四约束」骨架。</div>
+  </div>
+
+  <div class="formula">
+    <b>久期与凸性（详见 CH.04，此处先立框架）</b>
+    <div class="fx">D_mac = Σ t·PV(CF<sub>t</sub>) / Σ PV(CF<sub>t</sub>)　　D_mod = D_mac / (1+y)</div>
+    <div class="fx">ΔP/P ≈ −D_mod·Δy + ½·C·(Δy)²</div>
+    <div class="note">久期是「价格对利率的一阶敏感度」，凸性是二阶修正——免疫策略的数学根基。</div>
+  </div>
+
+  <div class="formula">
+    <b>资产负债表对话图（心象记忆）</b>
+    <div class="fx">资产端（现金 · 债券 · 股票 · 非标 · 衍生品） ⇄ 对话 ⇄ 负债端（准备金 · CSM · 保户储金 · 资本）</div>
+    <div class="fx">对话的四个频道：<b>期限</b>（久期缺口）· <b>现金流</b>（各期净流）· <b>利率敏感性</b>（DV01）· <b>币值/信用</b></div>
+    <div class="note">「四个频道」对应规则 4 号的量化评估框架——CH.02 与专章 B 将反复回到这张图。</div>
+  </div>
+</section>
+
+<!-- ========== 五、真题印证 ========== -->
+<section>
+  <h2><span class="sn">05</span>真题印证</h2>
+  <div class="exam"><span class="yr">2026·简1</span><b>「回顾 ALM，优化 SAA 战略资产配置」</b>——先答 ALM 六步流程中「分析负债特性 → 制定 SAA」的衔接逻辑，再按「久期匹配 → 流动性分层 → 收益增强」三层展开 SAA 优化建议。落点：本章 1.2 + <a href="ch4.html">CH.04 SAA/TAA</a>。</div>
+  <div class="exam"><span class="yr">2026·简8</span><b>「传统险账户如何资产负债匹配以降低财务报表波动」</b>——传统险负债刚性保证 + 久期长：拉长资产久期（国债/长债）、利率债对冲（衍生品）、减少权益与信用下沉，使资产 DV01 贴合负债 DV01，从而压平利润表与 OCI 波动。落点：本章 1.4 + <a href="quant.html">专章 B</a>。</div>
+  <div class="exam"><span class="yr">2017·10</span><b>「选一个近期险种阐述资产负债特征与投资策略」</b>——万能/分红/传统任选，按 1.4 负债特性表展开，投资策略须与负债性格一一对应。</div>
+  <div class="exam"><span class="yr">2014·24</span><b>「ABC 寿险 ALM 目标 / 万能险 ALM 流程 / 四部门职责」</b>——本题是本章 1.1 + 1.2 + 1.3 的全家桶，9 分大题。</div>
+  <div class="exam"><span class="yr">2013·24</span><b>分红险为主的 ABC 公司：ALM 目标、分红业务 ALM 过程、组织职责</b>——与 2014·24 几乎同构，证明<b>「组织职责 + 流程」是十年级重复考点</b>。</div>
+  <details class="answer"><summary>完整作答示范：2013·16「ALM 的主要途径，并选择两个举实例」</summary>
+    <div class="body">
+      <p><b>四大途径总述</b>：产品管理、资产配置管理（SAA/TAA）、再保险安排、动态财务分析（DFA）/ 情景与压力测试。</p>
+      <p><b>实例一 · 产品管理</b>：某公司在利率下行期开发分红型年金替代传统固定利率年金——通过红利浮动机制把部分利差风险转嫁给客户，降低负债保证成本刚性；定价时将投资假设（4.0%）与负债成本假设（预定利率 2.0% + 目标红利）做一致性校验，从源头控制错配。</p>
+      <p><b>实例二 · 再保险安排</b>：人身险公司将终身寿险的一定比例分出给再保险公司——降低死亡风险的净自留敞口（保险风险最低资本下降）、缓解新业务快速扩张对资本的占用（偿二代下分出降低最低资本、提升充足率），同时应收分保改善认可资产负债表（代价是新增交易对手信用风险，分入人充足率 ≥200% 时因子仅 0.008）。</p>
+      <p><b>答题提示</b>：途径名称要全列（4 个），实例要带"机制 + 数字"——两个实例分别落在负债端与资产端 / 风险端，覆盖面比两个都写资产端更得分。</p>
+    </div>
+  </details>
+  <details class="answer"><summary>完整作答示范：2013·18「万能险负债特征的几个方面」</summary>
+    <div class="body">
+      <p>五条：① <b>账户制与透明性</b>——保费进个人账户、结算利率逐月公布、费用扣除透明；② <b>结算利率竞争刚性</b>——虽设最低保证利率，实际结算受同业竞争驱动，"可上难下"棘轮效应；③ <b>退保选择权</b>——客户可随时退保，利率上升时退保率上升（内嵌看跌期权），负债久期随利率环境变化；④ <b>缴费灵活</b>——趸交 / 期交 / 追加 / 部分领取灵活，负债规模与现金流可预测性差；⑤ <b>分账户管理</b>——利率敏感 + 流动性敏感，监管要求独立账户运作，资产配置须高流动性、短久期为主。</p>
+      <p><b>延伸半句（拉分）</b>：这些特征使万能险的负债久期必须用<b>有效久期</b>（情景重新定价）而非修正久期度量（2009 前·9 考点），且结算利率粘性正是成本收益匹配情景三（利率跳升）下利差被双向挤压的根源。</p>
+    </div>
+  </details>
+</section>
+
+<!-- ========== 六、实务视角与口诀 ========== -->
+<section>
+  <h2><span class="sn">06</span>实务视角与口诀</h2>
+  <div class="prac"><b>实务视角（一名精算师的旁白）</b>：本章内容在实务中对应的是每月的 ALM 例会——精算部带着负债久期与现金流预测来，投资部带着组合 DV01 与再投资计划来，两边的数字在一张「缺口报表」上碰头。所谓 ALM 能力，本质是让两张报表说同一种语言。考试考的「职责与流程」，就是这张碰头会桌上的座位表。</div>
+  <div class="mnem"><b>总口诀</b><span class="verse">目标三层安全先，流程六步闭环转；<br>四途匹配免疫优，随机模拟看长川；<br>负债五类分性格，万能最灵传统僵；<br>委员会上两边坐，缺口报表是全场。</span></div>
+</section>
+
+  <p class="link">进阶延伸：ALM 模型怎么搭、四类准备金口径 → <a href="alm-plus.html">升级版 A⁺ ALM 模型与实务</a></p>
+<div class="pager">
+  <a class="pager-prev" href="index.html"><small>← 上一页</small>首页 · 考试全景</a>
+  <a class="pager-next" href="ch2.html"><small>下一页 →</small>CH.02 偿付能力评估与管理（40%）</a>
+</div>
+<button class="done-btn" data-id="ch1">○ 标记本页已完成</button>
+<footer class="colophon">2026 中国精算师资格考试 · 资产负债管理与价值评估（科目八）知识库 · 仅供学习交流</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>
