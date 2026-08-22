@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>卷一 · 筑基卷 · 2026 中国精算师科目八知识库</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<aside class="side">
+  <div class="brand"><b>ALM · 科目八</b><span>资产负债管理与价值评估 · 知识库</span></div>
+  <nav>
+    <div class="grp">总览</div>
+    <a href="xihong.html">关于 · 西红精算</a>
+    <a href="index.html">首页 · 考试全景</a>
+    <a href="about.html">本库说明 · 编法与用法</a>
+    <div class="grp">四大篇章（按考纲权重）</div>
+    <a href="ch1.html">① ALM 基础<span class="w">10%</span></a>
+    <a href="ch2.html">② 偿付能力评估与管理<span class="w">40%</span></a>
+    <a href="ch3.html">③ 价值评估与管理<span class="w">25%</span></a>
+    <a href="ch4.html">④ 资产负债管理<span class="w">25%</span></a>
+    <div class="grp">四大专章（纵深武器库）</div>
+    <a href="calc.html">A 偿二代计算手册</a>
+    <a href="quant.html">B ALM 量化评估拆解</a>
+    <a href="ev.html">C 内含价值实战</a>
+    <a href="hotspot.html">D 低利率与利差损</a>
+    <div class="grp">升级版 · 精算讲堂</div>
+    <a href="alm-plus.html">A⁺ ALM 模型与实务</a>
+    <a href="ev-plus.html">B⁺ 价值评估进阶</a>
+    <a href="companion.html">C⁺ ALM 在线库 · 导读</a>
+    <div class="grp">真题与实战</div>
+    <a href="zhenti.html">真题馆 · 2026 全解 ★</a>
+    <a href="exam1.html" class="on">卷一 · 筑基卷</a>
+    <a href="exam2.html">卷二 · 规则卷</a>
+    <a href="exam3.html">卷三 · 全真冲刺卷</a>
+  </nav>
+  <div class="prog-mini">已完成 <b>0 / 16</b> 页<br>点击每页底部按钮记录进度</div>
+</aside>
+<main class="main">
+
+<div class="ch-head">
+  <div class="no">MOCK Ⅰ</div>
+  <h1>卷一 · 筑基卷：概念、流程与久期手感</h1>
+  <div class="sub">多选 10 题 + 简答 5 题 · 建议用时 100 分钟 · 面向第一轮复习自查</div>
+  <div class="meta"><span>考点覆盖 CH.01 为主 + CH.04 久期概念</span><span>答案与解析全部折叠</span><span>选项以 A~E 标注 · 参考答案见各题解析</span></div>
+</div>
+
+<div class="paper-head">
+  <h3>中国精算师资格考试 · 资产负债管理与价值评估<br>模拟卷（一）筑基卷</h3>
+  <div class="ph-meta">满分 100 分　·　多选题每题 3 分（多选 / 错选不得分，少选得 1 分）　·　简答题共 70 分</div>
+  <div class="ph-warn">本卷为自编模拟题，题风对标 2013/2014 历年多选 + 简答结构</div>
+</div>
+
+<section>
+  <h2><span class="sn">A</span>多选题（每题 3 分，共 30 分）</h2>
+  <p class="qstem">选项已按 A~E 标注（仿真卷面）；参考答案与解析默认折叠——先做完再展开对照。</p>
+  <button class="js-toggle-answers" type="button">展开全部答案</button>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">1</span>关于资产负债管理（ALM）的定义与目标，下列说法正确的有：</div>
+    <ul class="opts">
+      <li class="ok">ALM 是通过协调资产端与负债端决策，实现公司经营目标、同时控制风险的技术与制度安排</li>
+      <li class="ok">ALM 的目标可分为公司层面、产品层面和日常经营层面三个层次</li>
+      <li>ALM 的首要目标是最大化投资收益率</li>
+      <li class="ok">ALM 是一种持续、动态的管理过程，而非一次性的静态匹配</li>
+      <li>ALM 只适用于寿险公司，非寿险公司不需要</li>
+    </ul>
+    <details class="answer"><summary>解析</summary><p>C 错——收益率单目标优化恰恰是 ALM 要纠正的倾向（负债冲规模、资产冲收益的错配根源，<a href="hotspot.html">专章 D</a>）；E 错——财险公司同样有成本收益与流动性匹配要求，2026 征求意见稿已明确覆盖。<b>答案：ABD</b></p></details>
+  </div>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">2</span>保险公司实施 ALM 的主要途径包括：</div>
+    <ul class="opts">
+      <li class="ok">产品管理（定价、产品结构设计）</li>
+      <li class="ok">资产配置管理（SAA / TAA）</li>
+      <li class="ok">再保险安排</li>
+      <li class="ok">动态财务分析（DFA）与情景 / 压力测试</li>
+      <li>更换审计师与精算师</li>
+    </ul>
+    <details class="answer"><summary>解析</summary><p>四大途径 = 产品管理、资产配置、再保险、DFA（<a href="ch1.html">CH.01</a>，2013 真题第 16 题原考点）。<b>答案：ABCD</b></p></details>
+  </div>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">3</span>关于 ALM 组织架构中各主体的职责，下列说法正确的有：</div>
+    <ul class="opts">
+      <li class="ok">董事会对资产负债管理承担最终责任，审定 ALM 总体目标与战略</li>
+      <li class="ok">资产负债管理委员会（高管层下设的执行委员会）负责日常管理与沟通协调</li>
+      <li>精算部只负责准备金评估，不参与资产负债管理</li>
+      <li class="ok">牵头部门担任资产负债管理秘书处，组织跨部门协调</li>
+      <li class="ok">总资产小于 1000 亿元的财险公司可以不设资产负债管理委员会</li>
+    </ul>
+    <details class="answer"><summary>解析</summary><p>C 错——精算部是负债端假设与现金流预测的核心部门（历年真题 2013·24、2014·24 反复考职责分工）；E 是 32 号办法原文。<b>答案：ABDE</b></p></details>
+  </div>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">4</span>关于久期，下列说法正确的有：</div>
+    <ul class="opts">
+      <li class="ok">Macaulay 久期是现金流支付时间的现值加权平均</li>
+      <li class="ok">修正久期 = Macaulay 久期 / (1 + y)，刻画价格对收益率的近似敏感性</li>
+      <li>零息债券的久期小于同期限的票息债券</li>
+      <li class="ok">久期相同的情况下，凸性大的债券在利率大幅变动时价值损失更小</li>
+      <li class="ok">含权债券（如可赎回债）更适合用有效久期而非修正久期度量利率风险</li>
+    </ul>
+    <details class="answer"><summary>解析</summary><p>C 错——零息债久期等于期限本身，是同期限债券中<b>最长</b>的（2014 真题第 5 题考点：同久期下零息债凸性更大）。<b>答案：ABDE</b></p></details>
+  </div>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">5</span>Redington 免疫的经典条件包括：</div>
+    <ul class="opts">
+      <li class="ok">资产现值 = 负债现值</li>
+      <li class="ok">资产久期 = 负债久期</li>
+      <li>资产凸性小于负债凸性</li>
+      <li class="ok">资产凸性大于负债凸性</li>
+      <li>资产现金流必须与负债现金流逐期完全相等</li>
+    </ul>
+    <details class="answer"><summary>解析</summary><p>免疫三条件：现值相等 + 久期相等 + 资产凸性 &gt; 负债凸性（利率双向变动时净资产均不减少）；E 是现金流匹配而非免疫的要求——免疫只盯住价值层面，是近似保护。<b>答案：ABD</b></p></details>
+  </div>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">6</span>下列属于寿险公司负债特性的是：</div>
+    <ul class="opts">
+      <li class="ok">长期性与利率敏感性</li>
+      <li class="ok">含有内嵌选择权（退保、保单贷款、红利选择权等）</li>
+      <li class="ok">万能险负债成本具有"上不封顶、下有保底"的浮动结算特征</li>
+      <li>负债期限普遍短于资产期限</li>
+      <li class="ok">分红险负债对投资收益率假设具有内在一致性要求</li>
+    </ul>
+    <details class="answer"><summary>解析</summary><p>D 与中国实际正好相反——负债久期长于资产久期（错配缺口约 7 年，<a href="hotspot.html">专章 D</a>）。<b>答案：ABCE</b></p></details>
+  </div>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">7</span>关于现金流匹配，下列说法正确的有：</div>
+    <ul class="opts">
+      <li class="ok">现金流匹配要求资产现金流的时间分布与负债现金流的时间分布相吻合</li>
+      <li class="ok">非寿险公司由于赔付的随机性与短周期性，难以实现严格的现金流匹配</li>
+      <li>再保险分出业务会加大现金流匹配的难度，因此不应使用</li>
+      <li class="ok">监管现金流测试采用三级检验体系（累计现金 → 高流动性资产变现 → 中低流动性资产变现）</li>
+      <li class="ok">中低流动性资产变现后累计现金流仍至少一期为负的，ALM 量化评估整体记 0 分</li>
+    </ul>
+    <details class="answer"><summary>解析</summary><p>C 错——再保险是 ALM 四大途径之一，虽然引入交易对手现金流，但能分散承保风险、改善偿付能力（<a href="ch4.html">CH.04</a>）。D、E 为规则第 4 号一票否决条款。<b>答案：ABDE</b></p></details>
+  </div>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">8</span>偿二代二期下，保险公司偿付能力达标须同时满足：</div>
+    <ul class="opts">
+      <li class="ok">核心偿付能力充足率 ≥ 50%</li>
+      <li class="ok">综合偿付能力充足率 ≥ 100%</li>
+      <li class="ok">风险综合评级不低于 B 类</li>
+      <li>核心偿付能力充足率 ≥ 100%</li>
+      <li>流动性比例 ≥ 5%</li>
+    </ul>
+    <details class="answer"><summary>解析</summary><p>达标三条件：核心 ≥50% + 综合 ≥100% + 风险综合评级 ≥B 类（<a href="ch2.html">CH.02</a>）。流动性比例 ≥5% 是 ALM 量化评估的指标，不是偿付能力达标条件——两个 5% 别混淆。<b>答案：ABC</b></p></details>
+  </div>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">9</span>关于内含价值（EV）的构成，下列说法正确的有：</div>
+    <ul class="opts">
+      <li class="ok">EV = 自由盈余 + 要求资本 + 有效业务价值 − 要求资本成本</li>
+      <li class="ok">EV 不包括未来新业务产生的价值</li>
+      <li>新业务价值 VNB 按保单到期时点计值</li>
+      <li class="ok">要求资本是受法律法规和公司内部管理限制、不能分配给股东的金额</li>
+      <li>金融选择权和保证通常提高 VIF</li>
+    </ul>
+    <details class="answer"><summary>解析</summary><p>C 错——VNB 按签单时点计值；E 错——金融选择权和保证<b>降低</b> VIF（<a href="ev.html">专章 C §VIF 六注意</a>）。<b>答案：ABD</b></p></details>
+  </div>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">10</span>关于久期缺口与利率风险，下列说法正确的有：</div>
+    <ul class="opts">
+      <li class="ok">久期缺口 = D_A − D_L × V_L / V_A</li>
+      <li class="ok">当久期缺口为负（负债久期相对更长）时，利率下行使净资产减少</li>
+      <li class="ok">利率下降时，资产与负债价值均上升，但负债上升更多导致净资产受损</li>
+      <li>久期缺口为零意味着任何利率变动下净资产完全不变</li>
+      <li class="ok">久期缺口管理是传统险账户降低报表波动的重要手段</li>
+    </ul>
+    <details class="answer"><summary>解析</summary><p>D 错——久期匹配只是免疫的一阶近似，大额或非平行变动下仍需凸性与关键期限（DV10）管理。可用 <a href="calc.html">专章 A 久期缺口演算器</a> 验证 A、B、C。<b>答案：ABCE</b></p></details>
+  </div>
+</section>
+
+<section>
+  <h2><span class="sn">B</span>简答题（共 70 分）</h2>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">一</span>（12 分）简述保险公司资产负债管理的六步流程，并说明每一步的核心产出。</div>
+    <details class="answer"><summary>参考答案</summary>
+      <div class="steps">
+        <div class="stp"><b>① 负债特性分析</b><span>核心产出：负债现金流预测、久期 / 凸性 / 关键期限分布、负债成本（预定利率 / 结算利率）画像。</span></div>
+        <div class="stp"><b>② 设定 ALM 目标与风险容忍度</b><span>核心产出：公司 / 产品 / 日常三层次目标与量化限额（久期缺口区间、利差底线、流动性比例）。</span></div>
+        <div class="stp"><b>③ 制定资产配置策略（SAA）</b><span>核心产出：分账户大类资产目标比例与再平衡规则。</span></div>
+        <div class="stp"><b>④ 实施与产品设计 / 再保安排联动</b><span>核心产出：定价假设与投资假设一致性校验、再保方案。</span></div>
+        <div class="stp"><b>⑤ 监控与评估</b><span>核心产出：量化评估评分（30/40/30）、久期缺口 / 利差 / 现金流三级检验的定期报告。</span></div>
+        <div class="stp"><b>⑥ 调整与反馈</b><span>核心产出：TAA 战术调整、假设重估、SAA 年度滚动修订。</span></div>
+      </div>
+      <p class="link">考点回链：<a href="ch1.html">CH.01 六步流程</a></p>
+    </details>
+  </div>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">二</span>（14 分）万能险的负债特征有哪些方面？这些特征对资产端配置提出了什么要求？（2013·18、2017·8 原型）</div>
+    <details class="answer"><summary>参考答案</summary>
+      <p><b>负债特征五方面</b>：① <b>最低保证利率</b>——结算利率下有保底（刚性成本底线，情景三下 +100bps 上浮）；② <b>浮动结算机制</b>——"上不封顶、下有保底"，公布结算利率逐月 / 逐季可调，但有市场预期粘性（下调受阻于客户流失）；③ <b>高流动性 / 退保选择权</b>——账户价值可随时支取，退保弹性大，利率与结算利差驱动客户行为（追涨杀跌）；④ <b>缴费灵活</b>——趸交 / 追加 / 部分领取由客户掌握，现金流规模不确定；⑤ <b>账户独立管理</b>——通常设独立账户，资产组合可含较高权益比例。</p>
+      <p><b>对资产端的要求</b>：① 资产久期不宜过长（负债久期相对短、退保随时发生）——历史上万能账户久期常在 5~7 年；② 保持相当比例高流动性资产以应对退保与部分领取；③ 收益基准盯住结算利率预期，需在"保底成本 + 客户预期"之上争取利差；④ 权益敞口受独立账户口径与偿付能力资本占用约束（权益因子 0.35/0.30）；⑤ 用情景测试刻画结算利率下调粘性下的利差损风险。</p>
+      <p class="link">考点回链：<a href="ch1.html">CH.01 万能险折叠卡</a> · <a href="hotspot.html">专章 D 36 个月规则</a></p>
+    </details>
+  </div>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">三</span>（14 分）某负债的现金流如下：第 1 年末 50、第 2 年末 50、第 3 年末 500（单位：万元）。市场利率为 3%。<br>（1）计算该负债的现值与 Macaulay 久期；（2）若市场利率上升 50bps，用久期近似估算负债价值的变化；（3）说明久期近似法的局限。</div>
+    <details class="answer"><summary>参考答案（含计算过程）</summary>
+      <p><b>（1）</b>逐笔折现计算表：</p>
+      <div class="tbl-scroll">
+      <table>
+        <tr><th class="num">时点 t（年）</th><th class="num">现金流 CF</th><th class="num">折现因子 1.03<sup>−t</sup></th><th class="num">现值 PV</th><th class="num">t × PV</th></tr>
+        <tr><td class="num">1</td><td class="num">50</td><td class="num">0.9709</td><td class="num">48.54</td><td class="num">48.54</td></tr>
+        <tr><td class="num">2</td><td class="num">50</td><td class="num">0.9426</td><td class="num">47.13</td><td class="num">94.26</td></tr>
+        <tr><td class="num">3</td><td class="num">500</td><td class="num">0.9151</td><td class="num">457.57</td><td class="num">1372.71</td></tr>
+        <tr><td class="ctr"><b>合计</b></td><td class="num">600</td><td class="num">—</td><td class="num"><b>553.24</b></td><td class="num"><b>1515.51</b></td></tr>
+      </table>
+      </div>
+      <p>现值 PV ≈ <b>553.24 万元</b>；Macaulay 久期 D = 1515.51 / 553.24 ≈ <b>2.74 年</b>；修正久期 D_mod = 2.74 / 1.03 ≈ <b>2.66</b>。</p>
+      <p><b>（2）</b>Δy = +0.5%，ΔPV ≈ −D_mod × Δy × PV ≈ −2.66 × 0.005 × 553.24 ≈ <b>−7.36 万元</b>，即负债价值约下降 7.36 万元至 545.9 万元左右。</p>
+      <p><b>（3）局限</b>：① 久期只是价格—利率关系的<b>一阶线性近似</b>，忽略了凸性（二阶项），利率变动越大误差越大；② 只适用<b>平行移动</b>，无法刻画曲线的倾斜、扭转（需关键期限久期 / DV10 体系）；③ 含权负债（退保、保证选择权）的现金流随利率内生变化，需用<b>有效久期</b>（情景重新定价）替代。</p>
+      <p class="link">考点回链：<a href="calc.html">专章 A 久期演算器（把 1/2/3 年填入即可复核本题）</a></p>
+    </details>
+  </div>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">四</span>（15 分）从资产负债管理角度，分析我国寿险公司"资产期限短于负债期限"这一错配格局的成因与风险，并提出改善措施。（2009 前·11 原型升级）</div>
+    <details class="answer"><summary>参考答案</summary>
+      <p><b>成因三方面</b>：① <b>负债端</b>——终身寿险、年金等长负债久期天然长（负债久期常 10 年以上）；② <b>资产端</b>——长期高收益资产供给不足：超长期利率债规模有限、优质非标逐步到期且剩余期限收窄、权益资产虽长久期但波动大；③ <b>经营端</b>——规模导向的销售策略偏好短期缴费产品快速做大资产，投资考核短周期化削弱拉长久期的动力（<a href="hotspot.html">专章 D 四大成因</a>）。</p>
+      <p><b>风险三方面</b>：① <b>再投资风险</b>——资产先于负债到期，新钱再投资收益率趋势性下行 → 利差损（缺口约 7 年）；② <b>利率下行净资产损失</b>——负债现值增幅超过资产（可用久期缺口演算器演示：利率 −50bp、D_A 6 / D_L 10 时净资产显著缩水）；③ <b>报表与偿付能力波动</b>——折现率下移推高认可负债、侵蚀实际资本。</p>
+      <p><b>措施四条</b>：① 增配超长期国债 / 地方债拉长资产久期，向免疫条件靠拢；② 负债端控制长久期高保证产品的新增、推动预定利率与市场利率联动；③ 用利率互换 / 国债期货等衍生品对冲剩余缺口；④ 治理上推行长周期考核（3 年 / 5 年权重 50% / 20%），把久期缺口纳入 ALM 量化评估与考核。</p>
+      <p class="link">考点回链：<a href="hotspot.html">专章 D</a> · <a href="ch4.html">CH.04 久期缺口</a></p>
+    </details>
+  </div>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">五</span>（15 分）简述内含价值报告的信息披露要求与 EV 使用注意事项；并说明"新业务"与"经验偏差"的边界如何界定。</div>
+    <details class="answer"><summary>参考答案</summary>
+      <p><b>披露要求（标准第五十条）</b>：上市公司应根据相关法律法规公开披露<b>经外部审阅</b>的内含价值报告；披露内容至少包括：主要评估方法和假设、计算结果、相关分析、敏感性测试。重要性上限：近似方法处理差异不超过 EV（或 VNB）总额的 5% 与 1000 万元孰大，方法有差异须明确说明。</p>
+      <p><b>使用注意事项（第九条）</b>：EV 不是衡量公司价值的唯一方法；EV 受经济环境和经营环境影响（利率下行时 EV 下调），使用者应充分理解 EV 的变化及原因；EV 是时点值，需借助 EV 桥判断质量。</p>
+      <p><b>边界界定（第十八条）</b>：应作为<b>经验偏差</b>而非新业务处理的三种情形——① 与有效合同预期保费的偏差；② 与趸交累加型合同预期续期保费的偏差；③ 有效业务预期保费的重新定价。判断原则：预期之内的变化早已在模型里，实际与预期的差是偏差；全新签发并核保录入的新保单才是新业务。VNB 按签单时点计值、含 CoC、含预期续保与合同变动价值。</p>
+      <p class="link">考点回链：<a href="ev.html">专章 C §假设与披露、§VNB 三原则</a></p>
+    </details>
+  </div>
+</section>
+
+<div class="mnem"><b>卷一使用建议</b><span class="verse">多选控制在 30 分钟内，先做后核；<br>简答务必动笔写提纲再展开答案；<br>第三题请用演算器复核——久期手感是本卷唯一要带走的手艺；<br>得分 ≥75 进入卷二，60~75 回 CH.01/CH.04 补课，&lt;60 重读四大篇章。</span></div>
+
+<div class="pager">
+  <a class="pager-prev" href="zhenti.html"><small>← 上一页</small>真题馆 · 2026 全解</a>
+  <a class="pager-next" href="exam2.html"><small>下一页 →</small>卷二 · 规则卷</a>
+</div>
+<button class="done-btn" data-id="exam1">○ 标记本页已完成</button>
+<footer class="colophon">2026 中国精算师资格考试 · 资产负债管理与价值评估（科目八）知识库 · 仅供学习交流</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>
