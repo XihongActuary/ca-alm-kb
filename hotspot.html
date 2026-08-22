@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>专章 D · 低利率与利差损 · 2026 中国精算师科目八知识库</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<aside class="side">
+  <div class="brand"><b>ALM · 科目八</b><span>资产负债管理与价值评估 · 知识库</span></div>
+  <nav>
+    <div class="grp">总览</div>
+    <a href="xihong.html">关于 · 西红精算</a>
+    <a href="index.html">首页 · 考试全景</a>
+    <a href="about.html">本库说明 · 编法与用法</a>
+    <div class="grp">四大篇章（按考纲权重）</div>
+    <a href="ch1.html">① ALM 基础<span class="w">10%</span></a>
+    <a href="ch2.html">② 偿付能力评估与管理<span class="w">40%</span></a>
+    <a href="ch3.html">③ 价值评估与管理<span class="w">25%</span></a>
+    <a href="ch4.html">④ 资产负债管理<span class="w">25%</span></a>
+    <div class="grp">四大专章（纵深武器库）</div>
+    <a href="calc.html">A 偿二代计算手册</a>
+    <a href="quant.html">B ALM 量化评估拆解</a>
+    <a href="ev.html">C 内含价值实战</a>
+    <a href="hotspot.html" class="on">D 低利率与利差损</a>
+    <div class="grp">升级版 · 精算讲堂</div>
+    <a href="alm-plus.html">A⁺ ALM 模型与实务</a>
+    <a href="ev-plus.html">B⁺ 价值评估进阶</a>
+    <a href="companion.html">C⁺ ALM 在线库 · 导读</a>
+    <div class="grp">真题与实战</div>
+    <a href="zhenti.html">真题馆 · 2026 全解 ★</a>
+    <a href="exam1.html">卷一 · 筑基卷</a>
+    <a href="exam2.html">卷二 · 规则卷</a>
+    <a href="exam3.html">卷三 · 全真冲刺卷</a>
+  </nav>
+  <div class="prog-mini">已完成 <b>0 / 16</b> 页<br>点击每页底部按钮记录进度</div>
+</aside>
+<main class="main">
+
+<div class="ch-head">
+  <div class="no">SPECIAL D</div>
+  <h1>低利率与利差损：所有规则的最终考场</h1>
+  <div class="sub">7 年久期缺口 · 长期低利率压测 · 2026 征求意见稿 · 长周期考核改革</div>
+  <div class="meta"><span>热点专题 · 支撑全部四大篇章</span><span>2026 真题「成本收益匹配」「传统险账户降波动」的现实背景</span><span>国泰海通 2026.06 深度研究 + 监管规则</span></div>
+</div>
+
+<div class="toc"><b>本页目录</b>
+<ol>
+  <li>三重语境：为什么低利率是总考场</li>
+  <li>资负错配的四大成因</li>
+  <li>监管规则里的低利率：情景二与情景三</li>
+  <li>2026《保险公司资产负债管理办法（征求意见稿）》</li>
+  <li>考核机制改革时间线 2022→2025</li>
+  <li>海外经验与估值修复</li>
+  <li>答题武器化：低利率怎么进考题</li>
+</ol>
+</div>
+
+<section>
+  <h2><span class="sn">00</span>三重语境：为什么低利率是总考场 <span class="star s3">★★★</span></h2>
+  <p>如果只能准备一个热点，就准备低利率。因为它同时出现在三套话语体系里，而科目八恰好把三套体系放在一张卷子上考：</p>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>语境</th><th>低利率下的冲击</th><th>考试落点</th></tr>
+    <tr><td><b>偿二代二期</b></td><td>750 日曲线下移 → 折现率下行 → 准备金 / 认可负债增提 → 实际资本减少、充足率承压</td><td>CH.02 + <a href="calc.html">专章 A</a>：折现率三段曲线、利率风险最低资本</td></tr>
+    <tr><td><b>ALM 量化评估</b></td><td>再投资收益率趋势性下移 → 成本收益匹配恶化 → 利差损；情景二专门刻画"长期低利率"</td><td>CH.04 + <a href="quant.html">专章 B</a>：情景二再投资收益率下调 24%~73%</td></tr>
+    <tr><td><b>价值评估 / IFRS17</b></td><td>投资收益率假设 ±50bps → EV 约 ±20%（最敏感）；上市险企 2023 年底集体下调投资回报率与 RDR 假设；EV 与 IFRS17 利润边际（CSM + 风险调整）的勾稽日益重要</td><td>CH.03 + <a href="ev.html">专章 C</a>：敏感性七情景、假设审慎化</td></tr>
+  </table>
+  </div>
+  <div class="tip"><b>一句话框架</b>：低利率是"负债刚性 + 资产收益下移"的双重挤压——负债端预定利率和保证成本是刚性的（下不去），资产端再投资收益率是下行的（上不来），中间被挤掉的就是利差。考试里凡是问"风险""压力情景""假设调整"，先想到这条主线，答案就有了骨架。</div>
+  <p class="src-note"><b>本专章知识来源</b>：保险资产负债管理监管规则第 4 号（情景二 / 情景三参数）＋ 2026 年《保险公司资产负债管理办法（征求意见稿）》（久期错配缺口上限、考核机制改革条款，注意其为征求意见稿、尚未生效）＋ 财政部 2022 年《关于国有保险公司考察期限设置的通知》等长周期考核文件 ＋ 日本 90 年代、欧洲低利率期行业应对的公开研究。行业数据（亏损面、缺口测算）为公开报道口径，答题引用时注明"据公开资料"。徽章：<span class="src">规</span> = 监管规则与法规、<span class="src">题</span> = 历年真题与热点。</p>
+  <h3>核心问题自测（先自己答，再展开对照）</h3>
+  <div class="qa-list">
+    <details class="answer"><summary>低利率的三重语境与一句话框架？</summary><div class="body"><p>偿二代（750 日曲线下移 → 认可负债增提 → 实际资本承压）、ALM 量化评估（再投资收益率下移 → 利差损，情景二 −73%~−24%）、价值评估 / IFRS17（投资假设 ±50bps → EV ±20%）。一句话：负债刚性 + 资产收益下移的双重挤压，挤掉的是利差。</p></div></details>
+    <details class="answer"><summary>情景二与情景三分别防什么？</summary><div class="body"><p>情景二（长期低利率）防<b>利差损</b>：再投资收益率按期限下调（1 年 −73% … 20 年+ −24%），负债保证成本率不变。情景三（利率跳升）防<b>双杀</b>：无风险利率第 2 年 +100bps、第 3 年再 +100bps，负债成本同步上调 + 资产市值大跌 + 退保权价值上升。</p></div></details>
+    <details class="answer"><summary>2026 征求意见稿的两个硬约束与生效状态？</summary><div class="body"><p>① 久期错配缺口上限（人身险 7 年）；② 考核机制改革时间线（2022→2025：长周期考核 3 年 / 5 年权重 50% / 20%）。注意：为征求意见稿、尚未正式生效——答题要写"征求意见稿拟……"。</p></div></details>
+    <details class="answer"><summary>海外低利率应对的三条主线？</summary><div class="body"><p>日本：预定利率分阶段下调（6%→2% 量级）+ 巨额利差损消化 + 提高死差 / 费差占比；欧洲：分红万能等浮动收益产品转型（负债成本联动市场）；共同经验：拉长资产久期 + 压降保证成本 + 修复利差 → 盈利确定性提升 → 估值修复（P/EV 回升）。</p></div></details>
+  </div>
+</section>
+
+<section>
+  <h2><span class="sn">01</span>资负错配的四大成因 <span class="star s3">★★★</span></h2>
+  <div class="steps">
+    <div class="stp"><b>业务模式层面：负债冲规模、资产冲收益</b><span>负债端以规模为核心、资产端以收益率为核心 → 负债成本较高而投资收益率不确定性提升 → 成本收益匹配风险；部分中小公司前期规模扩张忽视流动性管理 → 流动性风险。</span></div>
+    <div class="stp"><b>治理层面：资负组织架构割裂</b><span>缺乏统一强力管理部门是内在治理原因——资产部门与负债部门过度重视<b>短周期考核</b>；缺少资负管理专职人员、责任落实不到位；产品定价与投资配置<b>分头决策</b>。（对照 32 号办法的委员会架构要求，见 <a href="quant.html">专章 B</a>。）</span></div>
+    <div class="stp"><b>期限结构层面：负债久期长、长资产供给不足</b><span>负债久期过长 + 长期高收益固收资产供给不足：<b>中国保险资产负债久期错配缺口约 7 年</b>（中国保险资产管理业协会曹德云数据）；存量非标资产逐步到期、优质非标供给减少、剩余期限持续收窄 → <b>再配置压力显著提升</b>。</span></div>
+    <div class="stp"><b>成本收益与流动性层面：高预定利率的历史包袱</b><span>人身险公司过往销售高预定利率产品 → 刚性负债成本压力；固收资产回报趋势性下移。2025 年数据：86 家财险公司 9 家亏损（10.5%），72 家人身险公司 10 家亏损（13.9%）；财险公司中经营现金流净额为负的 21 家（24.4%），承保利润高度集中于头部。</span></div>
+  </div>
+  <div class="warn"><b>必须背下来的数字</b>：久期错配缺口 <b>7 年</b>；2025 年人身险亏损面 <b>13.9%</b>（10/72）；财险经营现金流为负比例 <b>24.4%</b>（21/86）。论述题里摆出这三个数字，论证立刻从"背书"升级为"诊断"。</div>
+</section>
+
+<section>
+  <h2><span class="sn">02</span>监管规则里的低利率：情景二与情景三 <span class="star s3">★★★</span></h2>
+  <p>成本收益匹配的压力情景不是抽象概念，监管规则第 4 号给了完整参数。低利率对应<b>情景二</b>，其镜像<b>情景三（利率跳升）</b>一起记才完整——这正是 2026 真题"成本收益匹配"一题的底层素材（详见 <a href="zhenti.html">真题馆</a>）。</p>
+  <h3>2.1 情景二：长期低利率</h3>
+  <div class="formula">
+    <div class="fx">存量固收资产期望收益率<b>不变</b>；再投资收益率按压力情景下调</div>
+    <div class="fx">压力后再投资收益率 = 基本情景再投资收益率 × (1 + 资产利率向下比例)</div>
+    <div class="note">负债保证成本率与基本情景相同——三句话合起来就是利差损的机械定义：存量收益锁住、新钱收益率大跌、负债成本纹丝不动。</div>
+  </div>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>期限（年）</th><th class="num">再投资收益率下调</th><th>期限（年）</th><th class="num">再投资收益率下调</th></tr>
+    <tr><td>1</td><td class="num neg">−73%</td><td>11</td><td class="num neg">−36%</td></tr>
+    <tr><td>2</td><td class="num neg">−71%</td><td>12</td><td class="num neg">−34%</td></tr>
+    <tr><td>3</td><td class="num neg">−68%</td><td>13</td><td class="num neg">−32%</td></tr>
+    <tr><td>4</td><td class="num neg">−63%</td><td>14</td><td class="num neg">−30%</td></tr>
+    <tr><td>5</td><td class="num neg">−58%</td><td>15</td><td class="num neg">−28%</td></tr>
+    <tr><td>6</td><td class="num neg">−54%</td><td>16~17</td><td class="num neg">−28% / −27%</td></tr>
+    <tr><td>7</td><td class="num neg">−50%</td><td>18~19</td><td class="num neg">−26% / −25%</td></tr>
+    <tr><td>8</td><td class="num neg">−46%</td><td>20 年及以上</td><td class="num neg">−24%</td></tr>
+    <tr><td>9 / 10</td><td class="num neg">−42% / −37%</td><td class="note-td" colspan="2"><b>短期限伤最深：1 年期再投资收益率近乎腰斩再打折</b></td></tr>
+  </table>
+  </div>
+  <p>读表三问（也是答题三段论）：<b>谁最受伤？</b>——短久期资产占比高的账户（再投资敞口大）。<b>谁相对安全？</b>——长久期、票息锁定的存量账户，但只是"安全一时"，到期后同样暴露。<b>负债端呢？</b>——保证成本率不动，传统险最刚；分红、万能有缓冲机制（见下）。</p>
+  <h3>2.2 情景三：利率跳升（对称的另一头）</h3>
+  <div class="formula">
+    <div class="fx">无风险收益率：第 1 年不变，第 2 年 +100bps，第 3 年再 +100bps</div>
+    <div class="fx">权益类资产收益率：取基本情景假设与过去三年实际收益率均值的<b>较小值</b></div>
+    <div class="fx">负债资金成本率：第 2 年传统险中短存续期产品与万能险 +100bps、分红险 +100bps×分配给保单持有人的比例；第 3 年同理再 +100bps</div>
+    <div class="note">利率跳升伤的是<b>资产市值</b>（债券大跌）与<b>退保潮</b>（保单持有人拿钱走人去追高息），而负债成本调整有时滞且不完全——所以"低利率怕利差损、高利率怕市值与退保"，两头都要防，这就是 ALM 存在的意义。</div>
+  </div>
+  <h3>2.3 分红与万能的缓冲机制（36 个月规则）</h3>
+  <p>负债端有效久期计算时，分红保险保单红利水平在报告期末起<b>连续 36 个月内</b>与收益率变动前保持一致；36 个月后按投资收益率变动幅度和公司分红比例调整（向下调整幅度变动不超过 <b>50bps × 0.7</b>），但不低于产品说明书低档红利水平；万能保险调整后结算利率不得低于合同约定<b>最低保证利率</b>。这就是浮动收益产品"吸收冲击"的监管刻画——也是规则 4 号中损失吸收调整 LA（β 系数）承认分红 / 万能账户的理论基础。</p>
+</section>
+
+<section>
+  <h2><span class="sn">03</span>2026《保险公司资产负债管理办法（征求意见稿）》 <span class="star s3">★★★</span></h2>
+  <p>2026 年 6 月，监管部门就《保险公司资产负债管理办法》公开征求意见——这是"当下热点"最直接的出题素材（国泰海通 2026.06.18 深度研究）。</p>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>对象</th><th>征求意见稿要求</th><th>行业影响</th></tr>
+    <tr><td>财险公司</td><td>提出<b>流动性及成本收益匹配</b>的资负管理要求</td><td>推动综合成本压降和维持流动性资产</td></tr>
+    <tr><td>人身险公司</td><td>提出<b>期限结构、成本收益以及流动性匹配</b>的资负管理要求（三维度全覆盖）</td><td>改善期限结构、降低负债成本</td></tr>
+    <tr><td>所有公司</td><td><b>治理架构改革</b>：建立专业部门独立职责，压实主体责任</td><td>改善组织架构和考核机制，提升资负联动</td></tr>
+  </table>
+  </div>
+  <div class="tip"><b>考点联想</b>：征求意见稿的三维度要求与现行量化评估规则（期限结构 30% + 成本收益 40% + 现金流 30%，<a href="quant.html">专章 B</a>）一脉相承，但把适用范围从人身险扩展到<b>财险公司</b>、把重心从"评估打分"前移到"治理责任"。答题时点出这层演进，就是"了解行业动态"的分。</div>
+</section>
+
+<section>
+  <h2><span class="sn">04</span>考核机制改革时间线 2022→2025 <span class="star s2">★★</span></h2>
+  <p>低利率的病根之一是"短周期考核逼着资产端追收益"。监管的解法是拉长考核周期——四个文件一条线，时间线背下来，选择题和论述题通吃：</p>
+  <div class="timeline">
+    <div class="tl"><b>2022.07.12</b><span>《商业保险公司绩效评价办法》——引入<b>资本保值增值率</b>指标。</span></div>
+    <div class="tl"><b>2023.10.30</b><span>《关于引导保险资金长期稳健投资加强国有商业保险公司长周期考核的通知》——净资产收益率由"当年度"调整为"<b>3 年周期 + 当年度</b>"各占 50%。</span></div>
+    <div class="tl"><b>2025.01.22</b><span>《关于推动中长期资金入市工作的实施方案》——当年度权重 ≤30%，<b>3~5 年周期权重 ≥60%</b>。</span></div>
+    <div class="tl"><b>2025.07.11</b><span>《关于引导保险资金长期稳健投资进一步加强国有商业保险公司长周期考核的通知》——调整为"<b>当年度 + 3 年 + 5 年</b>"权重分别为 <b>30% / 50% / 20%</b>。</span></div>
+  </div>
+  <div class="mnem"><b>考核改革口诀</b><span class="verse">二二保值增值，二三三年对半；<br>二五入市压当年（≤30%），七月再加五年档（30/50/20）。</span></div>
+</section>
+
+<section>
+  <h2><span class="sn">05</span>海外经验与估值修复 <span class="star s2">★★</span></h2>
+  <ul>
+    <li><b>海外头部险企</b>得益于相对健全的资负联动机制，盈利确定性与估值表现均更优；</li>
+    <li><b>海外经验三条</b>：① <b>预定利率随市场利率动态调整机制</b>（负债成本跟着资产收益走，从源头防利差损）；② 产品结构改善推动负债成本压降（提升保障型、降低储蓄刚兑型占比）；③ <b>久期缺口管控较好</b>（长债、超长债与衍生品补齐资产久期）；</li>
+    <li><b>核心论点</b>：资负匹配将提升保险公司盈利稳定性，推动估值修复；当前国内寿险行业估值已充分甚至过度计入悲观预期，合理控制资负匹配后估值有望显著修复。</li>
+  </ul>
+  <p>把这条论点与专章 C 接通：<b>估值修复的定价锚正是 EV</b>——当市场 P/EV 长期低于 1 时，意味着市场对 EV 里的投资收益率假设整体不信；资负匹配改善 + 假设审慎化（2023 年底下调投资回报率与 RDR）双管齐下，EV 的"可信度"提升，估值才有修复的支点。这是把热点讲成逻辑闭环的标准示范。</p>
+</section>
+
+<section>
+  <h2><span class="sn">06</span>答题武器化：低利率怎么进考题 <span class="star s3">★★★</span></h2>
+  <p>热点不是用来"知道"的，是用来"接题"的。低利率可以从五个方向进卷子，每一招都有标准接法：</p>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>出题方向</th><th>题目长相</th><th>接法（答题骨架）</th></tr>
+    <tr><td>偿付能力</td><td>"利率变动对实际资本 / 最低资本的影响"</td><td>750 日曲线下移 → 折现率 ↓ → 认可负债 ↑ → 实际资本 ↓；同时利率风险 MC 变动（参考 2026 真题简 6，<a href="zhenti.html">真题馆</a>）</td></tr>
+    <tr><td>成本收益匹配</td><td>"低利率情景下哪些账户承压、为什么"</td><td>存量收益锁定 + 再投资收益率 −73%~−24% + 保证成本不动 → 短久期高保证账户最伤；分红 / 万能有 36 个月缓冲与 LA 吸收（情景二参数直接搬）</td></tr>
+    <tr><td>传统险账户 ALM</td><td>"传统险账户如何降低利率风险敞口"</td><td>拉长资产久期（长债 / 超长债）、增配与负债现金流匹配的固收、利率衍生品对冲、控制新单预定利率、优化产品结构（2026 真题简 8 原题）</td></tr>
+    <tr><td>价值评估</td><td>"投资收益率假设下调 50bps 对 EV 的影响"</td><td>EV 约 −20%（最敏感假设）→ 2023 年底上市险企集体下调假设的实务印证 → 假设审慎性与 EV 可信度（专章 C 第五节）</td></tr>
+    <tr><td>监管趋势</td><td>"如何看待资产负债管理办法征求意见稿"</td><td>成因（四大错配 + 7 年缺口）→ 要求（财险两维度 / 人身险三维度 + 治理改革）→ 考核长周期化 → 海外经验与估值修复</td></tr>
+  </table>
+  </div>
+  <div class="warn"><b>热点题拿分铁律</b>：观点 + 数字 + 规则条文三个都要有。只谈观点是评论员，只背条文是复读机，"7 年缺口 + 情景二参数 + 32 号办法组织架构"三件套一起上，才是精算师的答案。</div>
+</section>
+
+<div class="mnem"><b>本页总口诀</b><span class="verse">负债刚性资产软，七载缺口是病根；<br>存量锁住新钱跌，保证成本纹不动；<br>再投一年七成三，二十年限二成四；<br>跳升反伤市值退，两头都要防；<br>考核拉长三五一，征求意见三维度；<br>预定利率随行就市，久期补齐估值修。</span></div>
+
+  <p class="link">进阶延伸：IFRS17 × 偿二代 × EV 三体系对照 → <a href="alm-plus.html">升级版 A⁺ ALM 模型与实务</a></p>
+<div class="pager">
+  <a class="pager-prev" href="ev.html"><small>← 上一页</small>专章 C 内含价值实战</a>
+  <a class="pager-next" href="alm-plus.html"><small>下一页 →</small>升级版 A ALM 模型与实务</a>
+</div>
+<button class="done-btn" data-id="hotspot">○ 标记本页已完成</button>
+<footer class="colophon">2026 中国精算师资格考试 · 资产负债管理与价值评估（科目八）知识库 · 仅供学习交流</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>
