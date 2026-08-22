@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>专章 B · ALM 量化评估拆解 · 2026 中国精算师科目八知识库</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<aside class="side">
+  <div class="brand"><b>ALM · 科目八</b><span>资产负债管理与价值评估 · 知识库</span></div>
+  <nav>
+    <div class="grp">总览</div>
+    <a href="xihong.html">关于 · 西红精算</a>
+    <a href="index.html">首页 · 考试全景</a>
+    <a href="about.html">本库说明 · 编法与用法</a>
+    <div class="grp">四大篇章（按考纲权重）</div>
+    <a href="ch1.html">① ALM 基础<span class="w">10%</span></a>
+    <a href="ch2.html">② 偿付能力评估与管理<span class="w">40%</span></a>
+    <a href="ch3.html">③ 价值评估与管理<span class="w">25%</span></a>
+    <a href="ch4.html">④ 资产负债管理<span class="w">25%</span></a>
+    <div class="grp">四大专章（纵深武器库）</div>
+    <a href="calc.html">A 偿二代计算手册</a>
+    <a href="quant.html" class="on">B ALM 量化评估拆解</a>
+    <a href="ev.html">C 内含价值实战</a>
+    <a href="hotspot.html">D 低利率与利差损</a>
+    <div class="grp">升级版 · 精算讲堂</div>
+    <a href="alm-plus.html">A⁺ ALM 模型与实务</a>
+    <a href="ev-plus.html">B⁺ 价值评估进阶</a>
+    <a href="companion.html">C⁺ ALM 在线库 · 导读</a>
+    <div class="grp">真题与实战</div>
+    <a href="zhenti.html">真题馆 · 2026 全解 ★</a>
+    <a href="exam1.html">卷一 · 筑基卷</a>
+    <a href="exam2.html">卷二 · 规则卷</a>
+    <a href="exam3.html">卷三 · 全真冲刺卷</a>
+  </nav>
+  <div class="prog-mini">已完成 <b>0 / 16</b> 页<br>点击每页底部按钮记录进度</div>
+</aside>
+<main class="main">
+
+<div class="ch-head">
+  <div class="no">SPECIAL B</div>
+  <h1>ALM 量化评估拆解：规则第 4 号的全景解剖</h1>
+  <div class="sub">30 / 40 / 30 权重体系 · 逐指标公式 · 六情景压测 · 评分标准</div>
+  <div class="meta"><span>支撑 CH.02 / CH.04</span><span>2026 真题「成本收益匹配」直接出处</span><span>《保险资产负债管理监管规则第 4 号》</span></div>
+</div>
+
+<div class="toc"><b>本页目录</b>
+<ol>
+  <li>总体框架与权重表</li>
+  <li>期限结构匹配（30%）逐指标</li>
+  <li>成本收益匹配（40%）逐指标</li>
+  <li>现金流匹配（30%）逐指标</li>
+  <li>配套规则：5 号报告 + 32 号办法</li>
+</ol>
+</div>
+
+<section>
+  <h2><span class="sn">00</span>总体框架与权重表 <span class="star s3">★★★</span></h2>
+  <p>规则第 4 号（人身险公司资产负债管理量化评估规则）把「匹配状况」变成百分制评分：<b>期限结构匹配 30% + 成本收益匹配 40% + 现金流匹配 30%</b>，基本信息不计分。每季度计算并随季报报送。</p>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>维度</th><th>指标</th><th class="num">权重</th></tr>
+    <tr><td rowspan="4">期限结构匹配（30%）</td><td>规模调整后的修正久期缺口</td><td class="num">10%</td></tr>
+    <tr><td>资产调整后的期限缺口</td><td class="num">10%</td></tr>
+    <tr><td>利率风险对冲率</td><td class="num">5%</td></tr>
+    <tr><td>基点价值变动率</td><td class="num">5%</td></tr>
+    <tr><td rowspan="2">成本收益匹配（40%）</td><td>成本收益匹配状况（基本情景）</td><td class="num">19%</td></tr>
+    <tr><td>成本收益匹配压力测试</td><td class="num">21%</td></tr>
+    <tr><td rowspan="3">现金流匹配（30%）</td><td>现金流测试（基本情景）</td><td class="num">10%</td></tr>
+    <tr><td>现金流压力测试</td><td class="num">15%</td></tr>
+    <tr><td>流动性指标</td><td class="num">5%</td></tr>
+    <tr><td class="note-td" colspan="2"><b>偿付能力一票否决（不计分，是开关）</b></td><td class="num note-td">—</td></tr>
+  </table>
+  </div>
+  <div class="warn"><b>两道一票否决</b>：① 报告期末<b>核心充足率 &lt;50% 或综合充足率 &lt;100%</b> → 整体量化评估 <b>0 分</b>；② 现金流测试中<b>中低流动性资产变现后</b>累计现金仍至少一期 &lt;0 → 整体 <b>0 分</b>。监管的逻辑：偿付能力与流动性是底线，底线破了，匹配做得再漂亮也无意义。</div>
+  <div class="tip"><b>评估范围</b>：母公司口径（非合并）。账户划分：普通账户（传统/分红/万能子账户 + 资本金账户）+ 独立账户；独立账户规模 ≤ 总资产 1% 的，现金流匹配按普通账户占比 100% 评价。非寿险业务占比 &gt;90% 的公司，期限结构三项指标（对冲率等）不适用；压力情景适用性：非寿占比 &gt;90% 只测情景一、四；&lt;10% 测一、二、三；其余全测。情景一至三每季度、情景四每年。</div>
+  <p class="src-note"><b>本专章知识来源</b>：保险资产负债管理监管规则第 4 号《资产负债管理量化评估规则》（指标定义、权重、评分档、压力情景参数的逐条出处）＋ 第 5 号《报告要求》（报送时限与签字责任）＋ 原银保监办发〔2019〕32 号《保险资产负债管理监管暂行办法》（能力评估与差别化措施）。2026 真题简 1、简 5、简 8 与 Excel 1、2 全部直接出自本章口径。徽章：<span class="src">规</span> = 监管规则原文、<span class="src">题</span> = 历年真题。</p>
+  <h3>核心问题自测（先自己答，再展开对照）</h3>
+  <div class="qa-list">
+    <details class="answer"><summary>三大维度权重与两道一票否决？</summary><div class="body"><p>期限结构 30%（久期缺口 10 + 期限缺口 10 + 对冲率 5 + 基点价值变动率 5）+ 成本收益 40%（基本情景 19 + 压力 21）+ 现金流 30%（测试 10 + 压力 15 + 流动性 5）。一票否决：核心 &lt;50% 或综合 &lt;100% → 0 分；中低流动性资产变现后累计现金仍至少一期为负 → 0 分。</p></div></details>
+    <details class="answer"><summary>久期缺口评分的 ±2 年分档与资产调整的年限设定？</summary><div class="body"><p>规模调整后修正久期缺口：|缺口| ≤2 年得满分，分档劣化至 &gt;8 年零分（评分线性内插）。资产调整后期限缺口中：长期股权投资按 12 年、投资性房地产按 25 年计权。</p></div></details>
+    <details class="answer"><summary>六种利率压力情景的形态与 40 年规则？</summary><div class="body"><p>上升（全曲线 +133~+137bps）、下降（−139~−143）、倾斜上（短端 −200 / 长端 +147）、倾斜下（短端 +250 / 长端 −141）、扭转上（短端 +254 → 中端 −186 → 长端 +117）、扭转下（镜像）；所有情景 40 年以上变动为 0（终极利率锁定）。</p></div></details>
+    <details class="answer"><summary>现金流压力测试三参数（人身险）？</summary><div class="body"><p>新单保费 −80%、退保率取 max（年化 25%，2× 基本退保率）、到期固定收益类资产 10% 违约——三者同时发生；测试期未来三年，首年按季度。</p></div></details>
+  </div>
+</section>
+
+<section>
+  <h2><span class="sn">01</span>期限结构匹配（30%）逐指标</h2>
+
+  <h3>1.1 规模调整后的修正久期缺口（10%）<span class="star s3">★★★</span></h3>
+  <div class="formula">
+    <div class="fx">规模调整后的久期缺口 = D_A×PV_A + D_In×PV_In − D_Out×PV_Out</div>
+    <div class="fx">金额久期缺口 = 上式 / 1000（= 平行变动 10bps 对资产负债<b>金额</b>的影响）；金额久期缺口率 = 金额久期缺口 / 核心资本</div>
+    <div class="note">D_A 资产修正久期按中债估价修正久期方法；In/Out 为资产现金流入与负债现金流出（各自的修正久期加权 PV）。</div>
+  </div>
+  <p><b>评分标准</b>：普通账户缺口在 <b>[-2, 2] 年内 → 直接得满分区间</b>；缺口 &lt;−2 年（资产久期过短，中国常态）时看「规模调整后的现金流<b>流入</b>修正久期」：≥5 年 → 10 分、[4,5) → 8 分、[3,4) → 5 分、[2,3) → 2 分、&lt;2 年 → 0 分；缺口 &gt;+2 年时看「负债现金流<b>流出</b>修正久期」：≥5 年 → 8 分、[4,5) → 5 分、[3,4) → 2 分、&lt;3 年 → 0 分。<b>记住 ±2 年的分界线与「5 年全分成」逻辑即可。</b></p>
+
+  <h3>1.2 资产调整后的期限缺口（10%）<span class="star s2">★★</span></h3>
+  <div class="formula">
+    <div class="fx">资产调整后的期限缺口 = D_A×PV_A + D_In×PV_In − D_Out×PV_Out + BV<sub>长投</sub>×12 + BV<sub>投资性房地产</sub>×25</div>
+    <div class="note">把不能按现金流刻画的长期股权投资（取 12 年）与投资性房地产（取 25 年）折算进缺口。评分：缺口 ∈ <b>[-10, +2]</b> → 10 分；&lt;−10 年且流入修正久期 ≥5 年 → 5 分（&lt;5 年 0 分）；&gt;+2 年且流出修正久期 ≥5 年 → 5 分（否则 0 分）。</div>
+  </div>
+
+  <h3>1.3 利率风险对冲率（5%）<span class="star s2">★★</span></h3>
+  <div class="formula">
+    <div class="fx">对冲率 = (AA<sub>不利</sub> − AA<sub>基础</sub>) / (PV<sub>不利</sub> − PV<sub>基础</sub>)　（不利利率情景下资产变动抵消负债变动的比例）</div>
+    <div class="fx">负债敏感度 = |PV<sub>不利</sub> − PV<sub>基础</sub>| / PV<sub>基础</sub>；资产敏感度 = |AA<sub>不利</sub> − AA<sub>基础</sub>| / AA<sub>基础</sub></div>
+    <div class="note">评分按「对冲率 × 负债敏感度」组合矩阵：对冲率 ≥40% 且敏感度 ≥8% → 5 分；20%~40% 且敏感度 ≥16% → 5 分；&lt;8% 且敏感度 [12%,16%) → 2 分……分档线：<b>40% / 20% / 8%</b>（对冲率）与 <b>5% / 8% / 12% / 16%</b>（敏感度）。直觉：负债对利率越敏感，越需要高对冲率；负债本身不敏感的公司，做对冲徒增成本。</div>
+  </div>
+
+  <h3>1.4 基点价值变动率（5%）与 DV10 体系 <span class="star s2">★★</span></h3>
+  <div class="formula">
+    <div class="fx">DV10<sub>N</sub> = −(PV<sub>+10</sub> − PV<sub>−10</sub>) / 2　（关键期限 N 上折现率 ±10bps 对现值的冲击）</div>
+    <div class="fx">20 个关键期限年：0 / 0.5 / 1 / 2 / 3 / 4 / 5 / 6 / 7 / 8 / 10 / 12 / 15 / 20 / 25 / 30 / 35 / 40 / 45 / 50</div>
+    <div class="fx">关键久期 Dur_Key = 1000 × Σ DV10<sub>N</sub> / PV</div>
+    <div class="fx">六情景基点价值变动：DV_X<sub>N</sub> = DV10<sub>N</sub> × X<sub>N</sub> / 10；Sum_DV_X = Σ DV_X<sub>AllN</sub> + LA</div>
+    <div class="fx">基点价值变动率 = Max(Sum_DV_X) / 核心资本</div>
+    <div class="note">评分分档：<b>≤30% → 10 分（折半为权重 5 分）；(30,50]% → 8 分；(50,70]% → 5 分；(70,100]% → 2 分；&gt;100% → 0 分</b>。LA（损失吸收调整）= β_Par×Min(ΣDV_X_Par,0) + β_U×Min(ΣDV_X_U,0)，β = Min(0.4, 1−Dur_eff/Dur_mod)，LA ≤ 0——分红/万能的浮动机制能吸收部分冲击，监管予以承认。</div>
+  </div>
+  <h4>六种利率压力情景（关键期限变动参数，bps）</h4>
+  <div class="scn-grid">
+    <div class="scn up"><b>上升</b><span>全曲线上行，短端约 +137、长端约 +133、40 年以上为 0</span></div>
+    <div class="scn down"><b>下降</b><span>全曲线下行，短端约 −143、长端约 −139、40 年以上为 0</span></div>
+    <div class="scn tilt"><b>倾斜上</b><span>短端大幅下行 −200、长端大幅上行 +147（陡峭化）</span></div>
+    <div class="scn tilt"><b>倾斜下</b><span>短端大幅上行 +250、长端大幅下行 −141（平坦化）</span></div>
+    <div class="scn twist"><b>扭转上</b><span>短端 +254 → 中端转负（10 年约 −186）→ 30 年 +117（先下后上）</span></div>
+    <div class="scn twist"><b>扭转下</b><span>与扭转上镜像对称（−200 → +179 → −112）</span></div>
+  </div>
+  <p>记忆法：<b>平移两式（升/降）+ 形状四式（陡/平/扭上/扭下）</b>。注意所有情景 40 年以上变动均为 0（终极利率锁定），且关键期限之间按线性插值、50 年以后等幅变动。</p>
+</section>
+
+<section>
+  <h2><span class="sn">02</span>成本收益匹配（40%）逐指标</h2>
+
+  <h3>2.1 收益端：E / G / H 三兄弟 <span class="star s3">★★★</span></h3>
+  <div class="formula">
+    <b>会计投资收益率 E（不含可供出售公允价值变动）</b>
+    <div class="fx">E = (投资收益 + 公允价值变动损益 + 其他投资损益 + 固收类当年可确定利息收入 + 其他可确定投资收入 − 可确定投资支出) / 资金运用平均净额</div>
+    <b>综合投资收益率 G（含可供出售公允价值变动）</b>
+    <div class="fx">G = (会计投资收益 + <b>可供出售类金融资产公允价值变动</b> + 固收类可确定利息收入…) / 资金运用平均净额</div>
+    <b>风险调整后综合投资收益率 H（RAROI）</b>
+    <div class="fx">H = G − [8% × √(MC<sub>市场</sub>² + 2×<b>0.25</b>×MC<sub>市场</sub>×MC<sub>信用</sub> + MC<sub>信用</sub>²)] / 资金运用平均净额</div>
+    <div class="note">H 的含义：把市场与信用风险的<b>资本占用成本</b>（按 8% 资本回报要求）从收益中扣除——同等收益率下，低资本占用的组合 H 更高，这就是「配置效率」的监管表达。计算时不考虑分红万能损失吸收效应。</div>
+  </div>
+
+  <h3>2.2 成本端：L / K / J / R 四口径 <span class="star s3">★★★</span></h3>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>口径</th><th>普通型</th><th>分红型</th><th>万能型</th><th>中短存续期</th></tr>
+    <tr><td><b>保证成本率 L</b></td><td>预定利率</td><td>预定利率</td><td>最低保证利率</td><td>= 资金成本率</td></tr>
+    <tr><td><b>资金成本率 K</b></td><td>预定利率</td><td><b>最近一年宣告分红水平 + 预定利率</b></td><td><b>过去 12 个月结算利率算术平均</b></td><td>= 保证成本率</td></tr>
+  </table>
+  </div>
+  <p><b>有效成本率 J</b>（IRR 法）：使负债现金流折现值 = 资产账面价值的年化折现率，BV = Σ CF<sub>t</sub>/(1+J)<sup>t</sup>。<b>非寿险资金成本率 R</b> = (综合成本 − 已赚保费) / (非寿险准备金 + 净资产)——综合成本率 100% 意味着承保零利润，R 直接刻划「承保亏损对资本的消耗速度」。</p>
+
+  <h3>2.3 三大利差指标与评分 <span class="star s3">★★★</span></h3>
+  <div class="formula">
+    <div class="fx">M = G − K（综合口径，5 分）　N = H − L（风险调整口径，5 分）　O = E − J（会计口径，5 分）</div>
+    <div class="fx">S = G − R（非寿险：综合收益率 − 非寿险资金成本率，15 分）</div>
+    <div class="note">三口径设计意图：M 看「钱袋子真实利差」（综合收益含浮盈）、N 看「扣掉资本占用后还剩多少」、O 看「会计报表口径利差」——三者同查，无处藏拙。</div>
+  </div>
+  <p><b>基本情景评分（19%）</b>：对普通账户 + 传统/分红/万能分账户评估——普通账户差额 ≥0 且所有子账户 ≥0 → <b>5 分</b>；普通 ≥0 但有子账户 &lt;0 → 3 分；普通 &lt;0 → 0 分。中短存续期产品单独 4 分（每有一个差额 &lt;0 扣 1 分）。</p>
+
+  <h3>2.4 四大压力情景（21%）<span class="star s3">★★★</span></h3>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>情景</th><th>核心参数</th><th>考法</th></tr>
+    <tr><td><b>一 · 宏观经济恶化</b></td><td>境内外股票基金按 99% 置信三年 VaR 下跌、其他权益减值 15%；投资性房地产 −20%；利差扩大 σ=77%（BV_down = BV×(1−σ×Dur_spread×S)）；关注类及以下违约损失 60%；人民币汇率不利波动 20%</td><td>当期利差冲击</td></tr>
+    <tr><td><b>二 · 长期低利率</b></td><td>存量固收期望收益不变，<b>再投资收益率</b>按期限下调：1 年期 <b>−73%</b> … 10 年 −37% … 20 年以上 −24%（期限越短降幅越大）；负债保证成本率不变</td><td>未来三年利差（短端再配置最痛）</td></tr>
+    <tr><td><b>三 · 利率跳升</b></td><td>无风险利率：第 1 年不变、第 2 年 <b>+100bps</b>、第 3 年再 +100bps；负债资金成本率同步：万能/中短 +100bps，分红 +100bps×保户分配比例；权益取基本假设与过去三年实际均值的较小值</td><td>「资产缩水 + 负债成本上行」双杀</td></tr>
+    <tr><td><b>四 · 非寿险影响</b></td><td>保费增长率 = 基本情景 ×130%（开业满三年）/×150%（未满）；赔付率与费用率 = ×106% / ×110%</td><td>非寿险占比大的公司</td></tr>
+  </table>
+  </div>
+  <p><b>压力测试评分（21%）</b>：情景一按当期整体差额分档（≥0 → 7 分；[−2%,0) → 5 分；[−5%,−2%) → 3 分；[−10%,−5%) → 1 分；其余 0 分）；情景二/三各 7 分，按<b>未来三年每年年末</b>普通账户及各账户利差：三年全 ≥0 → 7 分；普通每年 ≥0 但有子账户 &lt;0 → 5 分；仅两年普通 ≥0 → 3 分；仅一年 → 1 分；三年均 &lt;0 → 0 分。</p>
+</section>
+
+<section>
+  <h2><span class="sn">03</span>现金流匹配（30%）逐指标</h2>
+
+  <h3>3.1 流动性比例（5%）<span class="star s2">★★</span></h3>
+  <div class="formula">
+    <div class="fx">流动性比例 = (流动性资产 + 剩余期限 1 年以上政府债券/准政府债券) / 上季末总资产</div>
+    <div class="note">分母扣除债券回购融入资金与独立账户资产。评分只有一条线：<b>≥5% → 5 分；&lt;5% → 0 分</b>。2026 Excel「流动性指标计算 + 异常判断 + 三条建议」即源于此。</div>
+  </div>
+
+  <h3>3.2 现金流测试：三级检验体系（10% + 15%）<span class="star s3">★★★</span></h3>
+  <div class="steps">
+    <div class="stp"><b>第一级：累计现金及流动性管理工具</b><span> —— 不动资产，纯现金视角：账户累计余额未来各期是否 ≥0。</span></div>
+    <div class="stp"><b>第二级：+ 高流动性资产变现</b><span> —— 国债 95%、政府债/准政府债/AAA 金融债 90%、AAA 非金融债/债基 85%、上市股票/股基/可转债 80%。</span></div>
+    <div class="stp"><b>第三级：+ 中低流动性资产变现</b><span> —— 持有至到期国债 95%…保险资管产品 75%、其他资产 60%；已质押/抵押/信用增级的资产不可变现。</span></div>
+  </div>
+  <p><b>测试期间</b>：自报告期末未来三年（首年按季度、次年合并剩余季度、第三年按年）。<b>基本情景评分（10 分）</b>：全账户全程 ≥0 → 10 分；普通 ≥0 但子账户有负 → 8 分；普通有负但二级后 ≥0 → 5 分；三级后才 ≥0 → 0 分；三级后仍有负 → <b>整体 0 分（一票否决）</b>。<b>压力情景（15 分）</b>：12/10/5/0 分同构递减。</p>
+  <div class="formula">
+    <b>现金流压力情景（人身险，三者同时发生）</b>
+    <div class="fx">新单保费同比 <b>−80%</b></div>
+    <div class="fx">退保率 = max(年化 <b>25%</b>, 基本情景 × <b>2</b>)（绝对值 ≤100%）</div>
+    <div class="fx">预测期内到期固收资产 <b>10%</b> 无法收回本息</div>
+    <div class="note">财险版：保费 −50% + 综合成本率 ×130%；再保版：巨灾致分保赔付 +50% + 非关联方应收分保账款 30% 无法收回。</div>
+  </div>
+
+  <h3>3.3 偿付能力压力测试必测情景（配套，规则附件 4）<span class="star s2">★★</span></h3>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>公司</th><th>必测压力情景</th><th>年度敏感性必测因素</th></tr>
+    <tr><td>人身险</td><td>① 保险风险：新单 130% 或 70%、死亡 +10%、退保 +20%、疾病 +15%、费用 +10%；② 宏观：无风险曲线 +50BP、权益 −20%、固收违约损失 10%；③ 利率风险：不利情景参数 ×130%</td><td>750 日曲线平行下移 50BP；权益 −30%</td></tr>
+    <tr><td>财产险</td><td>① 保险风险：保费 ×120%、综合成本率 ×110%；② 宏观：同上</td><td>保费 ×130%；权益 −30%</td></tr>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2><span class="sn">04</span>配套规则：5 号报告 + 32 号办法</h2>
+  <h3>4.1 监管规则第 5 号：报告要求 <span class="star s2">★★</span></h3>
+  <ul>
+    <li><b>季度报告</b>：量化评估表 + 匹配结果变化与原因 + 主要风险 + 化解措施；季末后 <b>30 日内</b>报送；董事长、总经理签字。</li>
+    <li><b>年度报告</b>六部分：公司信息 / 董事会和管理层声明 / 基本情况 / 业务规划和资产配置 / 资产负债管理与评估 / 外部机构意见；<b>每年 5 月 31 日前</b>报送；七高管签字（董事长、总经理、财务负责人、精算负责人、投资负责人、首席风险官、合规负责人），<b>共同和连带法律责任</b>。</li>
+    <li>业务规划至少三年（含各类产品未来三年预期保费）；资产战略配置规划至少三年、每年至少滚动评估一次（六项内容：决策依据、长期收益目标、大类资产配置比例、允许/限制/禁止标准、流动性要求与再投资计划、会计分类原则）；回溯分析含保费偏差、收益率偏差、配置比例偏差。</li>
+    <li><b>第三方独立审核</b>（会计师事务所/精算咨询公司）：历史财务信息、预测方法合规性、基本情景假设合理性、压力情景一致性、计算结果完整性——意见分无保留/保留/否定/无法表示意见。</li>
+  </ul>
+  <h3>4.2 银保监发〔2019〕32 号：暂行办法 <span class="star s2">★★</span></h3>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>模块</th><th>要点</th></tr>
+    <tr><td>组织架构</td><td>董事会下设<b>资产负债管理委员会</b>，高管层下设<b>资产负债管理执行委员会</b>，牵头部门任秘书处；总资产 &lt;1000 亿的财险公司可不设委员会</td></tr>
+    <tr><td>董事会职责</td><td>承担<b>最终责任</b>：审定 ALM 总体目标与战略、审定制度、审定资产配置政策</td></tr>
+    <tr><td>执行委员会</td><td>日常管理、沟通协商机制、审议资产配置政策及调整、组织实施、控制风险</td></tr>
+    <tr><td>能力评估（5 维度）</td><td>基础与环境 · 控制与流程 · 模型与工具 · 绩效考核 · 管理报告（百分制，现场+非现场，材料调阅/查验/问卷/质询/穿行测试）</td></tr>
+    <tr><td>量化评估（3 维度）</td><td>期限结构匹配 · 成本收益匹配 · 现金流匹配（即规则 4 号）</td></tr>
+    <tr><td>差别化措施</td><td>能力高+匹配好 → 资金运用与产品政策支持；能力低/匹配差 → 风险提示、监管谈话、监管函、专项检查、限期整改等；评估结果作为<b>股权投资、不动产投资、衍生品运用能力</b>的审慎性条件</td></tr>
+  </table>
+  </div>
+</section>
+
+<div class="mnem"><b>本页总口诀</b><span class="verse">三十四十三，两票定生死；<br>久期缺口二为界，期限缺口负十三；<br>对冲四二八，变动三五七；<br>收益三兄弟，成本四口径；<br>压测四情景，低利最伤短；<br>现金三级验，中低破零即出局；<br>季报三十日，年报五一前。</span></div>
+<p class="arch-hint">「负十三」即期限缺口满分区间 [−10, +2]（从 −10 到 +2 共 12 年，记作「负十到正二」）。</p>
+
+  <p class="link">进阶延伸：曲线三层假设 · 再平衡阈值锚定监管指标 → <a href="alm-plus.html">升级版 A⁺ ALM 模型与实务</a></p>
+<div class="pager">
+  <a class="pager-prev" href="calc.html"><small>← 上一页</small>专章 A 偿二代计算手册</a>
+  <a class="pager-next" href="ev.html"><small>下一页 →</small>专章 C 内含价值实战</a>
+</div>
+<button class="done-btn" data-id="quant">○ 标记本页已完成</button>
+<footer class="colophon">2026 中国精算师资格考试 · 资产负债管理与价值评估（科目八）知识库 · 仅供学习交流</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>
