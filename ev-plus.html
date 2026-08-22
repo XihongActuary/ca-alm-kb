@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>升级版 B · 价值评估进阶 · 2026 中国精算师科目八知识库</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<aside class="side">
+  <div class="brand"><b>ALM · 科目八</b><span>资产负债管理与价值评估 · 知识库</span></div>
+  <nav>
+    <div class="grp">总览</div>
+    <a href="xihong.html">关于 · 西红精算</a>
+    <a href="index.html">首页 · 考试全景</a>
+    <a href="about.html">本库说明 · 编法与用法</a>
+    <div class="grp">四大篇章（按考纲权重）</div>
+    <a href="ch1.html">① ALM 基础<span class="w">10%</span></a>
+    <a href="ch2.html">② 偿付能力评估与管理<span class="w">40%</span></a>
+    <a href="ch3.html">③ 价值评估与管理<span class="w">25%</span></a>
+    <a href="ch4.html">④ 资产负债管理<span class="w">25%</span></a>
+    <div class="grp">四大专章（纵深武器库）</div>
+    <a href="calc.html">A 偿二代计算手册</a>
+    <a href="quant.html">B ALM 量化评估拆解</a>
+    <a href="ev.html">C 内含价值实战</a>
+    <a href="hotspot.html">D 低利率与利差损</a>
+    <div class="grp">升级版 · 精算讲堂</div>
+    <a href="alm-plus.html">A⁺ ALM 模型与实务</a>
+    <a href="ev-plus.html" class="on">B⁺ 价值评估进阶</a>
+    <a href="companion.html">C⁺ ALM 在线库 · 导读</a>
+    <div class="grp">真题与实战</div>
+    <a href="zhenti.html">真题馆 · 2026 全解 ★</a>
+    <a href="exam1.html">卷一 · 筑基卷</a>
+    <a href="exam2.html">卷二 · 规则卷</a>
+    <a href="exam3.html">卷三 · 全真冲刺卷</a>
+  </nav>
+  <div class="prog-mini">已完成 <b>0 / 16</b> 页<br>点击每页底部按钮记录进度</div>
+</aside>
+<main class="main">
+
+<div class="ch-head">
+  <div class="no">PLUS B</div>
+  <h1>价值评估 · 升级版：沿革、变动分析与收购定价</h1>
+  <div class="sub">中国 EV 体系建设史 · EV 变动数学原理 · 内含价值利润 · 评估价值与商誉 · MCEV vs TEV 终局对决</div>
+  <div class="meta"><span>素材来源：精算讲堂《人身保险公司价值评估》</span><span>《内含价值变动分析的原理》</span><span>补充 CH.03 / 专章 C</span></div>
+</div>
+
+<div class="toc"><b>本页目录</b>
+<ol>
+  <li>导读：从「会算 EV」到「会讲价值」</li>
+  <li>中国 EV 体系建设史：三个文件与两次换轨</li>
+  <li>评估价值体系：EV + VNB 乘数 + 商誉</li>
+  <li>EV 变动分析：一行公式的完整展开</li>
+  <li>内含价值利润与营运利润体系</li>
+  <li>RDR 的确定：风险折现率的解剖手术</li>
+  <li>MCEV vs TEV：两条技术路线的终局对决</li>
+  <li>考试视角：答题框架与自测</li>
+</ol>
+</div>
+
+<section>
+  <h2><span class="sn">00</span>导读：从「会算 EV」到「会讲价值」 <span class="star s2">★★</span></h2>
+  <p>主库 CH.03 与专章 C 解决了「EV 是什么、怎么算」；这一页解决「EV 从哪来、怎么变、怎么变成价格」——即精算讲堂《人身保险公司价值评估》与《内含价值变动分析的原理》两条线的进阶内容：<span class="src">教</span></p>
+  <ul>
+    <li><b>沿革线</b>：中国 EV 体系三个文件（2005 编制指引 → 2010 标准 → 2016 现行标准）与偿二代、IFRS17 的两次换轨互动；</li>
+    <li><b>变动线</b>：EV 桥背后的一般数学结构——期初 EV 如何一步步走到期末 EV，转移项与非转移项的划分；</li>
+    <li><b>价格线</b>：评估价值 = EV + 未来新业务价值（乘数法 / 逐单法）+ 收购溢价与商誉——并购定价的精算逻辑；</li>
+    <li><b>技术线</b>：RDR 的风险拆解与 MCEV 的市场一致性挑战。</li>
+  </ul>
+  <p class="src-note"><b>本页知识来源</b>：精算讲堂《人身保险公司价值评估》课件 +《内含价值变动分析的原理》文档（IMA 知识库「中国精算师ALM考试」）＋《精算实践标准：人身保险内含价值评估标准》（2016 版）＋《寿险公司内含价值研究》（指定教材）。徽章：<span class="src">教</span> = 讲堂与教材、<span class="src">规</span> = 精算标准、<span class="src">题</span> = 真题。定位是<b>论述题弹药库</b>——2026 真题简 3（EV 波动原因）与简 7（VNB 驱动）的答案在这一页都能找到进阶版表述。</p>
+</section>
+
+<section>
+  <h2><span class="sn">01</span>中国 EV 体系建设史：三个文件与两次换轨 <span class="star s2">★★</span><span class="src">规</span></h2>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>时点</th><th>文件</th><th>里程碑意义</th></tr>
+    <tr><td>2005</td><td>《人身保险内含价值报告编制指引》</td><td>中国 EV 制度起点：首次统一 EV 报告口径，强制披露 EV 与 VNB</td></tr>
+    <tr><td>2010</td><td>《人身保险内含价值评估标准》（试行）</td><td>从「报告指引」升级为「评估标准」：确立四要素框架、经验分析要求、独立签署制度</td></tr>
+    <tr><td>2016</td><td>《精算实践标准：人身保险内含价值评估标准》（现行）</td><td>与偿二代一期全面衔接：RC 采用最低资本口径、认可资产口径统一、披露与重要性门槛细化</td></tr>
+  </table>
+  </div>
+  <p><b>两次换轨</b>：① 偿二代换轨（2016）——EV 的 RC 从「法定资本要求」改为「最低资本 MC」，使 EV 与偿付能力报告共享一套资本模型，EV 对市场风险的敏感度显著上升；② IFRS17 换轨（2023 起执行）——新准则的 CSM 摊销逻辑与 EV 的 VIF 折现逻辑并存，市场上出现「双轨披露」：报表利润用 CSM、股东价值用 EV，两套语言的调节表成为投资者沟通新课题。<b>若内含价值标准再次修订（行业已启动研究），RC 口径与折现率规则可能再度调整</b>——这正是首页制度地图标注「过期预警」的原因。</p>
+  <p class="link">考点回链：<a href="ch3.html">CH.03 价值评估</a> · <a href="ev.html">专章 C 一条公式读懂 EV</a></p>
+</section>
+
+<section>
+  <h2><span class="sn">02</span>评估价值体系：EV + VNB 乘数 + 商誉 <span class="star s3">★★★</span><span class="src">教</span><span class="src">题</span></h2>
+  <p>EV 只度量<b>存量</b>业务；一家持续经营的公司值多少钱，还要加上<b>未来新业务</b>的价值与<b>控制权溢价</b>：</p>
+  <div class="formula">
+    <div class="fx">评估价值 AV = 内含价值 EV + 未来新业务价值 GNB（Goodwill-Novas，按乘数或逐单预测）</div>
+    <div class="fx">收购价 ≈ AV + 控制权溢价 − 少数股东调整；商誉 = 收购价 − 可辨认净资产公允价值</div>
+  </div>
+  <h3>未来新业务价值的两种算法</h3>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>方法</th><th>操作</th><th>适用</th><th>风险点</th></tr>
+    <tr><td><b>乘数法</b></td><td>GNB = 当期 VNB（年化）× 乘数（如 5~10 倍）</td><td>市场速算、估值参照</td><td>乘数主观；增长与贴现假设隐藏在倍数里</td></tr>
+    <tr><td><b>逐单 / 预测法</b></td><td>按业务计划逐年预测 VNB 并按 RDR（或 WACC）折现</td><td>正式评估、并购定价</td><td>依赖业务计划可信度；假设弹性大</td></tr>
+  </table>
+  </div>
+  <p><b>乘数与 P/EV 的换算直觉</b>：市场常用 P/EV（股价 ÷ 每股 EV）给上市险企估值——P/EV &lt; 1 意味着市场认为 EV 里的假设（投资收益率、退保率）偏乐观，或未来新业务价值为负增长。<b>为什么 EV ≠ 收购价</b>（论述题经典）：① EV 不含未来新业务；② 收购产生商誉与整合成本；③ 控制权溢价；④ 假设差异（收购方用自己的 RDR 重估 VIF）；⑤ 税务与资本摩擦（收购方偿付能力约束）。——专章 C §7 讲了骨架，这里给出完整五条。</p>
+  <p class="link">考点回链：<a href="ev.html">专章 C EV vs 收购价</a> · <a href="zhenti.html">真题馆 简 3 详版</a></p>
+</section>
+
+<section>
+  <h2><span class="sn">03</span>EV 变动分析：一行公式的完整展开 <span class="star s3">★★★</span><span class="src">教</span></h2>
+  <p>《内含价值变动分析的原理》的核心：期末 EV 与期初 EV 之间不是「黑箱」，而是可以被完整分解的恒等式：</p>
+  <div class="formula">
+    <div class="fx">EV期末 = EV期初 + VNB + EV期望回报 + 假设变化的影响 + 经验偏差 + 投资回报差异 + 模型与参数调整 + 资本变动（分红/注资/资本工具发行）± 其他</div>
+  </div>
+  <p>其中最重要的区分是<b>转移项</b>与<b>非转移项</b>：</p>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>类别</th><th>包含</th><th>性质</th><th>管理含义</th></tr>
+    <tr><td><b>转移项</b>（预期内）</td><td>VNB、EV 期望回报（期初 EV 按假设「滚利息」——VIF 折现期缩短一年 + 资产回报）</td><td>假设成立时就该发生的变动</td><td>不创造超额价值；考核基线</td></tr>
+    <tr><td><b>非转移项</b>（未预期）</td><td>经验偏差（死亡 / 退保 / 费用 / 赔付实际 vs 假设）、假设变化、投资回报差异、模型调整</td><td>假设不成立产生的差异</td><td>真正的价值创造 / 毁灭来源；管理抓手</td></tr>
+  </table>
+  </div>
+  <details class="answer"><summary>折叠 · 逐项拆解：EV 桥 19 项与本公式的对应</summary><div class="body">
+    <p>标准附件 2 的 19 项分析要点按四大类归位到上式：<b>新业务的预期影响</b>（VNB + 假设在新业务上的影响）→ VNB 项；<b>经营经验的差异</b>（死亡、伤残、疾病、退保、费用等实际与假设差异）→ 经验偏差项；<b>假设变化的影响</b>（经济假设：投资收益、费用通胀、税率；非经济假设：死亡率、退保率、承保规则）→ 假设变化项；<b>投资回报的差异</b>（实际投资收益 vs 假设收益）→ 投资回报差异项——2016 标准特别将其单列，因为它通常是最大波动项（对应敏感性分析中投资收益率 ±50bps → EV ±20% 的统治级地位）。</p>
+    <p><b>一个必懂细节</b>：期初 VIF 在一年后应按 RDR「展开」（roll-forward）——不仅贴现期缩短，还要加上要求资本释放与持有成本变化。若公司实际投资收益率恰好等于假设、经验全部命中、假设不变，则期末 EV − 期初 EV = VNB + EV 期望回报，这就是「EV 营运利润」的骨架（见下节）。</p>
+  </div></details>
+  <p><b>为什么这是 2026 真题简 3 的满分答案</b>：真题问「EV 波动的原因」——骨架答案列五大原因；进阶答案直接搬本节结构：<b>转移项给增长（VNB + 期望回报），非转移项给波动（经验偏差 + 假设变化 + 投资差异），其中投资回报差异是主导波动源</b>（敏感性 ±20% vs 其他 ±5% 以内）。一句话点破「增长是必然项、波动是差异项」的数学结构。</p>
+  <p class="link">考点回链：<a href="ev.html">专章 C EV 桥 19 项</a> · <a href="zhenti.html">真题馆 简 3 详版</a></p>
+</section>
+
+<section>
+  <h2><span class="sn">04</span>内含价值利润与营运利润体系 <span class="star s2">★★</span><span class="src">教</span></h2>
+  <p>把 EV 变动分析套上「考核」目的，就得到内含价值口径的利润体系：</p>
+  <div class="formula">
+    <div class="fx">EV 营运利润 = 当期 VNB + 上期末有效业务的期望利润释放 ± 经验偏差 ± 非经济假设变化（经济假设变化与投资差异单列）</div>
+    <div class="fx">EV 利润 = EV 营运利润 + 投资回报差异 + 经济假设变化影响 + 自由盈余投资收益 ± 其他</div>
+  </div>
+  <ul>
+    <li><b>营运口径</b>剔除市场噪声（投资差异、经济假设变化），考核管理层<b>可控</b>的经营质量——对应「内含价值营运利润」披露；</li>
+    <li><b>全口径</b> EV 利润再纳入市场项，反映股东价值的<b>实际</b>增减；</li>
+    <li><b>与会计利润的关系</b>：会计利润按权责发生制分期确认（CSM 摊销后置），EV 利润在签单时点前置确认 VNB——两者长期趋同、节奏迥异，调节表是投资者沟通的关键披露。</li>
+  </ul>
+  <div class="tip"><b>考核应用</b>：长周期考核（2022~2025 改革：3 年 / 5 年权重 50% / 20%）正是为了抑制全口径 EV 利润的市场噪声，把管理层激励锚定在营运项——VNB 质量与经验偏差管理上。这条链写进「价值管理如何落地」论述题，直接升维。</div>
+</section>
+
+<section>
+  <h2><span class="sn">05</span>RDR 的确定：风险折现率的解剖手术 <span class="star s3">★★★</span><span class="src">规</span><span class="src">题</span></h2>
+  <p>RDR（风险折现率）是 VIF 折现的灵魂参数——它每 +50bps，EV 约 −5%。精算讲堂给的标准解剖：</p>
+  <div class="formula">
+    <div class="fx">RDR = 无风险利率 + 权益风险溢价 × 业务风险加载（β 思路）+ 非流动性溢价 − 税收调整</div>
+  </div>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>成分</th><th>取值逻辑</th><th>敏感性</th></tr>
+    <tr><td>无风险利率</td><td>长期国债收益率（与负债久期匹配的期限）</td><td>随行就市</td></tr>
+    <tr><td>风险溢价</td><td>反映未来现金流的不确定性（死亡率 / 退保 / 费用 / 投资）</td><td>每 50bp → EV ∓5%</td></tr>
+    <tr><td>流动性溢价</td><td>有效业务现金流长期锁定 → 投资者要求补偿</td><td>与会计折现率差异的主要来源</td></tr>
+    <tr><td>税收</td><td>税后口径（股东视角）</td><td>口径错误系统性偏差</td></tr>
+  </table>
+  </div>
+  <p><b>与 CoC 的对偶关系</b>：RDR 用于折 VIF 现金流；CoC（要求资本成本）单独计量 RC 被锁定的机会损失——两者都反映资本占用代价，但对象不同（VIF vs RC），别在计算里重复扣或漏扣。标准要求 RDR 的确定方法与变动历史必须披露；敏感性分析强制 RDR ±50bp 情景。</p>
+  <p class="link">考点回链：<a href="ev.html">专章 C 敏感性七情景</a> · <a href="zhenti.html">真题馆 简 4 详版</a></p>
+</section>
+
+<section>
+  <h2><span class="sn">06</span>MCEV vs TEV：两条技术路线的终局对决 <span class="star s2">★★</span><span class="src">教</span></h2>
+  <p>欧洲市场（CFO 论坛）曾全面推行 <b>MCEV</b>（市场一致内含价值），中国与多数亚洲市场保留 <b>TEV</b>（传统内含价值）。两者分歧集中在三处：</p>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>分歧点</th><th>MCEV（市场一致）</th><th>TEV（传统）</th></tr>
+    <tr><td>折现率</td><td>与金融负债同期限的无风险曲线 + 流动性 / 风险溢价，盯市</td><td>锁定式 RDR（11% 量级，历史惯性）</td></tr>
+    <tr><td>金融选择权与保证（FOG）</td><td>市场一致定价（随机模型 / 期权定价），价值随市波动</td><td>确定性情景评估，通常低估</td></tr>
+    <tr><td>成本与透明度</td><td>假设复杂、结果波动大、与市场沟通难</td><td>简单稳健、可比性强、波动小</td></tr>
+  </table>
+  </div>
+  <p><b>中国现状的标准答法</b>：国内金融衍生品市场与定价工具尚不成熟，负债内嵌选择权缺乏可靠的对冲价格基准，<b>现阶段 TEV（2016 标准）可靠性更高</b>；随着 IFRS17 的市场一致计量落地与新准则过渡完成，EV 标准向市场一致性靠拢是长期方向——这也是「标准若修订」预警的技术背景。</p>
+  <p class="link">考点回链：<a href="ev.html">专章 C §8 TEV vs MCEV</a>（骨架版）</p>
+</section>
+
+<section>
+  <h2><span class="sn">07</span>考试视角：答题框架与自测 <span class="star s3">★★★</span><span class="src">题</span></h2>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>若考题问……</th><th>骨架答案（主库）</th><th>进阶加分（本页）</th></tr>
+    <tr><td>EV 波动原因（2026 简 3）</td><td>五大原因列举</td><td>转移项 / 非转移项结构 + 投资回报差异主导（±20% vs ≤±5%）</td></tr>
+    <tr><td>如何提升 VNB（2026 简 7）</td><td>四大驱动因素</td><td>叠加 EV 营运利润考核 + 长周期机制设计</td></tr>
+    <tr><td>EV 与收购价关系</td><td>EV 不含新业务 + 商誉</td><td>乘数法 vs 逐单法 + 控制权溢价 + 收购方 RDR 重估 + 资本摩擦五条</td></tr>
+    <tr><td>RDR 怎么定</td><td>反映现金流风险</td><td>无风险 + 风险溢价 + 流动性溢价 − 税的四成分解剖 + 与 CoC 对偶</td></tr>
+    <tr><td>为什么不用 MCEV</td><td>工具不成熟</td><td>三处分歧（折现率 / FOG / 成本透明度）+ IFRS17 长期趋同方向</td></tr>
+  </table>
+  </div>
+  <h3>核心问题自测</h3>
+  <div class="qa-list">
+    <details class="answer"><summary>中国 EV 体系三个文件与两次换轨？</summary><div class="body"><p>2005 编制指引（起点）→ 2010 评估标准试行（四要素框架）→ 2016 现行标准（与偿二代衔接）。两次换轨：偿二代（RC 改最低资本口径，EV 与偿付能力共享资本模型）、IFRS17（CSM 与 VIF 双轨并存，调节表成新课题）。</p></div></details>
+    <details class="answer"><summary>EV 变动分析的转移项与非转移项划分？</summary><div class="body"><p>转移项（预期内）：VNB、EV 期望回报——假设命中时的必然变动，是考核基线；非转移项（未预期）：经验偏差、假设变化、投资回报差异、模型调整——真正的价值创造 / 毁灭来源。投资回报差异通常是最大波动项。</p></div></details>
+    <details class="answer"><summary>未来新业务价值两算法与收购溢价五条？</summary><div class="body"><p>乘数法（VNB × 5~10 倍，速算）vs 逐单预测法（业务计划逐年折现，正式定价）。EV ≠ 收购价五条：不含新业务、商誉与整合成本、控制权溢价、收购方 RDR 重估、税务与资本摩擦。</p></div></details>
+    <details class="answer"><summary>RDR 四成分与 CoC 的对偶？</summary><div class="body"><p>RDR = 无风险利率 + 风险溢价 × 业务风险 + 流动性溢价 − 税收调整；每 +50bp → EV 约 −5%。CoC 计量 RC 被锁定的机会成本——对象不同（VIF vs RC），二者并存不可重复扣。标准强制披露 RDR 确定方法与 ±50bp 敏感性。</p></div></details>
+  </div>
+  <div class="tip"><b>备考优先级</b>：先主库（CH.03 + 专章 C 的公式、桥、敏感性——卷面分大头），再本页 §03（EV 变动数学）与 §05（RDR 解剖）——这两节是论述题拉开差距的地方；§06 MCEV 了解结论即可。</div>
+</section>
+
+<div class="mnem"><b>本页总口诀</b><span class="verse">零五指引一零标，一六换轨偿二代；<br>评估价值加新单，乘数逐单两算法；<br>期末期初一条式，转移增长非转移波；<br>营运剔除市场噪，签单前置会计后；<br>折现率中四成分，五bp动百分五；<br>市场一致盯欧洲，传统稳健看亚洲。</span></div>
+
+<div class="pager">
+  <a class="pager-prev" href="alm-plus.html"><small>← 上一页</small>升级版 A ALM 模型与实务</a>
+  <a class="pager-next" href="companion.html"><small>下一页 →</small>C⁺ ALM 在线库 · 导读</a>
+</div>
+<button class="done-btn" data-id="ev-plus">○ 标记本页已完成</button>
+<footer class="colophon">2026 中国精算师资格考试 · 资产负债管理与价值评估（科目八）知识库 · 仅供学习交流</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>
