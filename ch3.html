@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CH.03 价值评估与管理 · 2026 中国精算师科目八知识库</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<aside class="side">
+  <div class="brand"><b>ALM · 科目八</b><span>资产负债管理与价值评估 · 知识库</span></div>
+  <nav>
+    <div class="grp">总览</div>
+    <a href="xihong.html">关于 · 西红精算</a>
+    <a href="index.html">首页 · 考试全景</a>
+    <a href="about.html">本库说明 · 编法与用法</a>
+    <div class="grp">四大篇章（按考纲权重）</div>
+    <a href="ch1.html">① ALM 基础<span class="w">10%</span></a>
+    <a href="ch2.html">② 偿付能力评估与管理<span class="w">40%</span></a>
+    <a href="ch3.html" class="on">③ 价值评估与管理<span class="w">25%</span></a>
+    <a href="ch4.html">④ 资产负债管理<span class="w">25%</span></a>
+    <div class="grp">四大专章（纵深武器库）</div>
+    <a href="calc.html">A 偿二代计算手册</a>
+    <a href="quant.html">B ALM 量化评估拆解</a>
+    <a href="ev.html">C 内含价值实战</a>
+    <a href="hotspot.html">D 低利率与利差损</a>
+    <div class="grp">升级版 · 精算讲堂</div>
+    <a href="alm-plus.html">A⁺ ALM 模型与实务</a>
+    <a href="ev-plus.html">B⁺ 价值评估进阶</a>
+    <a href="companion.html">C⁺ ALM 在线库 · 导读</a>
+    <div class="grp">真题与实战</div>
+    <a href="zhenti.html">真题馆 · 2026 全解 ★</a>
+    <a href="exam1.html">卷一 · 筑基卷</a>
+    <a href="exam2.html">卷二 · 规则卷</a>
+    <a href="exam3.html">卷三 · 全真冲刺卷</a>
+  </nav>
+  <div class="prog-mini">已完成 <b>0 / 16</b> 页<br>点击每页底部按钮记录进度</div>
+</aside>
+<main class="main">
+
+<div class="ch-head">
+  <div class="no">CHAPTER 03</div>
+  <h1>价值评估与管理：EV 的一整套语言</h1>
+  <div class="sub">内含价值 · 新业务价值 · EV 桥 · 敏感性 · EV ≠ 收购价</div>
+  <div class="meta"><span>考纲权重 25%</span><span>2026 真题两题直接命中（EV 计算 + NBV 提升）</span><span>依据《精算实践标准：人身保险内含价值评估标准》</span></div>
+  <div class="wbar"><div class="lab"><span>权重</span><span>25%</span></div><div class="bar"><i style="width:25%"></i></div></div>
+</div>
+
+<div class="toc"><b>本章目录</b>
+<ol>
+  <li>导语：寿险公司到底值多少钱</li>
+  <li>知识图谱</li>
+  <li>星级讲义（六节）</li>
+  <li>公式与数字卡片</li>
+  <li>真题印证</li>
+  <li>实务视角与口诀</li>
+</ol>
+</div>
+
+<!-- ========== 一、导语 ========== -->
+<section>
+  <h2><span class="sn">01</span>导语：寿险公司到底值多少钱</h2>
+  <p>上世纪六七十年代，英国多起针对寿险公司的<b>恶意收购</b>揭开了这个行业的估值困境：寿险利润具有<b>延迟性与预期性</b>——今天签下的保单，利润要在未来几十年逐步释放，会计报表只能看到冰山一角，于是优质公司被当成便宜货收割。1984 年，英国寿险公司率先用<b>内含价值（EV）</b>做市值管理，把「未来」搬进今天的报表。</p>
+  <p>中国 2005 年建立指引、2016 年升级为精算实践标准、2022 年启动修订。今天，EV/VNB 已是寿险公司战略、定价、考核、并购的通用货币——也是 2026 年真题的必答题：<b>「上市保险公司内含价值如何计算，是否等于收购价」</b>与<b>「寿险公司如何提升新业务价值」</b>。本章给出完整答案。</p>
+  <p><b>一句话抓住 EV</b>：把公司拆成「净资产的现在」+「存量业务的未来」，未来按风险打折，再扣除占用资本的成本——这就是股东真正的家底。</p>
+</section>
+
+<!-- ========== 二、知识图谱 ========== -->
+<section>
+  <h2><span class="sn">02</span>知识图谱</h2>
+  <div class="arch">
+    <div class="arch-top"><b>CH.03 知识图谱</b><div class="meta"><span>一线（EV公式）· 一桥（变动分解）· 一感（敏感性）· 一问（EV≠收购价）</span></div></div>
+    <div class="arch-grid">
+      <a class="arch-card key" href="#s31"><span class="ac-top"><span class="ac-no">3.1</span><span class="ac-wt hot">★★★</span></span><h4>EV 定义与四要素</h4><p>FS + RC + VIF − CoC · 时点值 · 不含未来新业务</p></a>
+      <a class="arch-card key" href="#s32"><span class="ac-top"><span class="ac-no">3.2</span><span class="ac-wt hot">★★★</span></span><h4>VIF 与新业务价值 VNB</h4><p>VIF 六注意 · VNB 签单时点/含CoC/含续保 · 与经验偏差的边界</p></a>
+      <a class="arch-card key" href="#s33"><span class="ac-top"><span class="ac-no">3.3</span><span class="ac-wt hot">★★★</span></span><h4>假设体系</h4><p>最佳估计 + 内部一致性 · RDR = 十年国债 + 风险溢价 · 费用/税收</p></a>
+      <a class="arch-card key" href="#s34"><span class="ac-top"><span class="ac-no">3.4</span><span class="ac-wt hot">★★★</span></span><h4>EV 桥 19 项分解</h4><p>期初→期末全链条 · 预期利润不增 EV · 经验偏差才是真利源</p></a>
+      <a class="arch-card key" href="#s35"><span class="ac-top"><span class="ac-no">3.5</span><span class="ac-wt hot">★★★</span></span><h4>敏感性分析</h4><p>七大情景 · 投资收益率 ±50bps → ±20% 最敏感</p></a>
+      <a class="arch-card" href="#s36"><span class="ac-top"><span class="ac-no">3.6</span></span><h4>EV ≠ 收购价 与管理应用</h4><p>AV = EV + 商誉 · 五大差异 · 考核与定价应用 · TEV vs MCEV</p></a>
+    </div>
+  </div>
+  <h3>图谱核心问题自测（先自己答，再展开对照）</h3>
+  <div class="qa-list">
+    <details class="answer"><summary>3.1 EV 四要素各自的定义一句话？</summary><div class="body"><p>自由盈余 FS——适用业务净资产中不受约束、可分配给股东的部分；要求资本 RC——适用业务对应所有者权益中受法律法规与公司内部限制、不得分配的部分；有效业务价值 VIF——有效适用业务及其对应资产未来产生的股东现金流现值（含金融选择权和保证成本）；要求资本成本 CoC——要求资本未来不能全部返还股东造成的价值损失。EV = FS + RC + VIF − CoC。</p></div></details>
+    <details class="answer"><summary>3.2 VNB 三原则与"经验偏差 vs 新业务"的边界？</summary><div class="body"><p>VNB 三原则：签单时点计值、计算时考虑要求资本成本、包括预期续保与预期合同变动的价值。边界（标准第十八条）：与有效合同预期保费的偏差、与趸交累加型合同预期续期保费的偏差、有效业务预期保费的重新定价——三类按<b>经验偏差</b>处理，不是新业务；全新签发并核保录入的新保单才是新业务。</p></div></details>
+    <details class="answer"><summary>3.3 假设体系的构成与 RDR 的确定方法？</summary><div class="body"><p>假设体系：投资回报、死亡率 / 发病率 / 退保率、费用（维持 + 获取）、税率、风险贴现率等；原则是<b>最佳估计 + 内部一致性</b>（投资、分红、退保等假设相互勾稽）。RDR = 无风险利率（如十年期国债）+ 风险溢价，反映适用业务的风险与未来现金流的不确定性；假设须与评估日可获取信息一致，至少每年评估一次。</p></div></details>
+    <details class="answer"><summary>3.4 EV 桥的四大类别与"预期利润不增 EV"的原因？</summary><div class="body"><p>四大类：新业务的预期影响（VNB + 释放 + 预期利润）、经营经验的差异（退保差 / 发生率差 / 费用差 / 税务差等）、假设变化的影响、投资回报的差异（+ 其它如模型变化）。预期利润已按 RDR 折现计入期初 VIF——实现时从 VIF 释放到调整净资产，EV 总量不变；只有未预期到的偏差才真正改变 EV。</p></div></details>
+    <details class="answer"><summary>3.5 七大敏感性情景与敏感度排序？</summary><div class="body"><p>RDR ±50bps（EV 约 ±5%）、投资收益率 ±50bps（约 ±20%，最敏感）、死亡率 ±10%（约 ±1%）、发病率及赔付率 +10%（约 ±5%）、退保率 ±10%（约 ±1%）、费用 +10%（约 ±2.5%）、负债贴现率 ±50bps。测试时负债相关假设可同时更新，最低资本预测因子可不变；披露 ANW / VIF / VNB 三个口径。</p></div></details>
+    <details class="answer"><summary>3.6 EV ≠ 收购价的五大原因与 AV 的定义？</summary><div class="body"><p>五大原因：未来新业务（EV 不含）、控制权溢价、流动性差异、假设差异（收购方重估 + EV 非唯一价值方法）、市场环境与谈判。评估价值 AV = EV + 商誉，商誉 ≈ 一年 VNB × 乘数——EV 是底线，AV / 收购价在底线之上。</p></div></details>
+  </div>
+</section>
+
+<!-- ========== 三、星级讲义 ========== -->
+<section>
+  <h2><span class="sn">03</span>星级讲义</h2>
+  <p class="src-note"><b>本章知识来源</b>：中国精算师协会《精算实践标准：人身保险内含价值评估》（2016 版，核心条款第十 / 十一 / 十六 / 十八 / 四十 / 五十条）＋ 协会指定《资产负债管理》教材价值评估相关章节 ＋ 上市险企 EV 报告实务（敏感性、EV 桥披露口径）。徽章：<span class="src">规</span> = 精算实践标准与监管规则、<span class="src">教</span> = 指定教材、<span class="src">题</span> = 历年真题。全站来源地图见 <a href="index.html">首页 · 教材与制度地图</a>。</p>
+
+  <h3 id="s31">3.1 EV 的精确定义与四要素 <span class="star s3">★★★</span><span class="src">规</span><span class="src">题</span></h3>
+  <div class="formula">
+    <b>定义（标准第十条）</b>
+    <div class="fx">内含价值 = 在充分考虑总体风险的情况下，<b>适用业务</b>及其对应资产产生的现金流中<b>股东利益的现值</b></div>
+    <div class="fx">EV = <b>自由盈余 FS</b> + <b>要求资本 RC</b> + <b>有效业务价值 VIF</b> − <b>要求资本成本 CoC</b></div>
+    <div class="note">适用业务 = 人身险公司经营的所有 人身保险业务（人寿/年金/意外/健康）。EV 中<b>不含未来新业务</b>（第十一条）——这半句话是「EV 是否等于收购价」的第一块基石。</div>
+  </div>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>要素</th><th>定义</th><th>记忆点</th></tr>
+    <tr><td><b>自由盈余 FS</b></td><td>适用业务资产市值 − 全部负债 − 要求资本</td><td>「可自由分红的钱」</td></tr>
+    <tr><td><b>要求资本 RC</b></td><td>评估日受法律法规和公司内部管理限制、<b>不能分配给股东</b>的金额</td><td>「被监管锁住的钱」→ 需计算持有成本</td></tr>
+    <tr><td><b>有效业务价值 VIF</b></td><td>有效业务及其资产未来现金流中股东利益的现值（<b>含续保价值</b>）</td><td>「存量业务的未来」</td></tr>
+    <tr><td><b>要求资本成本 CoC</b></td><td>要求资本及其未来变化额的现值之和（考虑其未来税后投资收益）</td><td>本质 = RDR 与要求资本税后投资收益率之差；二者相等则 CoC=0</td></tr>
+  </table>
+  </div>
+  <p>等价口径：<b>EV = 调整净资产 ANW + VIF − CoC</b>（其中 ANW = RC + FS）。另一理解（原理派）：EV = 当期自由盈余 + 未来各期自由盈余增加额按 RDR 折现之和。</p>
+  <div class="formula">
+    <b>要求资本的计量（标准附件 1）</b>
+    <div class="fx">RC = max{0, <b>MC</b> + max[0, CV − (RES + DPL)]} − <b>DTL</b></div>
+    <div class="note">MC=最低资本；CV=现金价值；RES=寿险合同负债；DPL=剩余边际；DTL=DPL×税率（递延所得税负债）。相应负债 = 寿险合同负债 + 剩余边际。VIF 可整体计量，但<b>新业务价值必须按单个产品或更细维度分组</b>确定要求资本后加总。最低资本预测可用<b>载体法</b>：MC = 风险载体 × 预测因子。</div>
+  </div>
+
+  <h3 id="s32">3.2 VIF 六注意与 VNB 三原则 <span class="star s3">★★★</span><span class="src">规</span><span class="src">题</span></h3>
+  <p><b>VIF 计算六注意（第十二条）</b>：① 含续保价值；② 维持费用超支降低 VIF；③ 明显的预测损失可用不同 RDR 或方法处理；④ 合理考虑<b>再保险</b>影响；⑤ 融资性质负债（次级债、财务再保等）的现金流变化应体现在 VIF 中并与 FS、RDR 内在一致（本身从 EV 中扣除、按市值计量）；⑥ <b>金融选择权和保证降低 VIF</b>（保证年金选择权、分红/万能保证、变额年金保证），技术允许时应独立随机模拟其时间价值，有困难可隐含在 RDR 中。</p>
+  <p><b>新业务价值 VNB（第十六~十八条）三原则</b>：</p>
+  <ul>
+    <li><b>签单时点</b>计值（不是期末）；</li>
+    <li>计算<b>应考虑要求资本成本</b>；</li>
+    <li><b>应包括</b>预期续保与预期合同变动的价值。</li>
+  </ul>
+  <div class="warn"><b>边界题（第十八条）</b>：以下三项作为<b>经验偏差</b>而非新业务处理——① 有效合同<b>预期保费</b>的偏差；② 趸交累加型合同<b>预期续期保费</b>的偏差；③ 有效业务预期保费的<b>重新定价</b>。反之，「有效业务价值未包含的非预期趸交累加交费、续期保费」应进 VNB（第十七条）。VNB 与 VIF 的界定范围必须<b>内在一致</b>。</div>
+  <p><b>分红/万能的处理（第45~49条）</b>：须对未来红利水平/结算利率、客户与股东分配方法做合理假设，满足<b>公平性 + 合理性</b>，与投资收益率假设内在一致；分红业务价值 = 未来现金流中股东利益现值 + <b>股东对分红账户剩余资产享有权益的现值</b>。</p>
+
+  <h3 id="s33">3.3 假设体系：最佳估计 + 内部一致性 <span class="star s3">★★★</span><span class="src">规</span></h3>
+  <div class="steps">
+    <div class="stp"><b>未来经验假设原则</b><span> —— 最佳估计，综合考虑历史数据、当前经验与未来预期（第十九条）。</span></div>
+    <div class="stp"><b>内部一致性（第二十条）</b><span> —— 投资收益率 ↔ RDR、续期保费 ↔ 退保率/减额缴清率等必须互相咬合；假设定期重估（第二十一条）、按产品分类设定（第二十二条）、做敏感性测试（第二十三条）并披露（第二十四条）。</span></div>
+    <div class="stp"><b>费用假设（第27~31条）</b><span> —— 以持续经营为基础；有实际经验用「基于费用分摊的单位成本法」（超支时费用超支法调整），无经验以利润测试假设为基础；基于<b>整个集团</b>口径分摊，不限于保险公司自身支出。</span></div>
+    <div class="stp"><b>投资收益率（第34~39条）</b><span> —— 按资产<b>未来可产生的投资回报</b>确定，基于<b>长期经济状况判断</b>，考虑违约可能、未来正现金流再投资；与资产配置、RDR、资产评估方法内在一致。</span></div>
+    <div class="stp"><b>风险贴现率 RDR（第40~44条）</b><span> —— RDR = <b>无风险利率（十年期国债收益率）+ 风险溢价</b>；溢价反映公司<b>规模、业务性质、偿付能力充足率</b>差异；可按产品分组差异化；融资杠杆效应体现在现金流风险调整中。</span></div>
+    <div class="stp"><b>税收（第32~33条）</b><span> —— 考虑现在及已知未来的税收法律变化；税前弥补亏损价值合理估计并说明。</span></div>
+  </div>
+  <div class="tip"><b>重要性上限（第三条）</b>：EV 与 VNB 各为「<b>总额的 5% 与 1000 万元孰大</b>」——近似方法造成的差异不得越过该线，且须明确说明方法差异。上市公司披露的 EV 报告须<b>经外部审阅</b>，至少包括：主要评估方法和假设、计算结果、相关分析、敏感性测试（第五十条）。</div>
+
+  <h3 id="s34">3.4 EV 桥：从期初到期末的完整叙事 <span class="star s3">★★★</span><span class="src">规</span><span class="src">题</span></h3>
+  <p>EV 是<b>时点值</b>，本身不反映「质量」——价值的成色要看变动来源。标准附件 2 给出 19 项分解（本表为答题骨架，逐项定义见<a href="ev.html">专章 C</a>）：</p>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>序号</th><th>分项</th><th>符号/要点</th></tr>
+    <tr><td class="ctr">1</td><td>期初的内含价值</td><td>起点</td></tr>
+    <tr><td class="ctr">2</td><td>期初 EV 调整 = 盈余调整 + 兼并/收购 + 模型改进</td><td>口径重述，使期初与本期可比</td></tr>
+    <tr><td class="ctr">4</td><td><b>新业务的预期影响</b> = 一年新业务价值 + VNB 释放 + 新业务预期利润</td><td class="pos">EV 增长的核心来源（正 VNB → 增 EV）</td></tr>
+    <tr><td class="ctr">5</td><td>有效业务价值的预期影响 = VIF 释放 + VIF 预期利润</td><td>VIF 按 RDR 自然增长；预期利润释放至净资产，<b>对 EV 净影响为零</b></td></tr>
+    <tr><td class="ctr">6</td><td>分散效应</td><td class="pos">整体计量 &gt; 分别计量之和，通常为正</td></tr>
+    <tr><td class="ctr">7</td><td><b>经营经验的差异</b>（退保/死亡发病率/费用佣金/税务/其它）</td><td>实际 vs 假设——<b>未预期利源，真正改变 EV</b></td></tr>
+    <tr><td class="ctr">8</td><td>运营假设的变化（退保/死亡率/费用等非经济假设主动调整）</td><td>假设恶化 → 负</td></tr>
+    <tr><td class="ctr">9</td><td>经调整净值的预期收益</td><td class="pos">ANW × 预期投资收益率 × (1−税率)</td></tr>
+    <tr><td class="ctr">11</td><td><b>投资收益差异</b></td><td>实际投资收益 − 预期；「尤以投资收益偏差为甚」</td></tr>
+    <tr><td class="ctr">12</td><td>经济和税项假设的变动</td><td>下调投资收益率假设 → 负；RDR 下降 → VIF 上升</td></tr>
+    <tr><td class="ctr">13-17</td><td>汇率变动 · 资本注入 · 股息 · 其它 · 市场价值调整</td><td>注资 + / 股息 −</td></tr>
+    <tr><td class="ctr">19</td><td><b>期末的内含价值 = 经调整期初 EV + 内含价值运营收益（4~10）+ 收益（11~18）</b></td><td>闭环</td></tr>
+  </table>
+  </div>
+  <div class="mnem"><b>四条核心结论（答任何 EV 变动论述题的纲）</b><span class="verse">正 VNB 添增量，预期利润左手换；<br>未期偏差才真利，投资偏差最凶猛；<br>高 RDR 快释放，假设审慎家底稳；<br>高质量 EV 看：偏差小、假设真、结构纯。</span></div>
+  <p>四条白话：① 正 VNB 增加 EV、负 VNB 减少，RDR 越高预期 EV 增长越快；② <b>预期到的利润不增加 EV</b>（VIF → ANW 左手倒右手）；③ <b>只有未预期到的利润（经验差异）才真正改变 EV</b>，其中投资收益偏差影响最大——高投资收益率假设是双刃剑；④ 高质量 EV = 审慎假设 + 长期较小的运营与投资偏差。</p>
+
+  <h3 id="s35">3.5 敏感性分析：七大情景 <span class="star s3">★★★</span><span class="src">规</span><span class="src">题</span></h3>
+  <p>2026 年真题「敏感性分析的情景」直接对应标准附件 3。测试时除股东现金流假设外，<b>寿险合同负债假设可同时更新</b>；最低资本预测因子可按可操作性原则保持不变。公司应呈现不同情景下的<b>调整净资产、有效业务价值和新业务价值</b>：</p>
+  <div class="tbl-scroll">
+  <table>
+    <tr><th>情景</th><th>变动</th><th>典型 EV/VNB 敏感度（示例量级）</th></tr>
+    <tr><td>1 · 风险贴现率</td><td class="ctr">± 50bps</td><td class="ctr">约 ±5%</td></tr>
+    <tr><td>2 · <b>投资收益率</b></td><td class="ctr">± 50bps</td><td class="ctr"><b>约 ±20%（最敏感）</b></td></tr>
+    <tr><td>3 · 死亡率</td><td class="ctr">± 10%</td><td class="ctr">约 ±1%</td></tr>
+    <tr><td>4 · 发病率</td><td class="ctr">+ 10%</td><td class="ctr">约 −5%</td></tr>
+    <tr><td>5 · 退保率</td><td class="ctr">± 10%</td><td class="ctr">约 ±1%</td></tr>
+    <tr><td>6 · 费用</td><td class="ctr">+ 10%</td><td class="ctr">约 −2.5%</td></tr>
+    <tr><td>7 · 负债贴现率</td><td class="ctr">± 50bps</td><td class="ctr">—（与情景 1 方向相反作用于 VIF）</td></tr>
+  </table>
+  </div>
+  <div class="prac"><b>实务注脚</b>：正因为 EV 对投资收益率假设最敏感，2023 年底上市险企集体<b>下调投资回报率假设与 RDR 假设</b>（应对利率下行与利差损）——这是「敏感性 → 假设 → 真实世界」的教科书级联动，答题时点出来即是亮点。</div>
+
+  <h3 id="s36">3.6 EV ≠ 收购价，及价值管理的应用 <span class="star s3">★★★</span><span class="src">规</span><span class="src">教</span><span class="src">题</span></h3>
+  <div class="formula">
+    <b>评估价值 AV（Appraisal Value）</b>
+    <div class="fx">AV = <b>内含价值 EV</b> + <b>商誉 Goodwill</b></div>
+    <div class="fx">商誉 ≈ 未来新业务价值 = 实务中常用<b>一年 VNB × 乘数</b>估计</div>
+    <div class="note">乘数取决于：业务组合、利润边际、行业增长、市场份额、竞争地位、偿付能力资本与资本支出等。</div>
+  </div>
+  <p><b>EV ≠ 收购价的五大原因</b>（2026 真题标准答案骨架）：</p>
+  <ol>
+    <li><b>未来新业务</b>：EV 明确不含未来新业务价值（第十一条）；并购以 AV（EV+商誉）为起点，收购方为持续经营的新业务能力付费；</li>
+    <li><b>控制权溢价</b>：取得控制权的交易价格通常包含控制权溢价；</li>
+    <li><b>流动性差异</b>：EV 是持续经营假设下的精算账面价值，非可变现市场价；股价/交易价含流动性与情绪因素；</li>
+    <li><b>假设差异</b>：EV 基于当前假设集合（最佳估计 + 特定 RDR）；收购方会按自身资本成本、自身对未来投资收益/退保/费用的假设<b>重估</b>（第九条：EV 不是衡量公司价值的唯一方法）；</li>
+    <li><b>市场环境与交易结构</b>：利率环境、谈判、多次成交价格调整条款等，使成交价可能大幅偏离 EV。</li>
+  </ol>
+  <div class="tip"><b>一句话收尾</b>：EV 是「存量业务 + 净资产」的精算价值底线；收购价 ≈ EV + 未来新业务价值（商誉）+ 控制权溢价 ± 流动性/假设/谈判调整——<b>收购价一般高于 EV</b>。</div>
+  <p><b>价值管理的五大应用</b>：① 战略与资本决策（增资/引战/并购，用 AV）；② 产品定价与业务引导（利润测试、<b>新业务价值率 = VNB/新单保费</b>考核）；③ 资本管理（偿付能力、注资与分红参考）；④ 绩效考核（EV 营运利润 = 当期 VNB + 上期末有效业务期望收益 ± 经验与假设差异）；⑤ 信息披露（财报补充）。<b>NVB 内部管理四驱动</b>：规模与结构（渠道/产品）、业务成本（费用佣金）、业务品质（继续率/退保率/赔付率）、投资能力（收益率与资产负债匹配）。</p>
+  <details class="answer"><summary>拓展：TEV vs MCEV（答「概念演进」加分项）</summary>
+    <div class="body">
+      <div class="tbl-scroll">
+      <table>
+        <tr><th>维度</th><th>TEV（传统·中国现行）</th><th>MCEV（市场一致·欧洲 CFO 论坛 2008）</th></tr>
+        <tr><td>方法</td><td>确定性方法</td><td>保障型确定性；含期权保证产品用风险中性随机模拟</td></tr>
+        <tr><td>投资收益假设</td><td>基于资产配置与预期收益</td><td>无风险利率 + 市场一致定价</td></tr>
+        <tr><td>选择权与保证</td><td>隐含在 RDR 中</td><td>随机模拟计算 TVOG</td></tr>
+        <tr><td>贴现率</td><td>单一百分数 = 无风险利率 + 风险边际</td><td>无风险利率曲线 + 市场一致定价</td></tr>
+        <tr><td>资本成本</td><td>RDR &gt; 投资收益率时计要求资本息差损</td><td>无息差损，但考虑摩擦成本与不可对冲风险成本</td></tr>
+      </table>
+      </div>
+      <p>国内因衍生品市场与定价工具尚不成熟，当前采用 TEV 可靠性更高。制度建设：2005 指引 → 2016 精算师协会标准（衔接偿一代→二期、引入剩余边际、允许载体法）→ 2022.10 启动修订（与 IFRS17 利润边际信息衔接是未来方向）。</p>
+    </div>
+  </details>
+</section>
+
+<!-- ========== 四、公式与数字卡片 ========== -->
+<section>
+  <h2><span class="sn">04</span>公式与数字卡片</h2>
+  <div class="formula">
+    <b>本章一页纸</b>
+    <div class="fx">EV = FS + RC + VIF − CoC　（= ANW + VIF − CoC；不含未来新业务）</div>
+    <div class="fx">RC = max{0, MC + max[0, CV−(RES+DPL)]} − DTL</div>
+    <div class="fx">RDR = 十年期国债收益率 + 风险溢价（规模/业务性质/偿付能力充足率）</div>
+    <div class="fx">AV = EV + 商誉；商誉 ≈ 一年 VNB × 乘数</div>
+    <div class="fx">重要性上限 = max(5%, 1000 万)；敏感性：投资收益率 ±50bps → EV ±20%（最大）</div>
+  </div>
+  <div class="mnem"><b>总口诀</b><span class="verse">自由盈余加要求，有效业务折现收；<br>减去资本持有价，四项加总即含价；<br>新业务看签单点，含本含续不含偏；<br>桥上预期不增价，偏差才是真利源；<br>收益五十动两成，贴现五十动五分；<br>收购另加新业务，控制溢价再加身。</span></div>
+</section>
+
+<!-- ========== 五、真题印证 ========== -->
+<section>
+  <h2><span class="sn">05</span>真题印证</h2>
+  <div class="exam"><span class="yr hot">2026·简3</span><b>「上市保险公司内涵价值如何计算，是否等于收购价」</b>——3.1 公式 + 3.6 五大差异，本知识库已给出逐条标准答案。</div>
+  <div class="exam"><span class="yr hot">2026·简4</span><b>「敏感性分析的情景」</b>——3.5 七大情景表原样默写，再补「负债假设可同时更新 + 三项披露（ANW/VIF/VNB）」即满分结构。</div>
+  <div class="exam"><span class="yr hot">2026·简7</span><b>「寿险公司如何提升新业务价值」</b>——3.6 的 NVB 四驱动展开：规模结构（渠道转型、保障型占比）、业务成本（费用管控、报行合一）、业务品质（继续率、退保管理）、投资能力（收益率假设可达性、资产负债匹配），每条给一个具体动作。</div>
+</section>
+
+<!-- ========== 六、实务视角与口诀 ========== -->
+<section>
+  <h2><span class="sn">06</span>实务视角与口诀</h2>
+  <div class="prac"><b>实务视角（一名精算师的旁白）</b>：年报季写 EV 报告，最花时间的不是算 VIF，而是「讲故事」——EV 桥每个负项都要给董事会一个解释：假设变动为什么调？投资偏差是运气还是能力？精算师的价值在于把「数字的变化」翻译成「管理动作的回声」。反过来，考核体系里放进 VNB 和 EV 营运利润，产品部门和渠道的行为立刻改变——<b>价值管理不是报表，是指挥棒。</b></div>
+  <div class="mnem"><b>记不满时先记三句</b><span class="verse">EV 是底线，收购看 AV；<br>预期不增值，偏差见真章；<br>假设谁最灵，投资五十分。</span></div>
+</section>
+
+  <p class="link">进阶延伸：EV 体系建设史 · 变动分析原理 · 收购定价 → <a href="ev-plus.html">升级版 B⁺ 价值评估进阶</a></p>
+<div class="pager">
+  <a class="pager-prev" href="ch2.html"><small>← 上一页</small>CH.02 偿付能力评估与管理</a>
+  <a class="pager-next" href="ch4.html"><small>下一页 →</small>CH.04 资产负债管理（25%）</a>
+</div>
+<button class="done-btn" data-id="ch3">○ 标记本页已完成</button>
+<footer class="colophon">2026 中国精算师资格考试 · 资产负债管理与价值评估（科目八）知识库 · 仅供学习交流</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>
