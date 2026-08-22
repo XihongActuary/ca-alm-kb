@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>卷三 · 全真冲刺卷 · 2026 中国精算师科目八知识库</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<aside class="side">
+  <div class="brand"><b>ALM · 科目八</b><span>资产负债管理与价值评估 · 知识库</span></div>
+  <nav>
+    <div class="grp">总览</div>
+    <a href="xihong.html">关于 · 西红精算</a>
+    <a href="index.html">首页 · 考试全景</a>
+    <a href="about.html">本库说明 · 编法与用法</a>
+    <div class="grp">四大篇章（按考纲权重）</div>
+    <a href="ch1.html">① ALM 基础<span class="w">10%</span></a>
+    <a href="ch2.html">② 偿付能力评估与管理<span class="w">40%</span></a>
+    <a href="ch3.html">③ 价值评估与管理<span class="w">25%</span></a>
+    <a href="ch4.html">④ 资产负债管理<span class="w">25%</span></a>
+    <div class="grp">四大专章（纵深武器库）</div>
+    <a href="calc.html">A 偿二代计算手册</a>
+    <a href="quant.html">B ALM 量化评估拆解</a>
+    <a href="ev.html">C 内含价值实战</a>
+    <a href="hotspot.html">D 低利率与利差损</a>
+    <div class="grp">升级版 · 精算讲堂</div>
+    <a href="alm-plus.html">A⁺ ALM 模型与实务</a>
+    <a href="ev-plus.html">B⁺ 价值评估进阶</a>
+    <a href="companion.html">C⁺ ALM 在线库 · 导读</a>
+    <div class="grp">真题与实战</div>
+    <a href="zhenti.html">真题馆 · 2026 全解 ★</a>
+    <a href="exam1.html">卷一 · 筑基卷</a>
+    <a href="exam2.html">卷二 · 规则卷</a>
+    <a href="exam3.html" class="on">卷三 · 全真冲刺卷</a>
+  </nav>
+  <div class="prog-mini">已完成 <b>0 / 16</b> 页<br>点击每页底部按钮记录进度</div>
+</aside>
+<main class="main">
+
+<div class="ch-head">
+  <div class="no">MOCK Ⅲ</div>
+  <h1>卷三 · 全真冲刺卷：严格仿 2026 卷面结构</h1>
+  <div class="sub">简答 8 题 + Excel 操作 3 组 · 建议用时 150 分钟 · 全真模拟</div>
+  <div class="meta"><span>题风、题量、覆盖面均对标 2026 真题</span><span>所有计算题数字自洽、可复核</span><span>考前两周使用</span></div>
+</div>
+
+<div class="paper-head">
+  <h3>中国精算师资格考试 · 资产负债管理与价值评估<br>模拟卷（三）全真冲刺卷</h3>
+  <div class="ph-meta">满分 100 分　·　简答题 8 题（72 分）+ Excel 操作题 3 组（28 分）　·　建议 150 分钟</div>
+  <div class="ph-warn">请全程闭卷、限时完成；Excel 题按"列公式 → 代数字 → 判断结论"三步作答</div>
+</div>
+
+<section>
+  <h2><span class="sn">Ⅰ</span>简答题（8 题 × 9 分，共 72 分）</h2>
+  <button class="js-toggle-answers" type="button">展开全部答案</button>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">1</span>简述战略资产配置（SAA）与战术资产配置（TAA）的区别；说明在低利率环境下，人身险公司优化 SAA 应遵循的资产负债管理约束。</div>
+    <details class="answer"><summary>参考答案</summary>
+      <p><b>SAA vs TAA</b>：SAA 是长期（通常 3 年以上）、政策层面的大类资产目标配置与再平衡区间，由董事会审定、每年至少滚动评估；TAA 是在 SAA 框架内的短期战术偏离，追求市场时机收益，受偏离限额约束。SAA 决定组合 90% 以上的长期风险收益特征，TAA 只做边际修正。</p>
+      <p><b>低利率下的 ALM 约束四条</b>：① 期限结构约束——分账户控制规模调整后久期缺口于 ±2 年区间，负债久期长则增配超长利率债；② 成本收益约束——综合投资收益率覆盖资金成本率（M = G − K ≥ 0），情景二再投资收益率 −73%~−24% 下重点压降负债保证成本；③ 流动性约束——流动性比例 ≥5%、现金流三级检验全过；④ 资本效率约束——以 H = RAROCI 为目标函数之一，低资本占用资产（高评级、绿色债券 k1 = −0.1）优先。落点：预定利率动态调整 + 分红万能占比提升 + 久期补齐 + 长周期考核（<a href="hotspot.html">专章 D</a>）。</p>
+      <p class="link">考点回链：<a href="ch4.html">CH.04 §SAA/TAA</a></p>
+    </details>
+  </div>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">2</span>偿二代二期下，哪些资产属于非认可资产 / 处置受限情形？投资性房地产与对子公司长期股权投资作为"例外认可项目"如何计量？</div>
+    <details class="answer"><summary>参考答案</summary>
+      <p><b>非认可资产</b>：无形资产（土地使用权除外）、经营性亏损引起的递延所得税资产、待摊费用、处置受限资产、文物艺术品及其他。<b>处置受限情形</b>：被冻结、为他人担保被质押 / 抵押、交易对手出现危机、境外管制等。</p>
+      <p><b>例外认可</b>：① 以物权或项目公司方式持有的投资性房地产按<b>成本模式</b>计量（不按市价）；② 对子公司长期股权投资按<b>权益法</b>计量；③ 寿险应收分保准备金按规则第 3 号确认。补充：合营 / 联营上市公司若市价持续 1 年以上低于账面价值或低于账面价值超 50%，应计提减值；但为沪深 300 成份股且最近三年股息率均 ≥3% 或现金股利支付率均 ≥10% 的可不计提。</p>
+      <p class="link">考点回链：<a href="ch2.html">CH.02</a> · <a href="calc.html">专章 A 认可资产逐项表</a></p>
+    </details>
+  </div>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">3</span>写出 EV 桥中"新业务的预期影响"与"经营经验的差异"两大类别的构成，并解释为什么"预期到的利润不增加 EV"。</div>
+    <details class="answer"><summary>参考答案</summary>
+      <p><b>新业务的预期影响（第 4 项）</b> = 一年新业务的价值（4.1，签单时点价值、含 CoC）+ 新业务价值的释放（4.2）+ 新业务的预期利润（4.3）；正 VNB 增加 EV、负 VNB 减少 EV，是 EV 增长的核心来源。</p>
+      <p><b>经营经验的差异（第 7 项）</b> = 退保差 + 死亡率 / 发病率差 + 费用和佣金差 + 税务差 + 其它——实际经验与假设的最佳估计之差，属"未预期到的利源"。</p>
+      <p><b>为什么预期利润不增 EV</b>：预期利润在评估时点已按 RDR 折现计入 VIF——利润实现时只是从 VIF"左手"释放到调整净资产"右手"，EV 总量不变（对 VIF 负、对 ANW 正、净影响为零）。只有<b>未预期到的偏差</b>（经验差异、投资收益差异、假设变化）才真正改变 EV。这一结论的推论：高投资收益率假设是双刃剑——假设抬高当前 EV，但未来实现不了就以投资偏差的形式扣回来；高质量 EV = 审慎假设 + 长期小的偏差。</p>
+      <p class="link">考点回链：<a href="ev.html">专章 C §EV 桥四条核心结论</a></p>
+    </details>
+  </div>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">4</span>情景分析与压力测试有何区别与联系？列出监管规则第 4 号的六种利率压力情景，并说明基点价值变动率指标的计算思路。</div>
+    <details class="answer"><summary>参考答案</summary>
+      <p><b>区别</b>：情景分析考察一组内部一致的假设下的财务后果，可好可坏、可多情景并行，用于战略比较；压力测试是情景分析的极端化——小概率、严重不利情景，用于回答"底线守得住吗"。联系：两者共用同一套现金流与资产负债模型，压力测试是情景分析家族中盯住尾部风险的子集。</p>
+      <p><b>六情景</b>：上升（全曲线上行约 +133~+137bps）、下降（约 −139~−143bps）、倾斜上（短端 −200 / 长端 +147，陡峭化）、倾斜下（短端 +250 / 长端 −141，平坦化）、扭转上（短端 +254 → 中端 −186 → 长端 +117）、扭转下（镜像）。所有情景 40 年以上变动为 0（终极利率锁定）。</p>
+      <p><b>基点价值变动率</b>：先按 20 个关键期限年计算 DV10_N = −(PV₊₁₀ − PV₋₁₀)/2，再按情景参数放大为 DV_X_N = DV10_N × X_N/10，加总（含损失吸收调整 LA ≤ 0）得 Sum_DV_X，取六情景最大值除以核心资本——比值 ≤30% 得满分，&gt;100% 得零分（分档 30/50/70/100）。</p>
+      <p class="link">考点回链：<a href="quant.html">专章 B §期限结构匹配</a></p>
+    </details>
+  </div>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">5</span>万能险账户的成本收益匹配有何特殊性？在压力情景三（利率跳升）下，万能险账户面临什么冲击？</div>
+    <details class="answer"><summary>参考答案</summary>
+      <p><b>特殊性</b>：① 资金成本率 K = 过去 12 个月结算利率的算术平均——负债成本盯的是"已公布结算利率"而非合同下限，粘性强；② 保证成本率 L = 最低保证利率，是底线；③ 结算利率下调受客户流失约束（市场预期粘性），下行有刚性；④ 监管规则承认万能的浮动缓冲：负债有效久期计算中，调整后结算利率不得低于合同约定的最低保证利率。</p>
+      <p><b>情景三冲击</b>：无风险利率第 2 年 +100bps、第 3 年再 +100bps；负债资金成本率同步上浮——万能险（及中短存续期产品）负债资金成本率第 2 年上升 100bps、第 3 年再升 100bps；资产端债券市值大跌、权益收益率取基本假设与过去三年实际均值的较小值。结果：若结算利率因粘性未能足额上调资产收益，账户利差被双向挤压；同时退保选择权价值上升（客户拿钱追高息）放大现金流风险。这正是"低利率怕利差损、高利率怕市值与退保"的万能版。</p>
+      <p class="link">考点回链：<a href="quant.html">专章 B §四情景</a> · <a href="hotspot.html">专章 D</a></p>
+    </details>
+  </div>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">6</span>某公司拟通过发行次级债补充偿付能力。说明次级债发行对实际资本、核心 / 综合充足率的影响机制，以及为什么次级债"补综合不补核心"？</div>
+    <details class="answer"><summary>参考答案</summary>
+      <p><b>机制</b>：发行次级债 → 现金流入使认可资产增加；该债务本身属于"符合资本标准、用于补充实际资本的长期债务"，作为<b>非认可负债</b>从认可负债中剔除 → 实际资本 = 认可资产 − 认可负债显著上升。计入层级：次级债 / 资本补充债属<b>附属二级</b>（次级可转债按条件可计附属一级），且按剩余期限折扣认可（无赎回条款：≥2 年全额、1~2 年 50%、&lt;1 年 80%；有赎回条款按赎回日剩余期限分档 0%~80%）。</p>
+      <p><b>为什么补综合不补核心</b>：核心充足率 = 核心资本 / 最低资本，而次级债计入附属资本，不进入核心资本——核心一级须实缴、无到期日、受偿最后、非强制分配，次级债有明确期限、受偿在保单持有人之前、仅破产清算时吸收损失，不满足核心资本的永续性与吸收损失要求。因此次级债抬升综合充足率，核心充足率纹丝不动——改善的是监管第二条件，不是第一条件。限额：附属二级 ≤ 核心资本 25%、附属合计 ≤ 核心资本 100%。</p>
+      <p class="link">考点回链：<a href="ch2.html">CH.02 资本分级</a> · <a href="calc.html">专章 A 演算器</a>（卷三 Excel 3 与本题联动）</p>
+    </details>
+  </div>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">7</span>当前国内寿险行业估值（P/EV）长期偏低，试从资产负债管理与内含价值的角度分析原因，并提出提升估值可信度的路径。</div>
+    <details class="answer"><summary>参考答案</summary>
+      <p><b>原因三条</b>：① <b>假设可信度折价</b>——EV 高度依赖投资收益率假设（±50bps → EV ±20%），利率下行期市场不相信 4.5% 以上的长期假设，P/EV 长期 &lt;1 相当于市场对 EV 打折；② <b>利差损预期</b>——久期错配缺口约 7 年、存量高预定利率包袱，市场按情景二（再投资收益率 −73%~−24%）的悲观路径给存量业务定价；③ <b>波动与质量疑虑</b>——EV 是时点值，投资偏差逐年侵蚀（"未预期到的偏差才改变 EV"），高波动账户的 EV 折价更重。</p>
+      <p><b>提升路径</b>：① 假设审慎化——2023 年底上市险企已集体下调投资回报率与 RDR 假设，宁可低而可信；② 资负匹配改善——拉长久期、控制利差、降低报表波动（传统险账户 ALM），让 EV 增长的"可预期部分"占比上升；③ 披露与勾稽——强化 EV 桥归因披露、敏感性测试，并与 IFRS17 利润边际（CSM + 风险调整）信息衔接；④ 治理信号——长周期考核（3 年 / 5 年权重 50% / 20%）降低追收益动机。海外经验：预定利率随市场利率调整 + 产品结构改善 + 久期缺口管控 → 盈利确定性提升 → 估值修复。</p>
+      <p class="link">考点回链：<a href="ev.html">专章 C</a> · <a href="hotspot.html">专章 D §估值修复</a></p>
+    </details>
+  </div>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">8</span>对比传统险账户与分红险账户在降低财务报表波动上的异同：为什么监管在量化评估中对分红 / 万能账户给予损失吸收（LA）承认，而传统险没有？</div>
+    <details class="answer"><summary>参考答案</summary>
+      <p><b>共同点</b>：都要做久期匹配（±2 年区间）、现金流匹配（三级检验）、控制权益等高波动资产、按账户单独评估利差（M/N/O）。</p>
+      <p><b>差异（核心：浮动机制的有无）</b>：传统险负债成本 = 预定利率，完全刚性，利率下行时负债现值上升、资产收益下降，双向挤压只能靠资产端消化；分红险负债成本 = 预定利率 + 最近一年宣告分红水平，红利部分可调（负债有效久期计算中：报告期末起 36 个月内红利保持一致，36 个月后可按收益率变动与分红比例调整，下调不超过 50bps×0.7，但不低于说明书低档）——负债端自己就能吸收一部分冲击。</p>
+      <p><b>LA 的逻辑</b>：损失吸收调整 LA = β×Min(ΣDV_X, 0)（β = Min(0.4, 1−Dur_eff/Dur_mod)，LA ≤ 0）——监管承认分红 / 万能的浮动结算机制能吸收部分利率冲击，允许在基点价值变动率中扣减；传统险没有浮动机制，冲击全额传导，自然无 LA。这一设计也是监管引导产品结构向浮动收益转型的隐性激励。</p>
+      <p class="link">考点回链：<a href="quant.html">专章 B §DV10 与 LA</a> · <a href="hotspot.html">专章 D §36 个月规则</a></p>
+    </details>
+  </div>
+</section>
+
+<section>
+  <h2><span class="sn">Ⅱ</span>Excel 操作题（3 组，共 28 分）</h2>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">E1</span>（8 分）久期缺口与利率冲击。某寿险公司普通账户：资产修正久期 6.0 年、资产价值 180 亿元；负债修正久期 10.0 年、负债价值 160 亿元。<br>（1）计算久期缺口；（2）市场利率下行 50bps，估算资产、负债价值变动与净资产变动；（3）判断该账户的利率风险形态并给出一条对冲建议。</div>
+    <details class="answer"><summary>参考答案（含完整计算）</summary>
+      <p><b>（1）久期缺口</b> = D_A − D_L × V_L/V_A = 6.0 − 10.0 × 160/180 = 6.0 − 8.89 = <b>−2.89 年</b>（负债久期相对更长，缺口为负——中国寿险典型形态）。</p>
+      <p><b>（2）利率下行 Δy = −0.5%</b>：<br>
+      ΔV_A ≈ −D_A × Δy × V_A = −6.0 × (−0.005) × 180 = <b>+5.40 亿元</b>（资产增值）；<br>
+      ΔV_L ≈ −D_L × Δy × V_L = −10.0 × (−0.005) × 160 = <b>+8.00 亿元</b>（负债增提更多）；<br>
+      Δ净资产 = 5.40 − 8.00 = <b>−2.60 亿元</b>（净资产缩水约 2.6 亿元）。</p>
+      <p><b>（3）形态判断</b>：负缺口 + 利率下行 → 负债增值快于资产，存在再投资 / 利差损风险；若利率上行则反向受益。建议：增配 20~30 年超长期利率债或买入长期利率互换（支付固定）将资产久期拉至 8 年以上，把缺口收进 ±2 年区间。（可打开 <a href="calc.html">专章 A 久期缺口演算器</a>——本题即其默认参数，可自行改数验证。）</p>
+      <details class="answer"><summary>补充 · 表格化计算过程（Excel 建模模板）</summary>
+        <div class="tbl-scroll">
+        <table>
+          <tr><th>行次</th><th>项目</th><th class="num">资产</th><th class="num">负债</th><th>公式 / 说明</th></tr>
+          <tr><td class="num">1</td><td>修正久期（年）</td><td class="num">6.0</td><td class="num">10.0</td><td>题给</td></tr>
+          <tr><td class="num">2</td><td>价值（亿元）</td><td class="num">180</td><td class="num">160</td><td>题给</td></tr>
+          <tr><td class="num">3</td><td>利率变动 Δy</td><td class="num" colspan="2" style="text-align:center">−0.50%</td><td>题给</td></tr>
+          <tr><td class="num">4</td><td>久期缺口 = D_A − D_L×V_L/V_A</td><td class="num" colspan="2" style="text-align:center"><b>−2.89 年</b></td><td>6.0 − 10.0×160/180 = 6.0 − 8.89</td></tr>
+          <tr><td class="num">5</td><td>Δ价值 = −D×Δy×V</td><td class="num pos">+5.40</td><td class="num neg">+8.00</td><td>−6.0×(−0.005)×180；−10.0×(−0.005)×160</td></tr>
+          <tr><td class="num">6</td><td>Δ净资产 = 行5资产 − 行5负债</td><td class="num neg" colspan="2" style="text-align:center"><b>−2.60 亿元</b></td><td>5.40 − 8.00</td></tr>
+          <tr><td class="num">7</td><td>净资产变化率（原净资产 20 亿）</td><td class="num neg" colspan="2" style="text-align:center">−13.0%</td><td>−2.60 / 20</td></tr>
+        </table>
+        </div>
+        <p>第 7 行是拉分项：把绝对变动换算成净资产的相对损失（−13%），说明"2.6 亿"对净资产的杀伤力——这也解释了为什么监管要把缺口压进 ±2 年（同参数下缺口 −2 年时净资产损失约 −1.8 亿，再减三成）。</p>
+      </details>
+      <p class="link">考点回链：<a href="calc.html">专章 A 演算器</a> · <a href="ch4.html">CH.04</a></p>
+    </details>
+  </div>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">E2</span>（10 分）流动性指标。某人身险公司报告期末：流动性资产 10 亿元；剩余期限 1 年以上的政府债券 5 亿元；上季末总资产 400 亿元，其中债券回购融入资金 6 亿元、独立账户资产 4 亿元。<br>（1）计算流动性比例；（2）判断是否异常；（3）若异常，从三个不同侧面各给一条改进建议。</div>
+    <details class="answer"><summary>参考答案（含完整计算）</summary>
+      <p><b>（1）</b>分母 = 上季末总资产 − 债券回购融入资金 − 独立账户资产 = 400 − 6 − 4 = 390 亿元；流动性比例 = (10 + 5) / 390 = <b>3.85%</b>。</p>
+      <p><b>（2）</b>监管一条线为 5%——3.85% &lt; 5%，<b>异常</b>（且对应量化评估流动性指标 5 分全失）。</p>
+      <p><b>（3）三条建议（资产 / 负债 / 管理三侧面）</b>：① 资产侧——将部分中低流动性资产（非标、超长债）置换为货币基金、短期利率债与剩余期限 1 年以上政府债券，直接抬升分子；② 负债侧——控制中短存续期与高退保风险产品销售，用稳定新单现金流降低未来流动性消耗；③ 管理侧——预先安排回购 / 拆借备用额度与再保险流动性支持，把流动性比例纳入内部预警线（如内控线 6%）与考核。答题给建议务必分层，别三条都写"卖资产"。</p>
+      <details class="answer"><summary>补充 · 表格化计算过程（Excel 建模模板）</summary>
+        <div class="tbl-scroll">
+        <table>
+          <tr><th>行次</th><th>项目</th><th class="num">金额（亿元）</th><th>公式 / 说明</th></tr>
+          <tr><td class="num">1</td><td>流动性资产</td><td class="num">10</td><td>现金 + 货基 + 短期资产（题给）</td></tr>
+          <tr><td class="num">2</td><td>剩余期限 1 年以上政府债券</td><td class="num">5</td><td>题给（注意口径是"1 年以上"，不是以内）</td></tr>
+          <tr><td class="num">3</td><td>分子 = 行1 + 行2</td><td class="num"><b>15</b></td><td>—</td></tr>
+          <tr><td class="num">4</td><td>上季末总资产</td><td class="num">400</td><td>题给</td></tr>
+          <tr><td class="num">5</td><td>减：债券回购融入资金</td><td class="num">−6</td><td>常见漏扣项①</td></tr>
+          <tr><td class="num">6</td><td>减：独立账户资产</td><td class="num">−4</td><td>常见漏扣项②</td></tr>
+          <tr><td class="num">7</td><td>分母 = 行4 − 行5 − 行6</td><td class="num"><b>390</b></td><td>—</td></tr>
+          <tr><td class="num">8</td><td>流动性比例 = 行3 / 行7</td><td class="num"><b>3.85%</b></td><td>15 / 390</td></tr>
+          <tr><td class="num">9</td><td>判定：对比 5% 监管线</td><td class="num neg" colspan="2"><b>3.85% &lt; 5% → 异常</b>（量化评估流动性 5 分全失）</td></tr>
+        </table>
+        </div>
+      </details>
+      <p class="link">考点回链：<a href="quant.html">专章 B §流动性比例</a></p>
+    </details>
+  </div>
+
+  <div class="q-item">
+    <div class="q"><span class="tag">E3</span>（10 分）偿付能力综合演算。某人身险公司报告期末：认可资产 950 亿元、认可负债 830 亿元、最低资本 100 亿元、核心资本 60 亿元（其中核心一级 55 亿元、核心二级 5 亿元），风险综合评级 B 类。<br>（1）计算实际资本、核心与综合偿付能力充足率并判断达标情况；（2）公司拟新发行 10 亿元资本补充债券（附属二级，无赎回条款，剩余期限 8 年），计算发行后两率的变化；（3）说明该工具对资本层级的实质影响与限额检验。</div>
+    <details class="answer"><summary>参考答案（含完整计算）</summary>
+      <p><b>（1）</b>实际资本 = 950 − 830 = <b>120 亿元</b>；核心充足率 = 60/100 = <b>60%</b>；综合充足率 = 120/100 = <b>120%</b>；评级 B 类 → 三条件（核心 ≥50%、综合 ≥100%、评级 ≥B）<b>全部达标</b>。</p>
+      <p><b>（2）发行 10 亿元资本补充债后</b>：现金流入 → 认可资产 960 亿元；资本补充债属"用于补充实际资本的长期债务"，作为<b>非认可负债</b>不计入认可负债 → 认可负债仍 830 亿元；实际资本 = 960 − 830 = 130 亿元。无赎回条款且剩余期限 8 年 ≥ 2 年 → 认可折扣为 0，全额 10 亿元计入。<b>综合充足率 = 130/100 = 130%</b>（+10 个百分点）；核心资本不变 → <b>核心充足率仍 60%</b>。</p>
+      <p><b>（3）层级与限额</b>：资本补充债计入<b>附属二级</b>——补综合、不补核心（有期限、受偿先于保单持有人、仅破产清算吸收损失，不满足核心资本特性）。限额检验：附属二级（10 亿元）≤ 核心资本 × 25%（60 × 0.25 = 15 亿元）✓；附属资本合计（10 亿元）≤ 核心资本 × 100% ✓ → 10 亿元可全额计入。结论：该工具有效改善综合充足率，但核心充足率的改善只能靠核心一级（留存利润、增资、保单未来盈余中 ≥30 年档的核心一级部分）。</p>
+      <details class="answer"><summary>补充 · 发行前后对照表（Excel 建模模板）</summary>
+        <div class="tbl-scroll">
+        <table>
+          <tr><th>项目</th><th class="num">发行前</th><th class="num">调整</th><th class="num">发行后</th><th>说明</th></tr>
+          <tr><td>认可资产</td><td class="num">950</td><td class="num">+10</td><td class="num">960</td><td>发债现金流入</td></tr>
+          <tr><td>认可负债</td><td class="num">830</td><td class="num">0</td><td class="num">830</td><td>资本补充债为非认可负债，不计入</td></tr>
+          <tr><td><b>实际资本</b></td><td class="num"><b>120</b></td><td class="num"><b>+10</b></td><td class="num"><b>130</b></td><td>960 − 830</td></tr>
+          <tr><td>核心资本</td><td class="num">60</td><td class="num">0</td><td class="num">60</td><td>附属二级工具不进核心</td></tr>
+          <tr><td>最低资本</td><td class="num">100</td><td class="num">0</td><td class="num">100</td><td>简化：暂不考虑发行现金的资产占用</td></tr>
+          <tr><td><b>核心充足率</b></td><td class="num"><b>60%</b></td><td class="num">0</td><td class="num"><b>60%</b></td><td>纹丝不动</td></tr>
+          <tr><td><b>综合充足率</b></td><td class="num"><b>120%</b></td><td class="num"><b>+10pp</b></td><td class="num"><b>130%</b></td><td>120 → 130</td></tr>
+          <tr><td colspan="5" class="note-td">限额检验：附属二级 10 ≤ 核心资本 60×25% = 15 ✓；附属合计 10 ≤ 60×100% = 60 ✓ → 全额计入。剩余可发附属二级空间 = 15 − 10 = 5 亿元。</td></tr>
+        </table>
+        </div>
+        <p>延伸一问（自测）：若再发 8 亿元资本补充债，可计入多少？——附属二级上限 15 亿，已用 10 亿，只能再计 5 亿，其余 3 亿不进入实际资本（但现金流入与负债同步增加，实际资本不变）——这就是"资本限额"的约束力。</p>
+      </details>
+      <p class="link">考点回链：<a href="calc.html">专章 A 演算器 + 折扣定级表</a> · <a href="ch2.html">CH.02 资本限额</a>（与简答第 6 题联动出题，2026 真题式考法）</p>
+    </details>
+  </div>
+</section>
+
+<div class="mnem"><b>卷三使用建议</b><span class="verse">完全闭卷、150 分钟一次性完成；<br>简答先写骨架再填条文与数字；<br>Excel 题三步走：列公式、代数字、下结论；<br>E1 与专章 A 演算器默认参数一致——考后上机复核一遍手感；<br>得分 ≥80：可以上考场了；60~80：回错题对应章节；&lt;60：真题馆 + 专章 A/B 再过一轮。</span></div>
+
+<div class="pager">
+  <a class="pager-prev" href="exam2.html"><small>← 上一页</small>卷二 · 规则卷</a>
+  <a class="pager-next" href="index.html"><small>回到 →</small>首页 · 考试全景</a>
+</div>
+<button class="done-btn" data-id="exam3">○ 标记本页已完成</button>
+<footer class="colophon">2026 中国精算师资格考试 · 资产负债管理与价值评估（科目八）知识库 · 仅供学习交流</footer>
+</main>
+<script src="js/kb.js"></script>
+</body>
+</html>
